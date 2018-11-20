@@ -5,5 +5,7 @@ package array.easy;
  * @creation 2018/11/21
  */
 public class TwoSum {
-
+	public static void main(String[] args) {
+		System.out.println("TwoSum");
+	}
 }
