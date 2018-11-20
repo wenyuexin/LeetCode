@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Apollo
- * 
- */
-module LeetCode {
-}
