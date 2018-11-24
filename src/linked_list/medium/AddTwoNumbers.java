@@ -4,6 +4,9 @@ package linked_list.medium;
 /**
  * @author Apollo4634
  * @creation 2018/11/23
+ * 
+ * Runtime: 22 ms, 
+ * faster than 94.06% of Java online submissions for this.
  */
 
 /**
@@ -82,7 +85,8 @@ public class AddTwoNumbers {
 	
 	//链表相加
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-		int[] pair = AddTwoNumbers.calc(l1.val, l2.val, 0);
+		//int[] pair = AddTwoNumbers.calc(l1.val, l2.val, 0);
+		int[] pair = new int[] {0,0};
 		ListNode l3 = new ListNode(0);
 		ListNode l3_tmp = l3;
 
@@ -127,8 +131,8 @@ public class AddTwoNumbers {
 		node4b.next = node4;
 		
 		System.out.println("===== Solution =====");
-		int[] arr1 = new int[] {0,2,8,9};
-		int[] arr2 = new int[] {1,3,5};
+		int[] arr1 = new int[] {5,8};
+		int[] arr2 = new int[] {5,4};
 		
 		ListNode l1 = AddTwoNumbers.set(arr1);
 		ListNode l2 = AddTwoNumbers.set(arr2); 
@@ -137,8 +141,11 @@ public class AddTwoNumbers {
 		System.out.println("=====");
 		
 		ListNode l3 = new AddTwoNumbers().addTwoNumbers(l1, l2);
+		System.out.println("ListNode1: ");
 		AddTwoNumbers.print(l1);	
+		System.out.println("ListNode2: ");
 		AddTwoNumbers.print(l2);
+		System.out.println("ListNode3: ");
 		AddTwoNumbers.print(l3);
 	}
 }
