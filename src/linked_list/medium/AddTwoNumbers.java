@@ -73,7 +73,9 @@ public class AddTwoNumbers {
 		}
 		System.out.println();
 	}
+
 	
+	/******************* Answer *******************/
 	//某一位上的加法计算
 	static int[] calc(int val1, int val2, int c) {
 		int[] out = new int[] {0,0}; //m,r
@@ -136,16 +138,18 @@ public class AddTwoNumbers {
 		
 		ListNode l1 = AddTwoNumbers.set(arr1);
 		ListNode l2 = AddTwoNumbers.set(arr2); 
+		System.out.print("ListNode1: ");
 		AddTwoNumbers.print(l1);	
+		System.out.print("ListNode2: ");
 		AddTwoNumbers.print(l2);
 		System.out.println("=====");
 		
 		ListNode l3 = new AddTwoNumbers().addTwoNumbers(l1, l2);
-		System.out.println("ListNode1: ");
+		System.out.print("ListNode1: ");
 		AddTwoNumbers.print(l1);	
-		System.out.println("ListNode2: ");
+		System.out.print("ListNode2: ");
 		AddTwoNumbers.print(l2);
-		System.out.println("ListNode3: ");
+		System.out.print("ListNode3: ");
 		AddTwoNumbers.print(l3);
 	}
 }
