@@ -1,6 +1,8 @@
 package hash_table.medium;
 
-import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Set;
 
 /** 
  * @author Apollo4634 
@@ -31,26 +33,27 @@ public class LongestSubstring {
 	
 	public static int lengthOfLongestSubstring(String s) {
 		int maxLen = 0;
-		int strLen = -1;
-		//int j = 0;
 		
 		char c = ' ';
-		HashMap<Character,Integer> map = new HashMap<>();
+		LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+		Set<Character> set = map.keySet();
+		
 		for(int i=0; i<s.length(); i++) {
 			c = s.charAt(i);
 			Character character = Character.valueOf(c);
 			Integer integer = Integer.valueOf(i);
 			
 			//这里需要判断新来的char是否在keys中
+			set = map.keySet();
 			if (!set.contains(character)) { //如果不在
 				map.put(character,integer);
-				strLen++;
 			} else { //如果在
 				if(maxLen<map.size()) 
-					maxLen = strLen;
+					maxLen = map.size();
 				//更新map
-				map = new HashMap<Character,Integer>();
-				strLen = 0;
+				int idx = map.get(character);
+				//map = new HashMap<Character,Integer>();
+				
 			}
 
 		}
