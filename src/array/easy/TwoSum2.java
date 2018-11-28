@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author Apollo4634 
  * @creation 2018/11/22
  */
-public class TwoSum_v2 {
+public class TwoSum2 {
 	
 	public int[] twoSum(int[] nums, int target) {
 		int[] indices = {-1,-1};
@@ -58,14 +58,14 @@ public class TwoSum_v2 {
 	public static void main(String[] args) {
 		int target = 1;
 		int[] nums = {-3,4,3,90};
-		TwoSum_v2.print(nums);
+		TwoSum2.print(nums);
 		System.out.println("target: "+target);
 		
 		long t1 = System.nanoTime();
-		int[] indices = new TwoSum_v2().twoSum2(nums, target); 
+		int[] indices = new TwoSum2().twoSum2(nums, target); 
 		long t2 = System.nanoTime();
 		
 		System.out.println("time_main: "+(t2-t1)/1000);
-		TwoSum_v2.print(indices);
+		TwoSum2.print(indices);
 	}
 }
