@@ -39,7 +39,7 @@ public class LongestSubstring2 {
 					strLen = i - idx_tmp.intValue();
 					if(maxLen<strLen) maxLen = strLen;
 					idx_left = idx_tmp + 1;
-					
+					 
 					map.put(character,integer);//更新map
 				}
 				System.out.println("test");
