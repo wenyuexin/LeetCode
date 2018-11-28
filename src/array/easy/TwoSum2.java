@@ -8,6 +8,9 @@ import java.util.Arrays;
 /** 
  * @author Apollo4634 
  * @creation 2018/11/22
+ * 
+ * Title: Two Sum
+ * Runtime: 24 ms, faster than 36.51% of Java online submissions
  */
 public class TwoSum2 {
 	
