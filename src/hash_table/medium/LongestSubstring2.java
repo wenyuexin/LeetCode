@@ -1,6 +1,6 @@
 package hash_table.medium;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 
 /** 
  * @author Apollo4634 
@@ -19,7 +19,7 @@ public class LongestSubstring2 {
 		Integer idx_left = Integer.valueOf(0);
 		Integer idx_tmp = null;
 		
-		LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+		HashMap<Character,Integer> map = new HashMap<>();
 		//Set<Character> set = map.keySet();
 		
 		for(int i=0; i<s.length(); i++) {
@@ -42,8 +42,6 @@ public class LongestSubstring2 {
 					
 					map.put(character,integer);//更新map
 				}
-				
-				
 				System.out.println("test");
 			}
 		}
