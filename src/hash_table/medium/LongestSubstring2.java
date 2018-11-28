@@ -8,7 +8,7 @@ import java.util.HashMap;
  *
  * Tilte: Longest Substring Without Repeating Characters
  * 
- * Runtime: 
+ * Runtime: 33 ms, faster than 62.50% of Java online submissions for this.
  */
 
 public class LongestSubstring2 {
@@ -20,21 +20,21 @@ public class LongestSubstring2 {
 		Integer idx_tmp = null;
 		
 		HashMap<Character,Integer> map = new HashMap<>();
-		//Set<Character> set = map.keySet();
 		
 		for(int i=0; i<s.length(); i++) {
 			Character character = Character.valueOf(s.charAt(i));
 			Integer integer = Integer.valueOf(i);
 			
-			//set = map.keySet();
 			if (!map.containsKey(character)) { //判断char是否在keys中, 如果不在
 				map.put(character,integer);
+				strLen += 1;
+				if(maxLen<strLen) maxLen = strLen;
 			} else { //如果在
-				if(maxLen<map.size()) maxLen = map.size();
 				idx_tmp = map.get(character);
-				
 				if(idx_tmp<idx_left) {
 					map.put(character,integer);//更新map
+					strLen += 1;
+					if(maxLen<strLen) maxLen = strLen;
 				} else {
 					strLen = i - idx_tmp.intValue();
 					if(maxLen<strLen) maxLen = strLen;
@@ -42,12 +42,9 @@ public class LongestSubstring2 {
 					 
 					map.put(character,integer);//更新map
 				}
-				System.out.println("test");
+				//System.out.println("test");
 			}
 		}
-		
-		strLen = s.length() - idx_tmp.intValue();
-		if(maxLen<strLen) maxLen = strLen;
 		return maxLen;
     }
 	
@@ -55,10 +52,11 @@ public class LongestSubstring2 {
 	public static void main(String[] args) {
 		//String str = "bbbbb";
 		//String str = "abcabcbb";
-		String str = "pwwkew";
+		//String str = "pwwkew";
 		//String str = "au";
 		//String str = "aab";
 		//String str = "a";
+		String str = "tmmzuxt";
 		int len = LongestSubstring2.lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
