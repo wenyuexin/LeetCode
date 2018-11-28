@@ -8,7 +8,7 @@ import java.util.HashMap;
  *
  * Tilte: Longest Substring Without Repeating Characters
  * 
- * Runtime: 33 ms, faster than 62.50% of Java online submissions for this.
+ * Runtime: 33 ms, faster than 62.50% of Java online submissions
  */
 
 public class LongestSubstring2 {
@@ -42,7 +42,6 @@ public class LongestSubstring2 {
 					 
 					map.put(character,integer);//更新map
 				}
-				//System.out.println("test");
 			}
 		}
 		return maxLen;
