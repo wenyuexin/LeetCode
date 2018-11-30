@@ -20,6 +20,12 @@ public class MedianOfTwoSortedArrays {
 		int pow2 = (int) Math.pow(2, e2);
 		
 		double s = (len1+len2)/2.0;
+		if(s>3*minLen) {
+			
+		}
+		
+		
+		
 		
 		int idx1 = 0;
 		int idx2 = 0;
