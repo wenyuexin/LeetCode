@@ -2,16 +2,16 @@
 
 争取把leetcode的题都解一边，部分题可能有多种解法
 
-**文件夹说明：**
+**文件夹说明：**  
 src	个人解题所写的java源文件  
 solution	一般是leetcode上耗时最短的几个解法之一，其他方面不一定最优，仅供参考  
 problem	题干描述  
 
 **Tag List**  
 
-| No. | Tag  | problem | src | solution |  
-| ---- | ----- | ---- | ---- | ----- |  
-| 01 | Array |  |   |   |  
+| No. | Tag | src |  
+| ---- | ----- | ---- |
+| 01 | Array | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
 
 ## Problem  
 **Easy**  
