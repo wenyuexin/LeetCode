@@ -15,9 +15,9 @@
 
 | No. | Tag | src folder |
 | :----: | ----- | ---- |
-| 01 | [Array](https://github.com/Apollo4634/LeetCode/tree/master/src/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
-| 02 | Hash Table | Go |
-| 03 | Linked List | Go |
+| 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/src/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
+| 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table) |
+| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_ist/linked_ist.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_ist) |
 | 04 | Math | |
 | 05 | Two Pointers ||
 | 06 | String ||
