@@ -6,9 +6,9 @@ package string;
  * @author Apollo4634
  * @creation 2018/12/04
  * 
- * No.5 LongestPalindromicSubstring
+ * No.5 Longest Palindromic Substring - 最长回文子串
  * 
- * 
+ * 理解错题目了，以下解答错误
  */
 
 public class LongestPalindromicSubstring {
@@ -65,7 +65,7 @@ public class LongestPalindromicSubstring {
 		LongestPalindromicSubstring c = new LongestPalindromicSubstring();
 		//String s = "babad";
 		//String s = "cbbd";
-		String s = "cc";
+		String s = "abcda";
 		System.out.println("input:  "+s);
 		String str = c.longestPalindrome(s);
 		System.out.println("output: "+str);
