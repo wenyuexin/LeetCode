@@ -1,24 +1,23 @@
 # LeetCode
 
-```争取把leetcode的题都解完，部分题可能有多种解法```  
+```争取把所有leetcode的题都解完，部分题可能有多种解法```  
 
 
-## 1. File and Folder Description  
+## 1. Folder description  
 
-| File/Folder |	Description |
-| ---- | ---- |
-| src |	个人解题所写的java源文件 |
-| solution | 一般是leetcode上耗时最短的几个解法之一，仅供参考（按难易度分类） |
-| problem | 原问题的描述（按难易度分类） |
+| Folder |	Description |
+| :--: | ---- |
+| src |	包含个人解题所写的java源文件 |
+| solution | 附有leetcode上耗时较短的几个解法之一，仅供参考 |
 
 
-## 2. Tag List  
+## 2. Tag list  
 
 | No. | Tag | Src folder |
-| :----: | ----- | :----: |
+| :----: | :---- | :----: |
 | 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/src/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
 | 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/blob/master/src/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table) |
-| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/blob/master/src/linked_ist/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list) |
+| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/blob/master/src/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list) |
 | 04 | [Math](https://github.com/Apollo4634/LeetCode/blob/master/src/math/math.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math)|
 | 05 | [Two Pointers](https://github.com/Apollo4634/LeetCode/blob/master/src/two_pointers/two_pointers.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/two_pointers)|
 | 06 | [String](https://github.com/Apollo4634/LeetCode/blob/master/src/string/string.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string)|
@@ -52,4 +51,4 @@
 | 34 | [Random](https://github.com/Apollo4634/LeetCode/blob/master/src/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
 | 35 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/blob/master/src/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
 
-
+Note: Click tag to jump to the corresponding markdown file, through which you can find the problem you want.
