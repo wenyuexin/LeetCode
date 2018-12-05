@@ -4,11 +4,11 @@ package string;
 
 /**
  * @author Apollo4634
- * @creation 2018/12/04
+ * @creation 2018/12/05
  * 
  * No.5 Longest Palindromic Substring - 最长回文子串
  * 
- * 理解错题目了，以下解答错误
+ * Runtime: 29 ms, faster than 56.71%
  */
 
 public class LongestPalindromicSubstring {
@@ -27,32 +27,60 @@ public class LongestPalindromicSubstring {
 	
 	/* My Solution */
 	public String longestPalindrome(String s) {
-		if(s.length() < 2) return s;
+		int sLen = s.length();
+		if(sLen < 2) return s;
 		
-		int idx_right = 0;
-		int maxLen = 0;
-		int[] arr_leftIdx = new int[256];
-		boolean[] arr_exist = new boolean[256]; 
-		//LongestPalindromicSubstring.print(arr_leftIdx);
+		int maxRange = -1;
+		int strLen = 0;
 		
-		int ch = -1;
-		for (int i = 0; i < s.length(); i++) {
-			ch = (int) s.charAt(i);
-			
-			if(!arr_exist[ch]) {
-				arr_leftIdx[ch] = i;
-				arr_exist[ch] = true;
-			} else {
-				if(i-arr_leftIdx[ch]+1 > maxLen) {
-					maxLen = i-arr_leftIdx[ch]+1;
-					idx_right = i;
+		//以某个某个字符为中心进行搜索
+		int idx_center = 0;
+		int maxStrLen = 1;
+		for(int i_center=0; i_center<sLen; i_center++) {
+			strLen = 1;
+			maxRange = Math.min(i_center, sLen-i_center-1);
+			for(int i_char=0; i_char<maxRange; i_char++) {
+				if(s.charAt(i_center-i_char-1)==s.charAt(i_center+i_char+1)) {
+					strLen += 2;
+					if(maxStrLen<strLen) {
+						maxStrLen = strLen;
+						idx_center = i_center;
+					}
+				} else {
+					break;
 				}
 			}
 		}
 		
-		int idx_left = arr_leftIdx[(int)s.charAt(idx_right)];
-		String str = s.substring(idx_left, idx_right+1);
+		//以两个相连字符中点为中心进行搜索
+		int idx_center2 = -1;
+		int maxStrLen2 = 0;
+		for(int i_center=0; i_center<sLen-1; i_center++) {
+			strLen = 0;
+			maxRange = Math.min(i_center+1, sLen-i_center-1);
+			for(int i_char=0; i_char<maxRange; i_char++) {
+				if(s.charAt(i_center-i_char)==s.charAt(i_center+i_char+1)) {
+					strLen += 2;
+					if(maxStrLen2<strLen) {
+						maxStrLen2 = strLen;
+						idx_center2 = i_center;
+					}
+				} else {
+					break;
+				}
+			}
+		}
 		
+		//计算并返回最长回文子串
+		String str = "";
+		int idx_left = -1;
+		if(maxStrLen>maxStrLen2) {
+			idx_left = idx_center - (maxStrLen-1)/2;
+			str = s.substring(idx_left, idx_left+maxStrLen);
+		} else {
+			idx_left = idx_center2 - maxStrLen2/2 + 1;
+			str = s.substring(idx_left, idx_left+maxStrLen2);
+		}
 		return str;
 	}
 	
@@ -65,7 +93,8 @@ public class LongestPalindromicSubstring {
 		LongestPalindromicSubstring c = new LongestPalindromicSubstring();
 		//String s = "babad";
 		//String s = "cbbd";
-		String s = "abcda";
+		//String s = "abcda";
+		String s = "abcdaadcb";
 		System.out.println("input:  "+s);
 		String str = c.longestPalindrome(s);
 		System.out.println("output: "+str);
