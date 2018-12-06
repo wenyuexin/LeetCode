@@ -11,9 +11,22 @@ package string;
  * Runtime: 29 ms, faster than 56.71% of Java online submissions
  */
 
+/**
+ * 基本思路：
+ * 由于回文字符串具有对称性，可以利用此特性进行搜索
+ * 
+ * 分为两种情况进行讨论：
+ * 第一，以某个某个字符为中心向两边进行搜索
+ * 第二，以两个相连字符中点为中心进行搜索向两边进行搜索
+ * 如果发现关于中心点对称的两个字符不相同，则直接break
+ * 
+ * 两种情况在获取字符下标的时候有些许区别，
+ * 简单起见，以下解法对上述情况分开讨论
+ */
+
 public class LongestPalindromicSubstring3 {
 	
-	/* 用于测试的函数 */
+	//Functions for test
 	
 	//打印数组
 	static void print(int[] arr) { 
@@ -25,7 +38,7 @@ public class LongestPalindromicSubstring3 {
 		}
 	}
 	
-	/* My Solution */
+	//Solution
 	public String longestPalindrome(String s) {
 		int sLen = s.length();
 		if(sLen < 2) return s;
@@ -39,8 +52,8 @@ public class LongestPalindromicSubstring3 {
 		for(int i_center=0; i_center<sLen; i_center++) {
 			strLen = 1;
 			maxRange = Math.min(i_center, sLen-i_center-1);
-			for(int i_char=0; i_char<maxRange; i_char++) {
-				if(s.charAt(i_center-i_char-1)==s.charAt(i_center+i_char+1)) {
+			for(int i_range=0; i_range<maxRange; i_range++) {
+				if(s.charAt(i_center-i_range-1)==s.charAt(i_center+i_range+1)) {
 					strLen += 2;
 					if(maxStrLen<strLen) {
 						maxStrLen = strLen;
@@ -58,8 +71,8 @@ public class LongestPalindromicSubstring3 {
 		for(int i_center=0; i_center<sLen-1; i_center++) {
 			strLen = 0;
 			maxRange = Math.min(i_center+1, sLen-i_center-1);
-			for(int i_char=0; i_char<maxRange; i_char++) {
-				if(s.charAt(i_center-i_char)==s.charAt(i_center+i_char+1)) {
+			for(int i_range=0; i_range<maxRange; i_range++) {
+				if(s.charAt(i_center-i_range)==s.charAt(i_center+i_range+1)) {
 					strLen += 2;
 					if(maxStrLen2<strLen) {
 						maxStrLen2 = strLen;
@@ -98,7 +111,6 @@ public class LongestPalindromicSubstring3 {
 		System.out.println("input:  "+s);
 		String str = c.longestPalindrome(s);
 		System.out.println("output: "+str);
-		
 		
 	}
 }

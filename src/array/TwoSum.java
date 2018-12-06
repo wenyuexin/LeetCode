@@ -5,6 +5,11 @@ package array;
 /** 
  * @author Apollo4634 
  * @creation 2018/11/21
+ * 
+ * N0.1 Two Sum
+ * 
+ * Runtime: 29 ms, faster than 30.74% of Java online submissions
+ * Runtime: 23 ms, faster than 39.36% of Java online submissions
  */
 public class TwoSum {
 	public int[] twoSum(int[] nums, int target) {

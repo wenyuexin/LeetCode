@@ -6,7 +6,7 @@ import java.util.HashMap;
  * @author Apollo4634 
  * @creation 2018/11/26
  *
- * Tilte: Longest Substring Without Repeating Characters
+ * No.3 Longest Substring Without Repeating Characters
  * 
  * Runtime: 24 ms, faster than 91.82% of Java online submissions
  * Runtime: 42 ms, faster than 43.79% of Java online submissions
