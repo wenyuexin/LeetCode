@@ -18,29 +18,31 @@ import java.util.Arrays;
  * 说明：
  * 假定nums1的长度为len1，nums2的长度为len2
  * 同时假设nums1和nums2组合并排序后的数组为num3
- * 那么可以认为找中位数就是找到num3的前len_m=(len1+len2)/2个数arr
+ * 可以认为找中位数就是找到num3的前len_m=(len1+len2)/2个数arr[]
+ * 类似的，如果通过循环每次都能找到剩余数字的前一半即可求解
  * 
  * 忽略部分细节，上述过程可以这样处理：
  * 通过循环依次寻找，假设某次循环中已经找到了n0个符合的数，
  * 其中，nums1中有idx1+1个，nums2中有idx2+1个
  * 那么还剩余n_left=len_m-n0个数，这里采用一种折半的方法
- * 从idx1+1开始，在nums1剩余的数中找n_left/2个数arr1，最后一个为a
- * 从idx2+1开始，在nums2剩余的数中找n_left/2个数arr2，最后一个为b
- * 显然，如果arr1和arr2都是arr的一部分，那么就已经找到了len_m个数
+ * 从idx1+1开始，在nums1剩余的数中找n_left/2个数arr1[]，最后一个为a
+ * 从idx2+1开始，在nums2剩余的数中找n_left/2个数arr2[]，最后一个为b
+ * 显然，如果arr1[]和arr2[]都是arr的一部分，那么就已经找到了len_m个数
  * 
- * 实际上，通常情况下，只可以推断出arr1或者arr2的二者之一属于arr
- * 具体国际如下：
- * 如果a<b，那么arr1必然是arr的一部分
- * 如果a>b，那么arr2必然是arr的一部分
- * 如果a=b，那么arr1和arr2都是arr的一部分(n_left等于1的情况除外)
- * 这可以通过反正来分析，这里就不啰嗦了
+ * 但是通常情况下，只可以推断出arr1[]或者arr2[]的二者之一属于arr[]
+ * 具体过程如下：
+ * 如果a<b，那么arr1[]必然是arr[]的一部分
+ * 如果a>b，那么arr2[]必然是arr[]的一部分
+ * 如果a=b，那么arr1[]和arr2[]都是arr[]的一部分(n_left等于1的情况除外)
+ * 这可以通过反证法来分析，此处略过
  * 
  * 综上，每次循环都能找到n_left/2个数（剩余要找的数的一半）
  * 当然，考虑到两个数组长度可能不同，为了方便假设len1<len2，
  * 当idx1+1超过了len1时候要适当的将n_left/2变小，防止越界，
  * 同时可以通过推断，直接在nums2中找出剩余的n_left个数
- * 上述方法复杂度符合O(log(len1+len2))
+ * 上述方法复杂度符合O(log(len1+len2))的要求
  */
+
 public class MedianOfTwoSortedArrays {
 	
 	//用于测试的函数

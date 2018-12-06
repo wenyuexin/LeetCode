@@ -8,10 +8,10 @@ package string;
  * 
  * No.5 Longest Palindromic Substring - 最长回文子串
  * 
- * Runtime: 29 ms, faster than 56.71%
+ * Runtime: 29 ms, faster than 56.71% of Java online submissions
  */
 
-public class LongestPalindromicSubstring {
+public class LongestPalindromicSubstring3 {
 	
 	/* 用于测试的函数 */
 	
@@ -90,7 +90,7 @@ public class LongestPalindromicSubstring {
         //System.out.println("当前JVM的默认字符集：" + Charset.defaultCharset()); 
         //System.out.println("asdf".substring(1,4));
 		
-		LongestPalindromicSubstring c = new LongestPalindromicSubstring();
+		LongestPalindromicSubstring3 c = new LongestPalindromicSubstring3();
 		//String s = "babad";
 		//String s = "cbbd";
 		//String s = "abcda";
