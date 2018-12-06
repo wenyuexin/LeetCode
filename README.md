@@ -7,8 +7,9 @@
 
 | Folder |	Description |
 | :--: | ---- |
-| src |	包含个人解题所写的java源文件 |
+| src |	包括个人解题所写的java源文件 |
 | solution | 附有leetcode上耗时较短的几个解法之一，仅供参考 |
+| problem | 内含对问题题干描述的md文件 |
 
 
 ## 2. Tag list  
