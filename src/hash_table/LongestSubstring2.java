@@ -1,6 +1,9 @@
 package hash_table;
 
-import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
+import java.util.Set;
 
 /** 
  * @author Apollo4634 
@@ -8,51 +11,53 @@ import java.util.HashMap;
  *
  * Tilte: Longest Substring Without Repeating Characters
  * 
- * Runtime: 24 ms, faster than 91.82% of Java online submissions
- * Runtime: 42 ms, faster than 43.79% of Java online submissions
- * Runtime: 34 ms, faster than 59.28% of Java online submissions
+ * Runtime: 179 ms 
+ * faster than 8.33% of Java online submissions for this.
  */
+
 
 public class LongestSubstring2 {
 	
 	public static int lengthOfLongestSubstring(String s) {
-		Integer one = Integer.valueOf(1);
-		Integer maxLen = Integer.valueOf(0);
-		Integer strLen = Integer.valueOf(0);
-		Integer idx_left = Integer.valueOf(0);
-		Integer idx_tmp = Integer.valueOf(0);
+		int maxLen = 0;
+		//if(1==s.length()) return 1;
 		
-		HashMap<Character,Integer> map = new HashMap<>();
+		LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+		Set<Character> set = map.keySet();
+		
 		for(int i=0; i<s.length(); i++) {
 			Character character = Character.valueOf(s.charAt(i));
 			Integer integer = Integer.valueOf(i);
 			
-			if (!map.containsKey(character)) { //判断char是否在keys中
-				strLen += one;
+			set = map.keySet();
+			if (!set.contains(character)) { //判断char是否在keys中, 如果不在
+				map.put(character,integer);
 			} else { //如果在
-				idx_tmp = map.get(character);
-				if(idx_tmp<idx_left) {
-					strLen += one;
-				} else {
-					strLen = integer - idx_tmp;
-					idx_left = idx_tmp + one;
+				if(maxLen<map.size()) maxLen = map.size();
+				Integer idx = map.get(character);
+				
+				Iterator<Entry<Character, Integer>> iter = map.entrySet().iterator(); 
+				while (iter.hasNext()) { //注意，不能再迭代的同时直接对集合类进行修改
+					Entry<Character, Integer> entry = iter.next();
+					iter.remove();
+					if(entry.getValue().equals(idx)) break;
 				}
+				map.put(character,integer);//更新map
+				System.out.println("test");
 			}
-			map.put(character,integer);//更新map				
-			if(maxLen<strLen) maxLen = strLen;
 		}
+		if(maxLen<map.size()) maxLen = map.size();
 		return maxLen;
     }
 	
 	
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		//String str = "bbbbb";
 		//String str = "abcabcbb";
 		//String str = "pwwkew";
 		//String str = "au";
 		//String str = "aab";
-		//String str = "a";
-		String str = "tmmzuxt";
+		String str = "a";
 		int len = LongestSubstring2.lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
