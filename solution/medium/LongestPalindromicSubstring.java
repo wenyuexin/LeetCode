@@ -1,5 +1,6 @@
 package medium;
 
+
 /** 
  * @author -
  * @creation 2018/12/08 22:12
@@ -14,24 +15,46 @@ public class LongestPalindromicSubstring {
 		if (len <= 1)
 			return s;
 		for (int i = 0; i < len; i++) {
-			i = helper(arr, i);
+			i = getNextCenterAndProcess(arr, i);
 		}
 		return s.substring(start, start + maxLength);
 	}
 
-	public int helper(char[] arr, int k) {
-		int i = k - 1, j = k;
-		while (j < len - 1 && arr[j] == arr[j + 1])
-			j++;
-		int nextCenter = j++;
-		while (i >= 0 && j < len && arr[i] == arr[j]) {
-			i--;
-			j++;
+	public int getNextCenterAndProcess(char[] arr, int ctr) {
+		int left = ctr - 1;
+		int right = ctr;
+		while (right < len - 1 && arr[right] == arr[right + 1]) {
+			right++;
 		}
-		if (j - i - 1 > maxLength) {
-			maxLength = j - i - 1;
-			start = i + 1;
+		int nextCenter = right++;
+		while(left >= 0 && right < len && arr[left] == arr[right]) {
+			left--;
+			right++;
+		}
+		if (right - left - 1 > maxLength) {
+			maxLength = right - left - 1;
+			start = left + 1;
 		}
 		return nextCenter;
+	}
+	
+	
+	public static void main(String[] args) {
+		//String s = "babad";
+		//String s = "cbbd";
+		//String s = "abcda";
+		//String s = "abcba";
+		//String s = "abcdaadcb";
+		//String s = "aaaabaaa";
+		//String s = "ac";
+		String s = "acdfghertysdarveartb";
+		
+		System.out.println("input:  "+s);
+		long t1 = System.nanoTime();
+		String str = new LongestPalindromicSubstring().longestPalindrome(s);
+		long t2 = System.nanoTime();
+		System.out.println("output: "+str);
+		System.out.printf("time: "+(t2-t1)/1.0E6+" ms");
+		
 	}
 }

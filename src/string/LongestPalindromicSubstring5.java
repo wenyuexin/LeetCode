@@ -6,11 +6,10 @@ package string;
  * @creation 2018/12/06 19:12
  * 
  * No.5 Longest Palindromic Substring
- * 
  * Runtime: 118 ms, faster than 19.16% of Java online submissions
  */
-
-/**
+ 
+ /**
  * 解题思路：
  * 和之前的解法差不多，区别在于：
  * 第一，预先将输入的字符串s反转为s2
