@@ -192,6 +192,6 @@ public class LongestPalindromicSubstring {
 		String str = c.longestPalindrome2(s);
 		long t2 = System.nanoTime();
 		System.out.println("output: "+str);
-		System.out.println("time:  "+(t2-t1)/1000.0);
+		System.out.println("time:  "+(t2-t1)/1.0E6+" ms");
 	}
 }
