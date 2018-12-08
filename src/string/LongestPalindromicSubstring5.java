@@ -7,56 +7,47 @@ package string;
  * 
  * No.5 Longest Palindromic Substring
  * 
+ * Runtime: 118 ms, faster than 19.16% of Java online submissions
  */
 
 /**
- * 新的解题思路：
+ * 解题思路：
+ * 和之前的解法差不多，区别在于：
+ * 第一，预先将输入的字符串s反转为s2
+ * 然后使用String类中的regionMatches方法比较子串，
+ * 而之前的方法是，使用自定义的for循环实现该功能
+ * 第二，按子串从长到短顺序比较，得到回文子串后直接退出搜索
  * 
- * 
- *
+ * 其实在个人主机上的运行时间不到0.1ms，运行部分testcase的
+ * 时间也就2ms以内，不知道为什么提交后的运行时间要那么长，无语
  */
+
 public class LongestPalindromicSubstring5 {
-	
-	//Functions for test
-	
-	//打印数组
-	static void print(int[] arr) { 
-		for (int i = 0; i < arr.length-1; i++) {
-			System.out.print(arr[i]+" ");
-		}
-		if(arr.length>0) {			
-			System.out.println(arr[arr.length-1]);
-		}
-	}
 	
 	//Solution
 	public String longestPalindrome(String s) {
 		int sLen = s.length();
 		if(sLen < 2) return s;
 		
-		int[] n_pair = new int[2*sLen-1];
-		int[] maxStrLen_half = new int[2*sLen-1];
+		String s2 = new StringBuilder(s).reverse().toString();
+		//System.out.println("reverse: "+s2);
 		
-		int[][] charArr = new int[256][sLen];
-		int[] nArr = new int[256];
+		String str = "";
+		int ooffset = 0;
+		int maxRange = 0;
 		
-		//int firstChar = s.charAt(0);
-		int ch = -1;
-		for (int i = 0; i < sLen; i++) {
-			ch = s.charAt(i);
-			charArr[ch][nArr[ch]] = i;
-			nArr[ch]++;
+		DoSearch:
+		for (int iLen = sLen; iLen>0; iLen--) {
+			maxRange = sLen-iLen;
+			for (int toffset = 0; toffset <= maxRange; toffset++) {
+				ooffset = maxRange - toffset;
+				if(s.regionMatches(toffset, s2, ooffset, iLen)) {
+					str = s.substring(toffset, toffset+iLen);
+					break DoSearch;
+				}
+			}
 		}
-		
-		for (int i = 0; i < 256; i++) {
-			
-		}
-		
-		
-		
-		
-		
-		return "";
+		return str;
 	}
 	
 	
@@ -66,14 +57,17 @@ public class LongestPalindromicSubstring5 {
 		//String s = "cbbd";
 		//String s = "abcda";
 		//String s = "abcba";
-		String s = "abcdaadcb";
+		//String s = "abcdaadcb";
 		//String s = "aaaabaaa";
 		//String s = "ac";
+		String s = "acdfghertysdarveartb";
+		
 		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
 		String str = palindrome.longestPalindrome(s);
 		long t2 = System.nanoTime();
 		System.out.println("output: "+str);
-		System.out.println("time:  "+(t2-t1)/1000.0+" ms");
+		System.out.printf("time: "+(t2-t1)/1.0E6+" ms");
+		
 	}
 }

@@ -54,7 +54,7 @@ package string;
  * 函数longestPalindrome2进行了修改，测试发现时间好像差不多。。。
  */
 
-public class LongestPalindromicSubstring4 {
+public class LongestPalindromicSubstring {
 	
 	//Functions for test
 	
@@ -179,7 +179,7 @@ public class LongestPalindromicSubstring4 {
 	}
 	
 	public static void main(String[] args) {
-		LongestPalindromicSubstring4 c = new LongestPalindromicSubstring4();
+		LongestPalindromicSubstring c = new LongestPalindromicSubstring();
 		//String s = "babad";
 		//String s = "cbbd";
 		//String s = "abcda";
