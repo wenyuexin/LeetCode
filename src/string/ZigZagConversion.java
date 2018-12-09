@@ -36,7 +36,6 @@ public class ZigZagConversion {
 				idx++;
 				lenStrArr[i_r]++;
 			}
-			
 			for(int i_r=numRows-2; i_r>0; i_r--) {
 				if(idx>sLen-1) break CONVERT;
 				strCharArr[i_r][lenStrArr[i_r]] = sCharArr[idx];
