@@ -15,6 +15,15 @@ package string;
  * Runtime: 41 ms, faster than 50.20% of Java online submissions 
  * Runtime: 47 ms, faster than 46.99% of Java online submissions
  * Runtime: 39 ms, faster than 51.42% of Java online submissions
+ * 
+ * 2018-12-09修改后的Solution2：
+ * Runtime: 18 ms, faster than 69.67% of Java online submissions
+ * Runtime: 15 ms, faster than 76.23% of Java online submissions
+ * Runtime: 15 ms, faster than 76.23% of Java online submissions
+ * Runtime: 13 ms, faster than 80.53% of Java online submissions
+ * Runtime: 22 ms, faster than 63.49% of Java online submissions
+ * 
+ * leetcode的Runtime不太准确，参考意义不大，下次就不标注了
  */
 
 /**
@@ -52,23 +61,14 @@ package string;
  * 第二，以两个相连字符中点为中心进行搜索
  * 函数longestPalindrome使用了过多的条件判断和数据类型的转型
  * 函数longestPalindrome2进行了修改，测试发现时间好像差不多。。。
+ * 
+ * 修改：
+ * 2018-12-09 基于上述方法，这里进一步将String转化为char[]后再处理
  */
 
 public class LongestPalindromicSubstring {
 	
-	//Functions for test
-	
-	//打印数组
-	static void print(int[] arr) { 
-		for (int i = 0; i < arr.length-1; i++) {
-			System.out.print(arr[i]+" ");
-		}
-		if(arr.length>0) {			
-			System.out.println(arr[arr.length-1]);
-		}
-	}
-	
-	//Solution
+	//Solution1
 	public String longestPalindrome(String s) {
 		int sLen = s.length();
 		if(sLen < 2) return s;
@@ -119,61 +119,51 @@ public class LongestPalindromicSubstring {
 		int sLen = s.length();
 		if(sLen < 2) return s;
 
+		char[] chArr = s.toCharArray();
 		int maxRange = -1;
 		int strLen_half = 0;
-		int i_char = -1;
-		char c1 = ' ';
-		char c2 = ' ';
+		String str = "";
+		int idx_left = -1;
 		
 		//以某个某个字符为中心进行搜索
-		int idx_StrCenter = 0;
 		int maxStrLen_half = 0;
 		for(int i_center=0; i_center<sLen; i_center++) {
 			strLen_half = 0;
 			maxRange = Math.min(i_center, sLen-i_center-1);
 			if(maxRange<=maxStrLen_half) continue;
+			if(chArr[i_center-maxStrLen_half]!=chArr[i_center+maxStrLen_half]) continue;
 			for(int i_range=0; i_range<maxRange; i_range++) {
-				i_char = (i_range<maxStrLen_half) ? (maxStrLen_half-i_range-1) : i_range;
-				c1 = s.charAt(i_center-i_char-1);
-				c2 = s.charAt(i_center+i_char+1);
-				if(c1!=c2) { break; }
+				if(chArr[i_center-i_range-1]!=chArr[i_center+i_range+1]) break;
 				strLen_half += 1;
 				if(maxStrLen_half<strLen_half) {
 					maxStrLen_half = strLen_half;
-					idx_StrCenter = i_center;
+					idx_left = i_center-maxStrLen_half;
 				}
 			}
 		}
+		if(maxStrLen_half==0) {
+			str = String.valueOf(chArr[0]);
+		} else {
+			str = s.substring(idx_left, idx_left+2*maxStrLen_half+1);
+		}
 		
 		//以两个相连字符中点为中心进行搜索
-		int idx_StrCenter2 = -1;
-		int maxStrLen2_half = 0;
 		for(int i_center=0; i_center<sLen-1; i_center++) {
 			strLen_half = 0;
 			maxRange = Math.min(i_center+1, sLen-i_center-1);
 			if(maxRange<=maxStrLen_half) continue;
+			if(chArr[i_center-maxStrLen_half]!=chArr[i_center+maxStrLen_half+1]) continue;
 			for(int i_range=0; i_range<maxRange; i_range++) {
-				i_char = (i_range<maxStrLen_half) ? (maxStrLen_half-i_range-1) : i_range;
-				c1 = s.charAt(i_center-i_char);
-				c2 = s.charAt(i_center+i_char+1);
-				if(c1!=c2) { break; }
+				if(chArr[i_center-i_range]!=chArr[i_center+i_range+1]) break;
 				strLen_half += 1;
-				if(maxStrLen2_half<strLen_half) {
-					maxStrLen2_half = strLen_half;
-					idx_StrCenter2 = i_center;
+				if(maxStrLen_half<strLen_half) {
+					maxStrLen_half = strLen_half;
+					idx_left = i_center-strLen_half+1; 
 				}
 			}
 		}
-		
-		//计算并返回最长回文子串
-		String str = "";
-		int idx_left = -1;
-		if(maxStrLen_half+0.5<maxStrLen2_half) {
-			idx_left = idx_StrCenter2-maxStrLen2_half+1; 
-			str = s.substring(idx_left, idx_left+2*maxStrLen2_half);	
-		} else {
-			idx_left = idx_StrCenter-maxStrLen_half; 
-			str = s.substring(idx_left, idx_left+2*maxStrLen_half+1);			
+		if(2*maxStrLen_half>str.length()) {
+			str = s.substring(idx_left, idx_left+2*maxStrLen_half);
 		}
 		return str;
 	}
@@ -184,9 +174,11 @@ public class LongestPalindromicSubstring {
 		//String s = "cbbd";
 		//String s = "abcda";
 		//String s = "abcba";
-		String s = "abcdaadcb";
+		//String s = "abcdaadcb";
 		//String s = "aaaabaaa";
 		//String s = "ac";
+		String s = "tattarrattat"; //"tattarrattat"
+		
 		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
 		String str = c.longestPalindrome2(s);
