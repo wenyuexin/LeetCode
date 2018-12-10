@@ -9,13 +9,13 @@ package string;
 
 /**
  * 解题思路：
- * 
- * 
- * 
+ * (参考problem文件夹中的0006_ZigZagConversion.md)
+ * 先将输入字符串s按Z字形排列得到二维字符数组strCharArr（忽略空格）
+ * 然后得到各行字符串s1 s2 s3 ... 最后拼接各行字符串得到结果str
  */
 
 
-public class ZigZagConversion {
+public class ZigZagConversion2 {
 	
 	//Solution1
 	public String convert(String s, int numRows) {		
@@ -59,7 +59,7 @@ public class ZigZagConversion {
 		int numRows = 1;
 		
 		long t1 = System.nanoTime();
-		String str = new ZigZagConversion().convert(s, numRows);
+		String str = new ZigZagConversion2().convert(s, numRows);
 		long t2 = System.nanoTime();
 		
 		System.out.println("intput: "+s);
