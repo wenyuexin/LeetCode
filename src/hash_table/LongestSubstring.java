@@ -7,10 +7,6 @@ import java.util.HashMap;
  * @creation 2018/11/26
  *
  * No.3 Longest Substring Without Repeating Characters
- * 
- * Runtime: 24 ms, faster than 91.82% of Java online submissions
- * Runtime: 42 ms, faster than 43.79% of Java online submissions
- * Runtime: 34 ms, faster than 59.28% of Java online submissions
  */
 
 public class LongestSubstring {

@@ -6,7 +6,6 @@ package string;
  * @creation 2018/12/06 19:12
  * 
  * No.5 Longest Palindromic Substring
- * Runtime: 118 ms, faster than 19.16% of Java online submissions
  */
 
 /**

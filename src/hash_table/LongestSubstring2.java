@@ -9,10 +9,7 @@ import java.util.Set;
  * @author Apollo4634 
  * @creation 2018/11/26
  *
- * Tilte: Longest Substring Without Repeating Characters
- * 
- * Runtime: 179 ms 
- * faster than 8.33% of Java online submissions for this.
+ * No.3 Longest Substring Without Repeating Characters
  */
 
 
