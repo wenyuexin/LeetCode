@@ -7,13 +7,14 @@ import java.util.Arrays;
  * @creation 2018/12/10 23:12
  * 
  * No.6 ZigZag Conversion
+ * 
+ * 施工中..
  */
 
 /**
  * 解题思路：
  * 直接获取坐标对应关系，然后循环复制各个字符
  * 
- * 没写完，施工中...
  */
 
 
@@ -32,13 +33,9 @@ public class ZigZagConversion3 {
 			if(nRemain2<2) {
 				Arrays.fill(strLenArr, 1, numRows-1, nGroup);
 			} else {
-				if(nRemain==nRemain2) { //nGroup是偶数
-					Arrays.fill(strLenArr, 1, nRemain, nGroup+1);
-					Arrays.fill(strLenArr, nRemain, numRows-1, nGroup);
-				} else {
-					Arrays.fill(strLenArr, 1, numRows-nRemain, nGroup);
-					Arrays.fill(strLenArr, numRows-nRemain, numRows-1, nGroup+1);
-				}
+				int offset = (nRemain==nRemain2)?nRemain:numRows-nRemain;
+				Arrays.fill(strLenArr, 1, offset, nGroup+1);
+				Arrays.fill(strLenArr, offset, numRows-1, nGroup);
 			}
 		}
 		
@@ -51,6 +48,8 @@ public class ZigZagConversion3 {
 	public String convert(String s, int numRows) {	
 		int sLen = s.length();
 		if(sLen<2 || numRows==1) return s;
+		int groupLen = numRows-1;
+		//int nRemain = sLen/groupLen;
 		char[] sCharArr = s.toCharArray();
 		char[] strCharArr = new char[sLen];
 		System.out.println("sLen: "+sLen+" , "+"numRows: "+numRows);
@@ -63,7 +62,13 @@ public class ZigZagConversion3 {
 		int idx = -1;
 		for (int i = 0; i < numRows; i++) {
 			for (int j = 0; j < strLenArr[i]; j++) {
-				idx = 0;
+				if(i==0) {
+					idx = 2*j*groupLen;
+				} else if(i==numRows-1) {
+					idx = (2*j+1)*groupLen;
+				} else {
+					idx = j*groupLen + ((j%2==0)?i:numRows-i-1);										
+				}
 				strCharArr[i_char] = sCharArr[idx];
 				i_char++;
 			}
@@ -73,10 +78,10 @@ public class ZigZagConversion3 {
 	
 	
 	public static void main(String[] args) {
-		//String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
+		String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
 		//String s = "PAYPALISHIRING"; //3 "PAHNAPLSIIGYIR"
-		String s = "123456789012345678"; 
-		int numRows = 4;
+		//String s = "123456789012345678"; 
+		int numRows = 3;
 		
 		long t1 = System.nanoTime();
 		String str = new ZigZagConversion3().convert(s, numRows);
