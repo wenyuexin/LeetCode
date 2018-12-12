@@ -53,10 +53,10 @@ public class ZigZagConversion2 {
 	
 	
 	public static void main(String[] args) {
-		//String s = "PAYPALISHIRING"; //nR=4, "PINALSIGYAHRPI"
+		String s = "PAYPALISHIRING"; //nR=4, "PINALSIGYAHRPI"
 		//String s = "PAYPALISHIRING"; //nR=3, "PAHNAPLSIIGYIR"
-		String s = "a"; 
-		int numRows = 1;
+		//String s = "a"; 
+		int numRows = 4;
 		
 		long t1 = System.nanoTime();
 		String str = new ZigZagConversion2().convert(s, numRows);
