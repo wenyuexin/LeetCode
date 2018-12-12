@@ -23,33 +23,28 @@ public class ZigZagConversion3 {
 	private int[] getStrLenArr(int sLen, int numRows) {
 		int groupLen = numRows-1;
 		int nGroup = sLen/groupLen;
-		//int nGroup2 = sLen/(2*groupLen);
-		int nRemain = sLen%groupLen;
-		
+		int nGroup2 = nGroup/2;
+		int nRemain2 = sLen%(2*groupLen);
+		int nRemain = nRemain2%groupLen;
 		int[] strLenArr = new int[numRows];
-		if(nGroup%2==0) {
-			if(nRemain<2) {
-				Arrays.fill(strLenArr, 0, numRows, nGroup);
+		
+		if(numRows>2) {
+			if(nRemain2<2) {
+				Arrays.fill(strLenArr, 1, numRows-1, nGroup);
 			} else {
-				Arrays.fill(strLenArr, 0, nRemain, nGroup+1);
-				Arrays.fill(strLenArr, nRemain, numRows, nGroup);
-			}
-		} else {
-			if(nRemain<2) {
-				Arrays.fill(strLenArr, 0, numRows, nGroup);
-			} else {
-				Arrays.fill(strLenArr, 0, numRows-nRemain, nGroup);
-				Arrays.fill(strLenArr, numRows-nRemain, numRows, nGroup);
+				if(nRemain==nRemain2) { //nGroup是偶数
+					Arrays.fill(strLenArr, 1, nRemain, nGroup+1);
+					Arrays.fill(strLenArr, nRemain, numRows-1, nGroup);
+				} else {
+					Arrays.fill(strLenArr, 1, numRows-nRemain, nGroup);
+					Arrays.fill(strLenArr, numRows-nRemain, numRows-1, nGroup+1);
+				}
 			}
 		}
 		
-		strLenArr[0] = (int) Math.ceil(sLen/(2.0*groupLen));
-		if(nGroup%2==1 && nRemain>0) {
-			strLenArr[numRows-1] = strLenArr[0] + 1;			
-		} else {
-			strLenArr[numRows-1] = strLenArr[0];
-		}
-
+		strLenArr[0] = nGroup2 + ((nRemain2>0)?1:0);
+		strLenArr[numRows-1] = nGroup2;			
+		if(nRemain<nRemain2 && nRemain2>groupLen) strLenArr[numRows-1]++;
 		return strLenArr;
 	}
 	
@@ -58,31 +53,30 @@ public class ZigZagConversion3 {
 		if(sLen<2 || numRows==1) return s;
 		char[] sCharArr = s.toCharArray();
 		char[] strCharArr = new char[sLen];
-		
-		System.out.println("test"+sLen);
-		
-		/*
-		int groupLen = numRows-1;
-		int nGroup = sLen/groupLen;
-		//int nGroup2 = sLen/(2*groupLen);
-		int nRemain = sLen%groupLen;
-		*/
+		System.out.println("sLen: "+sLen+" , "+"numRows: "+numRows);
 		
 		int[] strLenArr = getStrLenArr(sLen, numRows); 
-		Arrays.toString(strLenArr);
+		System.out.println("strLenArr: "+Arrays.toString(strLenArr));
 		
-		
-		String str = "";
-		
-		return str;
+		//String str = "";
+		int i_char = 0;
+		int idx = -1;
+		for (int i = 0; i < numRows; i++) {
+			for (int j = 0; j < strLenArr[i]; j++) {
+				idx = 0;
+				strCharArr[i_char] = sCharArr[idx];
+				i_char++;
+			}
+		}
+		return new String(strCharArr);
 	}
 	
 	
 	public static void main(String[] args) {
 		//String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
 		//String s = "PAYPALISHIRING"; //3 "PAHNAPLSIIGYIR"
-		String s = "123456789"; 
-		int numRows = 2;
+		String s = "123456789012345678"; 
+		int numRows = 4;
 		
 		long t1 = System.nanoTime();
 		String str = new ZigZagConversion3().convert(s, numRows);
