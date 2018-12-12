@@ -7,8 +7,6 @@ package string;
  * @creation 2018/12/05
  * 
  * No.5 Longest Palindromic Substring - 最长回文子串
- * 
- * Runtime: 29 ms, faster than 56.71% of Java online submissions
  */
 
 /**

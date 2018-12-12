@@ -5,8 +5,7 @@ package linked_list;
  * @author Apollo4634
  * @creation 2018/11/23
  * 
- * Runtime: 22 ms, 
- * faster than 94.06% of Java online submissions for this.
+ * No.2 Add Two Numbers
  */
 
 /**

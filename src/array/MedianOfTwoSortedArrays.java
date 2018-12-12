@@ -7,11 +7,6 @@ import java.util.Arrays;
  * @creation 2018/11/30
  * 
  * No.4 Median of Two Sorted Arrays
- * 
- * Runtime: 30 ms, faster than 87.36% of Java online submissions 
- * Runtime: 36 ms, faster than 58.84% of Java online submissions
- * Runtime: 32 ms, faster than 82.13% of Java online submissions
- * Runtime: 26 ms, faster than 97.84% of Java online submissions
  */
 
 /**

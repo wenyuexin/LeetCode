@@ -6,24 +6,6 @@ package string;
  * @creation 2018/12/06
  * 
  * No.5 Longest Palindromic Substring - 最长回文子串
- * 
- * Solution1
- * Runtime: 39 ms, faster than 51.42% of Java online submissions
- * Runtime: 27 ms, faster than 58.78% of Java online submissions
- * 
- * Solution2
- * Runtime: 41 ms, faster than 50.20% of Java online submissions 
- * Runtime: 47 ms, faster than 46.99% of Java online submissions
- * Runtime: 39 ms, faster than 51.42% of Java online submissions
- * 
- * 2018-12-09修改后的Solution2：
- * Runtime: 18 ms, faster than 69.67% of Java online submissions
- * Runtime: 15 ms, faster than 76.23% of Java online submissions
- * Runtime: 15 ms, faster than 76.23% of Java online submissions
- * Runtime: 13 ms, faster than 80.53% of Java online submissions
- * Runtime: 22 ms, faster than 63.49% of Java online submissions
- * 
- * leetcode的Runtime不太准确，参考意义不大，下次就不标注了
  */
 
 /**
