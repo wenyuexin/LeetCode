@@ -92,6 +92,5 @@ public class ZigZagConversion3 {
 		System.out.println(str.equals("PINALSIGYAHRPI"));
 		System.out.println(str.equals("PAHNAPLSIIGYIR"));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
-		
 	}
 }
