@@ -7,9 +7,7 @@ package string;
  * @creation 2018/12/09 16:12
  * 
  * No.6 ZigZag Conversion
- */
-
-/**
+ *
  * 解题思路：
  * (参考problem文件夹中的0006_ZigZagConversion.md)
  * 先将输入字符串s按Z字形排列得到二维字符数组strCharArr（忽略空格）
