@@ -57,12 +57,10 @@ public class ZigZagConversion {
 	
 	//Solution2 - Recommendation
 	//2018-12-14 01:02
-	public String convert2(String s, int numRows) {	
-		//long t1 = System.nanoTime();
+	public String convert2(String s, int numRows) {
 		int sLen = s.length();
 		if(numRows==1 || sLen==0 || sLen<numRows) return s;
 		
-		//long t2 = System.nanoTime();
 		int groupLen = numRows-1;
 		int nGroup = sLen/groupLen;
 		int nRemain = sLen%groupLen;	
@@ -70,7 +68,6 @@ public class ZigZagConversion {
 		char[][] strCharArr = new char[numRows][nGroup+((nRemain>0)?1:0)];
 		int[] lenStrArr = new int[numRows]; //各行子串的长度
 		
-		//long t3 = System.nanoTime();
 		int idx = 0; //i_Group*groupLen;
 		for (int i_Group=0; i_Group<nGroup; i_Group++) {
 			if(i_Group%2==0) {
@@ -84,7 +81,6 @@ public class ZigZagConversion {
 			}
 		}
 		
-		//long t4 = System.nanoTime();
 		if(nRemain>0) {
 			if(nGroup%2==0) {
 				for(int i_r=0; i_r<nRemain; i_r++) {
@@ -98,25 +94,12 @@ public class ZigZagConversion {
 		}
 		//System.out.println(Arrays.deepToString(strCharArr));
 		
-		//long t5 = System.nanoTime();
 		int destPos = 0;
 		char[] strCharArr2 = new char[sLen];
 		for (int i = 0; i < numRows; i++) {
 			System.arraycopy(strCharArr[i],0,strCharArr2,destPos,lenStrArr[i]);
 			destPos += lenStrArr[i];
 		}
-		
-		/*
-		long t6 = System.nanoTime();
-		System.out.println("Rumtime12: "+(t2-t1)/1.0E6+" ms");
-		System.out.println("Rumtime23: "+(t3-t2)/1.0E6+" ms");
-		System.out.println("Rumtime34: "+(t4-t3)/1.0E6+" ms");
-		System.out.println("Rumtime45: "+(t5-t4)/1.0E6+" ms");
-		System.out.println("Rumtime56: "+(t6-t5)/1.0E6+" ms");
-		long t7 = System.nanoTime();
-		System.out.println("Rumtime67: "+(t7-t6)/1.0E6+" ms");
-		System.out.println("Rumtime16: "+(t6-t1)/1.0E6+" ms");
-		*/
 		return new String(strCharArr2);
 	}
 	
