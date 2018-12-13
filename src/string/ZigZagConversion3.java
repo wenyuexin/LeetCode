@@ -30,12 +30,16 @@ public class ZigZagConversion3 {
 		int[] strLenArr = new int[numRows];
 		
 		if(numRows>2) {
-			if(nRemain2<2) {
+			if(nRemain<2 || nRemain2<2) {
 				Arrays.fill(strLenArr, 1, numRows-1, nGroup);
 			} else {
-				int offset = (nRemain==nRemain2)?nRemain:numRows-nRemain;
-				Arrays.fill(strLenArr, 1, offset, nGroup+1);
-				Arrays.fill(strLenArr, offset, numRows-1, nGroup);
+				if(nRemain==nRemain2) {
+					Arrays.fill(strLenArr, 1, nRemain, nGroup+1);
+					Arrays.fill(strLenArr, nRemain, numRows-1, nGroup);					
+				} else {
+					Arrays.fill(strLenArr, 1, numRows-nRemain, nGroup+1);
+					Arrays.fill(strLenArr, numRows-nRemain, numRows-1, nGroup);	
+				}
 			}
 		}
 		
@@ -62,6 +66,12 @@ public class ZigZagConversion3 {
 		int idx = -1;
 		for (int i = 0; i < numRows; i++) {
 			for (int j = 0; j < strLenArr[i]; j++) {
+				System.out.println("i="+i+", j="+j);
+				
+				if(i==1 && j==1) {
+					System.out.println("test");
+				}
+				
 				if(i==0) {
 					idx = 2*j*groupLen;
 				} else if(i==numRows-1) {
@@ -78,10 +88,11 @@ public class ZigZagConversion3 {
 	
 	
 	public static void main(String[] args) {
-		String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
+		//String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
 		//String s = "PAYPALISHIRING"; //3 "PAHNAPLSIIGYIR"
 		//String s = "123456789012345678"; 
-		int numRows = 3;
+		String s = "12345"; 
+		int numRows = 4;
 		
 		long t1 = System.nanoTime();
 		String str = new ZigZagConversion3().convert(s, numRows);
