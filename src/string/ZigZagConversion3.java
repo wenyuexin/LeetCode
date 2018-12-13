@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 /**
  * 解题思路：
- * (参考problem文件夹中的0006_ZigZagConversion.md)
+ * 参考problem文件夹中的0006_ZigZagConversion.md
  * 
  * 首先，输入s对应的字符数组是 char[] sCharArr = s.toCharArray()
  * 输出str对应的字符数组 char[] strCharArr = new char[sLen]
