@@ -56,6 +56,44 @@ public class ZigZagConversion2 {
 		return new String(strCharArr2);
 	}
 	
+	//Solution2
+	public String convert2(String s, int numRows) {		
+		int sLen = s.length();
+		if(numRows==1 || sLen==0) return s;
+		
+		int groupLen = numRows-1;
+		double nGroup_tmp = Math.ceil(1.0*sLen/groupLen);
+		char[] sCharArr = s.toCharArray();
+		char[][] strCharArr = new char[numRows][(int)nGroup_tmp];
+		int[] lenStrArr = new int[numRows]; //各行子串的长度
+		
+		int nGroup = nGroup_tmp;
+		
+		CONVERT:
+		for (int i_Group=0; i_Group<nGroup; i_Group++) {
+			int idx = i_Group*groupLen;
+			for(int i_r=0; i_r<numRows; i_r++) {
+				if(idx>sLen-1) break CONVERT;
+				strCharArr[i_r][lenStrArr[i_r]] = sCharArr[idx];
+				idx++;
+				lenStrArr[i_r]++;
+			}
+			for(int i_r=numRows-2; i_r>0; i_r--) {
+				if(idx>sLen-1) break CONVERT;
+				strCharArr[i_r][lenStrArr[i_r]] = sCharArr[idx];
+				idx++;
+				lenStrArr[i_r]++;
+			}
+		}
+		
+		int destPos = 0;
+		char[] strCharArr2 = new char[sLen];
+		for (int i = 0; i < numRows; i++) {
+			System.arraycopy(strCharArr[i],0,strCharArr2,destPos,lenStrArr[i]);
+			destPos += lenStrArr[i];
+		}
+		return new String(strCharArr2);
+	}
 	
 	public static void main(String[] args) {
 		String s = "PAYPALISHIRING"; //nR=4, "PINALSIGYAHRPI"

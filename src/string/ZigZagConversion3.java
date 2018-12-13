@@ -8,13 +8,19 @@ import java.util.Arrays;
  * 
  * No.6 ZigZag Conversion
  * 
- * 施工中..
+ * Rumtime: 0.035602 ms
  */
 
 /**
  * 解题思路：
- * 直接获取坐标对应关系，然后循环复制各个字符
+ * (参考problem文件夹中的0006_ZigZagConversion.md)
  * 
+ * 首先，输入s对应的字符数组是 char[] sCharArr = s.toCharArray()
+ * 输出str对应的字符数组 char[] strCharArr = new char[sLen]
+ * 
+ * 先计算各行子串s1 s2 s3...的长度数组strLenArr，
+ * 然后使用2层for循环，依次对各行子串进行遍历，
+ * 依次将各个字符复制到strCharArr中，最后返回new String(strCharArr)
  */
 
 
@@ -27,8 +33,8 @@ public class ZigZagConversion3 {
 		int nGroup2 = nGroup/2;
 		int nRemain2 = sLen%(2*groupLen);
 		int nRemain = nRemain2%groupLen;
-		int[] strLenArr = new int[numRows];
 		
+		int[] strLenArr = new int[numRows];
 		if(numRows>2) {
 			if(nRemain<2 || nRemain2<2) {
 				Arrays.fill(strLenArr, 1, numRows-1, nGroup);
@@ -37,8 +43,8 @@ public class ZigZagConversion3 {
 					Arrays.fill(strLenArr, 1, nRemain, nGroup+1);
 					Arrays.fill(strLenArr, nRemain, numRows-1, nGroup);					
 				} else {
-					Arrays.fill(strLenArr, 1, numRows-nRemain, nGroup+1);
-					Arrays.fill(strLenArr, numRows-nRemain, numRows-1, nGroup);	
+					Arrays.fill(strLenArr, 1, numRows-nRemain, nGroup);
+					Arrays.fill(strLenArr, numRows-nRemain, numRows-1, nGroup+1);	
 				}
 			}
 		}
@@ -53,45 +59,41 @@ public class ZigZagConversion3 {
 		int sLen = s.length();
 		if(sLen<2 || numRows==1) return s;
 		int groupLen = numRows-1;
-		//int nRemain = sLen/groupLen;
 		char[] sCharArr = s.toCharArray();
 		char[] strCharArr = new char[sLen];
-		System.out.println("sLen: "+sLen+" , "+"numRows: "+numRows);
-		
 		int[] strLenArr = getStrLenArr(sLen, numRows); 
-		System.out.println("strLenArr: "+Arrays.toString(strLenArr));
 		
-		//String str = "";
 		int i_char = 0;
 		int idx = -1;
-		for (int i = 0; i < numRows; i++) {
-			for (int j = 0; j < strLenArr[i]; j++) {
-				System.out.println("i="+i+", j="+j);
-				
-				if(i==1 && j==1) {
-					System.out.println("test");
+		int groupLen2 = 2*groupLen;
+		
+		for (int i_Group = 0; i_Group < strLenArr[0]; i_Group++) {
+			idx = i_Group*groupLen2;
+			strCharArr[i_char++] = sCharArr[idx];
+		}
+		
+		if(numRows>2) {
+			for (int i_row = 1; i_row < groupLen; i_row++) {
+				for (int i_Group = 0; i_Group < strLenArr[i_row]; i_Group++) {
+					idx = i_Group*groupLen + ((i_Group%2==0)?i_row:groupLen-i_row);
+					strCharArr[i_char++] = sCharArr[idx];
 				}
-				
-				if(i==0) {
-					idx = 2*j*groupLen;
-				} else if(i==numRows-1) {
-					idx = (2*j+1)*groupLen;
-				} else {
-					idx = j*groupLen + ((j%2==0)?i:numRows-i-1);										
-				}
-				strCharArr[i_char] = sCharArr[idx];
-				i_char++;
-			}
+			}	
+		}
+		
+		for (int i_Group = 0; i_Group < strLenArr[groupLen]; i_Group++) {
+			idx = (2*i_Group+1)*groupLen;
+			strCharArr[i_char++] = sCharArr[idx];
 		}
 		return new String(strCharArr);
 	}
 	
 	
 	public static void main(String[] args) {
-		//String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
+		String s = "PAYPALISHIRING"; //4 "PINALSIGYAHRPI"
 		//String s = "PAYPALISHIRING"; //3 "PAHNAPLSIIGYIR"
 		//String s = "123456789012345678"; 
-		String s = "12345"; 
+		//String s = "12345"; 
 		int numRows = 4;
 		
 		long t1 = System.nanoTime();
