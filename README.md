@@ -1,6 +1,6 @@
 # LeetCode
 
-```争取把所有leetcode的题都解完，部分题可能有多种解法```  
+争取把所有leetcode的题都解完，部分题可能有多种解法
 
 
 ## 1. Folder description  
