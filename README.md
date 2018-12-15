@@ -52,6 +52,6 @@
 | 34 | [Random](https://github.com/Apollo4634/LeetCode/blob/master/src/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
 | 35 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/blob/master/src/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
 
-**Note: **
+**Note:**  
 
 Click tag to jump to the corresponding markdown file, through which you can find the problem you want.

@@ -15,7 +15,7 @@ If no valid conversion could be performed, a zero value is returned.
 **Note:**
 
 - Only the space character `' '` is considered as whitespace character.
-- Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. If the numerical value is out of the range of representable values, INT_MAX (231 − 1) or INT_MIN (−231) is returned.
+- Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. If the numerical value is out of the range of representable values, INT_MAX (2 ^31 − 1) or INT_MIN (−2^31) is returned.
 
 **Example 1:**
 
@@ -56,7 +56,7 @@ Explanation: The first non-whitespace character is 'w', which is not a numerical
 Input: "-91283472332"
 Output: -2147483648
 Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
-             Thefore INT_MIN (−231) is returned.
+             Thefore INT_MIN (−2^31) is returned.
 ```
 
 **Java**
