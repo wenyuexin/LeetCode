@@ -10,7 +10,7 @@ package math;
  * 
  */
 
-public class StringToInteger {
+public class StringToInteger2 {
 	
 	public int myAtoi(String str) {
 		String s = str.strip();
@@ -29,21 +29,28 @@ public class StringToInteger {
 		}
 		
 		char[] charArr = s.toCharArray();
-		char[] numCharArr = new char[10];
-
-		int sgn = 0;
+		//char[] numCharArr = new char[10];
+		
+		int nDigit = 0; //数字个数
+		int sgn = 0; //符号位
 		if(charArr[0]=='-') {
 			sgn = -1;
 		} else if (charArr[0]=='+') {
 			sgn = 1;
+			nDigit++;
 		} else if (Character.isDigit(charArr[0])) {
 			sgn = 1;
+			nDigit++;
 		}
-
-
-		int nDigit = 0;
-		for (int i = 0; i < charArr.length; i++) {
-
+		
+		if(sgn==0) return 0;
+		if(Character.isDigit(charArr[nDigit+10])) return 0;
+		for (int i = nDigit; i < nDigit+10; i++) {
+			if (Character.isDigit(charArr[i])) {
+				nDigit++;
+			} else {
+				
+			}
 		}
 			
 		
@@ -54,7 +61,7 @@ public class StringToInteger {
 		String str = "  +13 ";
 		
 		System.out.println("".isBlank());
-		System.out.println(Character.isDigit('-'));
+		System.out.println(Character.isDigit('0'));
 		
 		//int num = new StringToInteger().myAtoi(str);
 		
