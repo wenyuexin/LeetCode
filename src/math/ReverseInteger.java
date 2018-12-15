@@ -33,9 +33,9 @@ public class ReverseInteger {
 			digit = num%10;
 			num /= 10;
 			xRev += digit*tenPow[nDigit-i-1];
+			if(xRev>Integer.MAX_VALUE) return 0;
 		}
 		
-		if(xRev>Integer.MAX_VALUE) return 0;
 		if(x<0) xRev=-xRev;
 		return (int) xRev;
 	}
