@@ -10,6 +10,9 @@ package math;
  * 先将x转换为正数，计算数x的总位数nDigit，然后使用取余和整数除法，
  * 由低位到高位依次取各个位上的值，乘以对应的位权，转换后叠加到xRev，
  * 如果xRev的值在int取值范围内，则输出转换后的值
+ * 
+ * 其他：
+ * 大部分写法都比较麻烦，日常码代码推荐ReverseInteger2中的solution1
  */
 
 public class ReverseInteger {
@@ -18,7 +21,7 @@ public class ReverseInteger {
 	public int reverse(int x) {
 		if(x==Integer.MIN_VALUE) return 0;
 		
-		int num = (x>0)?x:-1*x;
+		int num = (x>0)?x:-x;
 		int nDigit = (int)Math.log10(num) + 1;
 		if(nDigit>10) return 0;
 		
@@ -33,7 +36,7 @@ public class ReverseInteger {
 		}
 		
 		if(xRev>Integer.MAX_VALUE) return 0;
-		if(x<0) xRev*=-1;
+		if(x<0) xRev=-xRev;
 		return (int) xRev;
 	}
 	
