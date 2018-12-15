@@ -32,7 +32,7 @@ public class ReverseInteger2 {
 		int sLen = s.length();
 		char[] sCharArr = s.toCharArray();
 		char ch;
-		for (int i = 0; i < sLen/2; i++) {
+		for (int i = (sLen>>1)-1; i >= 0; i--) {
 			ch = sCharArr[i];
 			sCharArr[i] = sCharArr[sLen-i-1];
 			sCharArr[sLen-i-1] = ch;
