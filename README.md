@@ -8,7 +8,7 @@
 | Folder |	Description |
 | :--: | ---- |
 | src |	包括个人解题所写的java源文件 |
-| solution | 附有leetcode上耗时较短的几个解法之一，仅供参考 |
+| solution | 附有leetcode提供的参考解法或者耗时较短的解法 |
 | problem | 内含对问题题干描述的md文件 |
 
 
@@ -52,4 +52,6 @@
 | 34 | [Random](https://github.com/Apollo4634/LeetCode/blob/master/src/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
 | 35 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/blob/master/src/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
 
-Note: Click tag to jump to the corresponding markdown file, through which you can find the problem you want.
+**Note: **
+
+Click tag to jump to the corresponding markdown file, through which you can find the problem you want.
