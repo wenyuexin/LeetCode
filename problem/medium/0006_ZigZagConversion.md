@@ -47,7 +47,7 @@ class Solution {
 }
 ```
 
-**Note**  
+**My Note**  
 ​        本题要求将字符串转变为Z字形排列的若干字符，然后根据从新排列的字符获取规定的字符串，相当于字符串的变形。例如，对于 `s = "PAYPALISHIRING"，numRows = 4  `  
 
 | row\col | 1 | 2 | 3 | 4 | 5 | 6 | 7 |  |
