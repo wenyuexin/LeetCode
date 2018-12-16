@@ -12,60 +12,109 @@ package math;
 
 public class StringToInteger2 {
 	
+	//Solution1
 	public int myAtoi(String str) {
-		String s = str.strip();
-		//int sLen = s.length();
-		if(str.isBlank()) return 0;
-		
-		long num = 0; 
-		try {
-			num = Long.parseLong(s);
-			if(num<Integer.MIN_VALUE || num>Integer.MAX_VALUE) {
-				return 0;
-			} else {
-				return (int) num;
-			}
-		} catch (Exception e) {
-		}
-		
+		//String s = str.strip(); //strip() since Java 11
+		String s = str.trim();
+		int sLen = s.length();
+		//if(s.isBlank()) return 0; //isBlank() since Java 11
+		if(sLen==0) return 0;
 		char[] charArr = s.toCharArray();
-		//char[] numCharArr = new char[10];
 		
-		int nDigit = 0; //数字个数
+		int left = 0;
 		int sgn = 0; //符号位
 		if(charArr[0]=='-') {
 			sgn = -1;
+			left++;
 		} else if (charArr[0]=='+') {
 			sgn = 1;
-			nDigit++;
+			left++;
 		} else if (Character.isDigit(charArr[0])) {
 			sgn = 1;
-			nDigit++;
 		}
 		
 		if(sgn==0) return 0;
-		if(Character.isDigit(charArr[nDigit+10])) return 0;
-		for (int i = nDigit; i < nDigit+10; i++) {
-			if (Character.isDigit(charArr[i])) {
-				nDigit++;
-			} else {
-				
-			}
+		for (int i = left; i < charArr.length; i++) {
+			if(charArr[i]!='0') break;
+			left++;
 		}
-			
 		
-		return 0;
+		int right = left;
+		int end = (left+11<sLen)? left+11:sLen;
+		for (int i = left; i < end; i++) {
+			if (!Character.isDigit(charArr[i])) break;
+			right++;
+		}
+		
+		if(right-left==0) return 0;
+		long num = sgn*Long.parseLong(s.substring(left, right));
+		if(num<Integer.MIN_VALUE) return Integer.MIN_VALUE;
+		if(num>Integer.MAX_VALUE) return Integer.MAX_VALUE;
+		return (int) num;
     }
 
+	
+	//Solution2 - 施工中
+	public int myAtoi2(String str) {
+		int strLen = str.length();
+		if(strLen==0) return 0;
+		char[] charArr = str.toCharArray();
+
+		int left = 0;
+		int sgn = 1; //符号位
+		for (int i = left; i < charArr.length; i++) {
+			if(charArr[i]==' ' || charArr[i]=='0') {
+				left++;
+			} else {
+				if(charArr[left]=='-') {
+					sgn = -1;
+					left++;
+				} else if (charArr[left]=='+') {
+					left++;
+				} else if (!Character.isDigit(charArr[left])) {
+					return 0;
+				}
+				break;
+			}
+		}
+
+		int right = left;
+		int end = (left+11<strLen)? left+11:strLen;
+		for (int i = left; i < end; i++) {
+			if (!Character.isDigit(charArr[i])) break;
+			right++;
+		}
+
+		if(right-left==0) return 0;
+		long num = sgn*Long.parseLong(str.substring(left, right));
+		if(num<Integer.MIN_VALUE) return Integer.MIN_VALUE;
+		if(num>Integer.MAX_VALUE) return Integer.MAX_VALUE;
+		return (int) num;
+	}
+	
+	
 	public static void main(String[] args) {
-		String str = "  +13 ";
+		//String str = "  -13 ";
+		String str = "   -42";
+		//String str = "  1 ";
+		//String str = "  1b ";
+		//String str = "  a1b ";
+		//String str = "  -1 ";
+		//String str = "  -123456789 ";
+		//String str = "  + ";
+		//String str = "-91283472332";
+		//String str = "  0000000000012345678";
+		//String str = "20000000000000000000 ";
+		//String str = "  0000000000012345678";
 		
-		System.out.println("".isBlank());
-		System.out.println(Character.isDigit('0'));
+		long t1 = System.nanoTime();
+		int num = new StringToInteger2().myAtoi2(str);
+		long t2 = System.nanoTime();
 		
-		//int num = new StringToInteger().myAtoi(str);
+		System.out.println("intput: \""+str+"\"");
+		System.out.println("output: "+num);
+		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 		
-		//System.out.println(isNumeric("1234657890"));
-		
+		//System.out.println(System.getProperty("java.version"));
 	}
 }
