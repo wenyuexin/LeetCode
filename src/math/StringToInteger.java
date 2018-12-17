@@ -73,7 +73,7 @@ public class StringToInteger {
     }
 
 	
-	//Solution2
+	//Solution2 - Recommendation
 	public int myAtoi2(String str) {
 		int strLen = str.length();
 		if(strLen==0) return 0;
