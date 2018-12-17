@@ -5,12 +5,17 @@ package math;
  * @creation 2018/12/16 17:12
  * 
  * No.9 Palindrome Number
+ * 
+ * 解题思路：
+ * 先将数字转变为字符串，然后将字符串反转，最后对比两个字符串是否相同
  */
 
 public class PalindromeNumber2 {
 	
 	//Solution1
 	public boolean isPalindrome(int x) {
+		if(x<0) return false;
+		if(x<10) return true;
 		String xStr = String.valueOf(x);
 		String xStrRev = new StringBuilder(xStr).reverse().toString();
 		return xStr.equals(xStrRev);
