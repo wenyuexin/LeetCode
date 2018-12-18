@@ -22,11 +22,13 @@ public class PalindromeNumber3 {
 		int n2 = x%((int)tenPow[nChar_h2]);
 		
 		int digit = 0;
+		int n2Rev = 0;
 		for (int i = 0; i < nChar_h2; i++) {
-			digit = n1%10;
-			n1 = n1/10 + (int) (digit*tenPow[nChar_h2-1]);
+			digit = n2%10;
+			n2 /= 10;
+			n2Rev += (int) (digit*tenPow[nChar_h2-i-1]);
 		}
-		return n1==n2;
+		return n1==n2Rev;
 	}
 	
 
