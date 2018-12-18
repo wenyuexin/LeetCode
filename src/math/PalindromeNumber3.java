@@ -9,7 +9,7 @@ package math;
 
 public class PalindromeNumber3 {
 
-	//Solution - 施工中
+	//Solution
 	public boolean isPalindrome(int x) {
 		if(x<0) return false;
 		if(x<10) return true;
@@ -17,14 +17,15 @@ public class PalindromeNumber3 {
 
 		int nChar = (int) Math.log10(x)+1;
 		if(nChar==2) return x%10==x/10;
+		if(nChar==3) return x%10==x/100;		
 		if(nChar==10 && x%10>2) return false;
 		
 		int nChar_h1 = (int) (nChar/2.0+0.5);
 		int nChar_h2 = nChar/2;
 		int tenPow_1 = (int) Math.pow(10, nChar_h1);
-		int tenPow_2 = (nChar_h1==nChar_h2)?tenPow_1:tenPow_1/10;
+		int tenPow_2 = (nChar_h1==nChar_h2)?tenPow_1/10:tenPow_1/100;
 		int n1 = x/tenPow_1;
-		int n2 = x%tenPow_2;
+		int n2 = x;
 
 		int digit1 = 0;
 		int digit2 = 0;
