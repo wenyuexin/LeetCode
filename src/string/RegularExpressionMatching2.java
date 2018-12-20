@@ -1,5 +1,6 @@
 package string;
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 
@@ -18,30 +19,49 @@ public class RegularExpressionMatching2 {
 	}
 	
 	//Solution2 - 施工中
+	/*
 	private int[] pfilter(String p) {
+		int pLen = p.length();
 		char[] pCharArr = p.toCharArray();
-		int containStar = 0;
-		int containDot = 0;
+		char[] pCharArr2 = new char[pLen];
 		int containDotStar = 0;
+		
+		
 		boolean afterDotStar = false;
-		for (int i = 0; i < pCharArr.length; i++) {
-			if(afterDotStar) {
+		for (int i = 0; i < pLen; i++) {
+			if(afterDotStar ) {
+				if(pCharArr[i]!='.') afterDotStar = false;
+				if(i+1<pLen && pCharArr[i]!='*') ;
 				
 			} else {
-				if(pCharArr[i]=='.') containDot++;
 				if(pCharArr[i]=='*') {
-					containStar++;
 					if(pCharArr[i-1]=='.') {
 						containDotStar++;
-						containDot--;
-						containStar--;
 						afterDotStar = true;
 					}
 				}	
 			}
 		}
 		
-		return new int[] {containStar, containDot, containDotStar};
+		return new int[] {containDotStar};
+	}
+	*/
+	
+	private String pFilter(String p) {
+		char[] pCharArr = p.toCharArray();
+		
+		
+		boolean dotFlag = false;
+		for (int i = 0; i < pCharArr.length; i++) {
+			if(pCharArr[i]=='.') {
+				dotFlag = true;
+			} else if (dotFlag && pCharArr[i]=='*') {
+				
+			}
+			
+		}
+		
+		return "";
 	}
 	
 	public boolean isMatch2(String s, String p) {
@@ -73,5 +93,8 @@ public class RegularExpressionMatching2 {
 		System.out.println("output: "+flag);
 		System.out.println("output: "+Pattern.matches(p, s));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		
+		String[] ss = new String("o.*asdf.*ww").split(".*");
+		System.out.println(Arrays.toString(ss));
 	}
 }
