@@ -12,7 +12,6 @@ import java.util.Set;
  * No.3 Longest Substring Without Repeating Characters
  */
 
-
 public class LongestSubstring2 {
 	
 	public int lengthOfLongestSubstring(String s) {
