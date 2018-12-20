@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class LongestSubstring2 {
 	
-	public static int lengthOfLongestSubstring(String s) {
+	public int lengthOfLongestSubstring(String s) {
 		int maxLen = 0;
 		//if(1==s.length()) return 1;
 		
@@ -55,7 +55,7 @@ public class LongestSubstring2 {
 		//String str = "au";
 		//String str = "aab";
 		String str = "a";
-		int len = LongestSubstring2.lengthOfLongestSubstring(str);
+		int len = new LongestSubstring2().lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
 }
