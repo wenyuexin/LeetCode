@@ -47,21 +47,29 @@ public class RegularExpressionMatching2 {
 	}
 	*/
 	
-	private String pFilter(String p) {
-		char[] pCharArr = p.toCharArray();
+	private static int[] pFilter(String p) {
+		int pLen = p.length();
+		if(pLen<2) return new int[] {};
+		int[] idxArr = new int[pLen/2];
+		int nIdx = 0;
 		
-		
-		boolean dotFlag = false;
-		for (int i = 0; i < pCharArr.length; i++) {
-			if(pCharArr[i]=='.') {
-				dotFlag = true;
-			} else if (dotFlag && pCharArr[i]=='*') {
-				
+		int idx = -1;
+		int fromIndex = 0;
+		while (fromIndex<pLen) {
+			idx = p.indexOf(".*",fromIndex);
+			if(idx==-1) break;
+			if(nIdx==0 || (nIdx>0 && idx-idxArr[nIdx-1]>2)) {
+				idxArr[nIdx] = idx;
+				fromIndex = idx+2; 
+				nIdx++;
 			}
-			
+			if(nIdx>0 && idx-idxArr[nIdx-1]>2) {
+				fromIndex = idx+2;
+			} else {
+				fromIndex++;
+			}
 		}
-		
-		return "";
+		return Arrays.copyOfRange(idxArr,0,nIdx);
 	}
 	
 	public boolean isMatch2(String s, String p) {
@@ -82,7 +90,7 @@ public class RegularExpressionMatching2 {
 	
 	public static void main(String[] args) {
 		String s = "I am noob " + "from runoob.com.";
-		String p = ".*runoob.*";
+		String p = ".*run.*.*oob.*";
 
 		long t1 = System.nanoTime();
 		boolean flag = new RegularExpressionMatching2().isMatch2(s,p);
@@ -94,7 +102,9 @@ public class RegularExpressionMatching2 {
 		System.out.println("output: "+Pattern.matches(p, s));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 		
-		String[] ss = new String("o.*asdf.*ww").split(".*");
-		System.out.println(Arrays.toString(ss));
+		//String[] ss = new String("o.*asdf.*ww").split(".*");
+		System.out.println(Arrays.toString(RegularExpressionMatching2.pFilter(p)));
+		
+		
 	}
 }
