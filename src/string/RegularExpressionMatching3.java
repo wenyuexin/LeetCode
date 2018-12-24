@@ -10,33 +10,6 @@ import java.util.regex.Pattern;
 
 public class RegularExpressionMatching3 {
 	//Solution2 - 施工中
-	/*
-		private int[] pfilter(String p) {
-			int pLen = p.length();
-			char[] pCharArr = p.toCharArray();
-			char[] pCharArr2 = new char[pLen];
-			int containDotStar = 0;
-
-
-			boolean afterDotStar = false;
-			for (int i = 0; i < pLen; i++) {
-				if(afterDotStar ) {
-					if(pCharArr[i]!='.') afterDotStar = false;
-					if(i+1<pLen && pCharArr[i]!='*') ;
-
-				} else {
-					if(pCharArr[i]=='*') {
-						if(pCharArr[i-1]=='.') {
-							containDotStar++;
-							afterDotStar = true;
-						}
-					}	
-				}
-			}
-
-			return new int[] {containDotStar};
-		}
-	 */
 
 	private static int[] pFilter(String p) {
 		int pLen = p.length();
@@ -62,21 +35,21 @@ public class RegularExpressionMatching3 {
 		}
 		return Arrays.copyOfRange(idxArr,0,nIdx);
 	}
-
+	
+	
 	public boolean isMatch(String s, String p) {
 		if(p.equals(".*")) return true;
-		if(s.equals("") && (p.equals(".") || p.equals(".*")));
+		if(s.equals("") && (p.equals(".") || p.equals(".*"))) return true;
 		char[] sCharArr = s.toCharArray();
-		char[] pCharArr = p.toCharArray();
+		//char[] pCharArr = p.toCharArray();
 
-
+		String p2 = p.replaceAll("\\.\\**", " ");
+		
 		
 
-		for (int i = 0; i < pCharArr.length; i++) {
-
-		}
-
-		return Pattern.matches(p, s);
+		
+		return true;
+		//return Pattern.matches(p, s);
 	}
 
 	public static void main(String[] args) {
