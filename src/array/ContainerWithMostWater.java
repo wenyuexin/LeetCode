@@ -1,6 +1,5 @@
 package array;
 
-
 /** 
  * @author Apollo4634 
  * @creation 2018/12/25 00:12
@@ -68,6 +67,5 @@ public class ContainerWithMostWater {
 		
 		System.out.println("output: "+maxValue);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
-		
 	}
 }
