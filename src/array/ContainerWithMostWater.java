@@ -11,6 +11,15 @@ package array;
  * 假设容器左右两端的下标分别为i和j，那么容器的容量area为
  * area = (j-i)*min(height[i], height[j])
  * 因此，只要遍历可能出现的(i,j)组合即可
+ * 
+ * Solution1:
+ * 限制了i和j的关系，要求j>i
+ * 
+ * Solution2:
+ * 在方法1的基础上进一步收缩遍历范围，对于固定的i，
+ * 可知容器的宽度至少要大于等于width = max/height[i] -1
+ * 因此j的取值范围是i+width至height.length-1，
+ * 如果(i+width)>(height.length-1)则直接跳过当前的i而直接i++
  */
 
 public class ContainerWithMostWater {
@@ -34,16 +43,16 @@ public class ContainerWithMostWater {
 		int area = (hLen-1)*Math.min(height[0], height[hLen-1]);
 		if(hLen==2) return area;
 			
-		int max = 0; //最大容量
+		int max = area; //最大容量
 		int width = 0;
 		for (int i = 0; i < hLen-2; i++) {
 			if(height[i]==0) continue;
-			width = area/height[i]-1;
+			width = max/height[i]-1;
 			for (int j = hLen-1; j > i+width; j--) {
 				area = (j-i)*Math.min(height[i],height[j]);
 				if(area>max) {
 					max = area;
-					width = area/height[i]-1;
+					width = max/height[i]-1;
 				}
 			}
 		}
