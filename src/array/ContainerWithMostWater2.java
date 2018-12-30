@@ -14,6 +14,8 @@ package array;
 public class ContainerWithMostWater2 {
 
 	//Solution - 施工中
+	//private int calcArea(int[] height, int idx1, int idx2) {}
+	
 	public int maxArea(int[] height) {
 		int hLen = height.length;
 		int left = 0;
@@ -36,7 +38,12 @@ public class ContainerWithMostWater2 {
 					i++; continue;
 				} else if(height[left+i]>minHeight && height[right-i]>minHeight) {
 					if(leftIsLarger) {
-
+						int area1 = i*Math.min(height[left],height[left+i]);
+						int area2 = (right-left-i)*Math.min(height[left],height[right-i]);
+						
+						if (area1>area2) {
+							
+						}
 					}
 
 				} else {
