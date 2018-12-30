@@ -20,39 +20,51 @@ public class ContainerWithMostWater2 {
 		int right = hLen - 1;
 
 		int i = 0;
-		int j = 0;
+		boolean leftIsLarger = true;
 		int maxAreaValue = 0;
-		int area = (right-left)*Math.min(height[right],height[left]);
+		int minHeight = 0;
+		int area = 0;
 		while (right-left>0) {
-			int maxHeight = Math.max(height[right],height[left]);
+			leftIsLarger = (height[left]>=height[right]);
+			minHeight = (leftIsLarger?height[right]:height[left]);
+			area = (right-left)*minHeight;
+			if(area>maxAreaValue) maxAreaValue = area;
 
-			i=0; j=0;
-			while(left+i<right-j) {
-				if(height[left+i]<maxHeight) {
-					i++;
+			i=0;
+			while(left+i<=right-i) {
+				if(height[left+i]<=minHeight && height[right-i]<=minHeight) {
+					i++; continue;
+				} else if(height[left+i]>minHeight && height[right-i]>minHeight) {
+					if(leftIsLarger) {
+
+					}
+
 				} else {
+					//施工中...
+					if(height[left+i]>minHeight) {
+
+					}
+
+					if(height[right-i]>minHeight) {
+
+					}
+
 					area = (right-left-i)*Math.min(height[left+i],height[right]);
 					if(area>maxAreaValue) {
 						maxAreaValue = area;
 						left = left+i;
-						maxHeight = height[left+i];
+						minHeight = height[left+i];
 						break;
 					}
-				}
 
-				if(height[right-j]<maxHeight) {
-					j++;
-				} else {
-					area = (right-left-j)*Math.min(height[left],height[right-j]);
+					area = (right-left-i)*Math.min(height[left],height[right-i]);
 					if(area>maxAreaValue) {
 						maxAreaValue = area;
-						right = right-j;
-						maxHeight = height[right-j];
+						right = right-i;
+						minHeight = height[right-i];
 						break;
 					}
 				}
-
-
 			}
 		}
 		return maxAreaValue;
