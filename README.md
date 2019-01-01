@@ -1,8 +1,8 @@
 # LeetCode
 
+* 基于Java的leetcode解题记录
 * **Jdk version:** Jdk 11  ，  **IDE:** Eclipse
-* 争取把所有leetcode的题都解完，部分题可能有多种解法。
-* 每个题的解法都是个人独立思考得出，求解结束后才参考他人的方法。
+* 争取把所有leetcode的题都解完，部分题可能有多种解法
 
 ## 1. Folder description  
 
