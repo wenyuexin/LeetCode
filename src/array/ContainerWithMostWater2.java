@@ -7,82 +7,146 @@ package array;
  * No.11 Container With Most Water
  * 
  * 解题思路：
+ * 一个容器或者说一个区间包含左右两个端点，
+ * 只要确定了左右端点就能得到一个容量，因此可以正在按以下思路思考：
+ * 先将左端点left设为0，右端点right设为height.length-1，
+ * 只要找到一种规则，当满足该规则时端点能向中间收缩即可。
  * 
+ * 暂时没有想出具体方法，但有几点可以作为参考：
+ * 第一，如果要将left更新为left+i，那么新端点处的height值要更大；
+ * 第二，在上一点基础上，可以尝试将面积增大作为端点收缩的参考
  * 
+ * 程序施工中... 2019-01-01
  */
 
 public class ContainerWithMostWater2 {
 
-	//Solution - 施工中
-	//private int calcArea(int[] height, int idx1, int idx2) {}
-	
+	//Solution - 施工中 - 此方法的解题思路有问题
 	public int maxArea(int[] height) {
 		int hLen = height.length;
+		if(hLen==2) return Math.min(height[0], height[1]);
 		int left = 0;
 		int right = hLen - 1;
 
-		int i = 0;
-		boolean leftIsLarger = true;
+		int i = 1;
+		int j = 1;
 		int maxAreaValue = 0;
-		int minHeight = 0;
-		int area = 0;
+		int areaL = 0;
+		int areaL_tmp = 0;
+		int areaR = 0;
+		int areaR_tmp = 0;
 		while (right-left>0) {
-			leftIsLarger = (height[left]>=height[right]);
-			minHeight = (leftIsLarger?height[right]:height[left]);
-			area = (right-left)*minHeight;
-			if(area>maxAreaValue) maxAreaValue = area;
+			areaL = (right-left)*Math.min(height[left],height[right]);
+			areaR = areaL;
+			if(areaL>maxAreaValue) maxAreaValue = areaL;
 
-			i=0;
-			while(left+i<=right-i) {
-				if(height[left+i]<=minHeight && height[right-i]<=minHeight) {
-					i++; continue;
-				} else if(height[left+i]>minHeight && height[right-i]>minHeight) {
-					if(leftIsLarger) {
-						int area1 = i*Math.min(height[left],height[left+i]);
-						int area2 = (right-left-i)*Math.min(height[left],height[right-i]);
-						
-						if (area1>area2) {
-							
-						}
-					}
-
+			while(left+i<right-j) {
+				//左端
+				if(height[left]>=height[left+i]) {
+					i++;
 				} else {
-					//施工中...
-					if(height[left+i]>minHeight) {
-
-					}
-
-					if(height[right-i]>minHeight) {
-
-					}
-
-					area = (right-left-i)*Math.min(height[left+i],height[right]);
-					if(area>maxAreaValue) {
-						maxAreaValue = area;
+					areaL_tmp = (right-left-i)*Math.min(height[left+i], height[right]);
+					if(areaL_tmp>areaL) {
 						left = left+i;
-						minHeight = height[left+i];
-						break;
+						i = 1;
+						areaL = areaL_tmp;
+						if(areaL>maxAreaValue) maxAreaValue = areaL;
+					} else {
+						i++;
 					}
+				}
 
-					area = (right-left-i)*Math.min(height[left],height[right-i]);
-					if(area>maxAreaValue) {
-						maxAreaValue = area;
-						right = right-i;
-						minHeight = height[right-i];
-						break;
+				//右端
+				if(height[right]>=height[right-j]) {
+					j++;
+				} else {
+					areaR_tmp = (right-left-j)*Math.min(height[left],height[right-j]);
+					if(areaR_tmp>areaR) {
+						right = right-j;
+						j = 1;
+						areaR = areaR_tmp;
+						if(areaR>maxAreaValue) maxAreaValue = areaR;
+					} else {
+						j++;
 					}
 				}
 			}
+			if(left+i>=right-j) break;
+		}
+		return maxAreaValue;
+	}
+
+
+	//Solution2 - 施工中
+	public int maxArea2(int[] height) {
+		int hLen = height.length;
+		if(hLen==2) return Math.min(height[0], height[1]);
+		int left = 0;
+		int right = hLen - 1;
+
+		int i = 1;
+		int j = 1;
+		int maxAreaValue = 0;
+		int areaL = 0;
+		int areaL_tmp = 0;
+		int areaR = 0;
+		int areaR_tmp = 0;
+		while (right-left>0) {
+			areaL = (right-left)*Math.min(height[left],height[right]);
+			areaR = areaL;
+			if(areaL>maxAreaValue) maxAreaValue = areaL;
+
+			System.out.println("left "+left+"  i "+i+"  right "+right+"  j "+j+
+					"  maxAreaValue "+maxAreaValue);
+			
+			while(left+i<right-j) {
+				//左端
+				if(height[left]>=height[left+i]) {
+					i++;
+				} else {
+					areaL_tmp = (right-left-i)*Math.min(height[left+i], height[right]);
+					if(areaL_tmp>maxAreaValue) {
+						left = left+i;
+						i = 1;
+						maxAreaValue = areaL_tmp;
+						//if(areaL>maxAreaValue) maxAreaValue = areaL;
+						break;
+					} else {
+						i++;
+					}
+				}
+
+				//右端
+				if(height[right]>=height[right-j]) {
+					j++;
+				} else {
+					areaR_tmp = (right-left-j)*Math.min(height[left],height[right-j]);
+					if(areaR_tmp>maxAreaValue) {
+						right = right-j;
+						j = 1;
+						maxAreaValue = areaR_tmp;
+						//if(areaR>maxAreaValue) maxAreaValue = areaR;
+						break;
+					} else {
+						j++;
+					}
+				}
+			}
+			System.out.println("left "+left+"  i "+i+"  right "+right+"  j "+j+
+					"  maxAreaValue "+maxAreaValue);
+			
+			if(left+i>=right-j) break;
 		}
 		return maxAreaValue;
 	}
 
 
 	public static void main(String[] args) {
-		int[] height = {1,8,6,2,5,4,8,3,7};
+		//int[] height = {1,8,6,2,5,4,8,3,7}; //49
+		int[] height = {2,3,4,5,18,17,6}; //17
 
 		long t1 = System.nanoTime();
-		int maxValue = new ContainerWithMostWater().maxArea2(height);
+		int maxValue = new ContainerWithMostWater2().maxArea2(height);
 		long t2 = System.nanoTime();
 
 		System.out.println("output: "+maxValue);
