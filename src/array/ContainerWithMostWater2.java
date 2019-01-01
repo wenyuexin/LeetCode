@@ -21,7 +21,7 @@ package array;
 
 public class ContainerWithMostWater2 {
 
-	//Solution - 施工中 - 此方法的解题思路有问题
+	//Solution - 此方法的解题思路有问题
 	public int maxArea(int[] height) {
 		int hLen = height.length;
 		if(hLen==2) return Math.min(height[0], height[1]);
