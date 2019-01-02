@@ -77,7 +77,7 @@ public class ContainerWithMostWater2 {
 	}
 
 
-	//Solution2 - 施工中
+	//Solution2 - 施工中 - 估计这种左右同时收缩的方法不对
 	public int maxArea2(int[] height) {
 		int hLen = height.length;
 		if(hLen==2) return Math.min(height[0], height[1]);
@@ -89,11 +89,11 @@ public class ContainerWithMostWater2 {
 		int maxAreaValue = 0;
 		int areaL = 0;
 		int areaL_tmp = 0;
-		int areaR = 0;
+		//int areaR = 0;
 		int areaR_tmp = 0;
 		while (right-left>0) {
 			areaL = (right-left)*Math.min(height[left],height[right]);
-			areaR = areaL;
+			//areaR = areaL;
 			if(areaL>maxAreaValue) maxAreaValue = areaL;
 
 			System.out.println("left "+left+"  i "+i+"  right "+right+"  j "+j+
