@@ -1,5 +1,7 @@
 package math;
 
+import java.util.Arrays;
+
 import array.ContainerWithMostWater2;
 
 /** 
@@ -18,7 +20,7 @@ import array.ContainerWithMostWater2;
  * C 100  D 500  M 1000
  */
 
-public class IntegerToRoman2 {
+public class IntegerToRoman {
 
 	private static int[] basicValue = new int[] {
 			1,4,5,9,10,40,50,90,100,400,500,900,1000};
@@ -74,8 +76,8 @@ public class IntegerToRoman2 {
 		} else if (residual<=100) {
 			idx = 8;
 		}
-
-		StringBuilder sb = new StringBuilder();
+		
+		StringBuilder sb = new StringBuilder(20);
 		while(residual>0) {
 			if(residual>=basicValue[idx]) {
 				residual -= basicValue[idx];
@@ -89,11 +91,12 @@ public class IntegerToRoman2 {
 	
 
 	public static void main(String[] args) {
-		//int num = 3999; //MMMCMXCIX
-		int num = 3; //III
+		int num = 3999; //MMMCMXCIX
+		//int num = 1000; //MMMCMXCIX
+		//int num = 3; //III
 
 		long t1 = System.nanoTime();
-		String romanStr = new IntegerToRoman2().intToRoman3(num);
+		String romanStr = new IntegerToRoman().intToRoman3(num);
 		long t2 = System.nanoTime();
 
 		System.out.println("input: "+num);
