@@ -1,9 +1,5 @@
 package math;
 
-import java.util.Arrays;
-
-import array.ContainerWithMostWater2;
-
 /** 
  * @author Apollo4634 
  * @creation 2019/01/01 17:01
@@ -11,9 +7,7 @@ import array.ContainerWithMostWater2;
  * No.12 Integer to Roman
  * 
  * 解题思路：
- * 感觉可以借鉴贪心算法的思想
- * 
- * 施工中... 2019-01-02
+ * 借鉴贪心算法的思想
  * 
  * 参考：
  * I 1    V 5    X 10    L 50
@@ -92,7 +86,7 @@ public class IntegerToRoman {
 
 	public static void main(String[] args) {
 		int num = 3999; //MMMCMXCIX
-		//int num = 1000; //MMMCMXCIX
+		//int num = 1000; //M
 		//int num = 3; //III
 
 		long t1 = System.nanoTime();
