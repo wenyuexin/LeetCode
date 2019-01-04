@@ -1,4 +1,4 @@
-package medium;
+package linked_list;
 
 /**
  * @author -

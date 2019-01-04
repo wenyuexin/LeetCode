@@ -1,4 +1,4 @@
-# 4. Median of Two Sorted Arrays [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/MedianOfTwoSortedArrays.java)]
+# 4. Median of Two Sorted Arrays [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/MedianOfTwoSortedArrays.java)]
 
 ```Hard, Array, Binary Search, Divide and Conquer```
 

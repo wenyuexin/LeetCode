@@ -1,4 +1,4 @@
-package medium;
+package hash_table;
 
 
 /** 
