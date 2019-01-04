@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * No.10 Regular Expression Matching
  */
 
-public class RegularExpressionMatching2 {
+public class RegularExpressionMatching {
 
 	//Solution
 	public boolean isMatch(String s, String p) {
@@ -23,7 +23,7 @@ public class RegularExpressionMatching2 {
 		String p = ".*sdf.*.*oop.*";
 
 		long t1 = System.nanoTime();
-		boolean flag = new RegularExpressionMatching2().isMatch(s,p);
+		boolean flag = new RegularExpressionMatching().isMatch(s,p);
 		long t2 = System.nanoTime();
 		
 		System.out.println("intput: s -> \""+s+"\"");

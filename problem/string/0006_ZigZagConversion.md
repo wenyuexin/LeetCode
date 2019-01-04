@@ -1,4 +1,4 @@
-# 6. ZigZag Conversion [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/string/ZigZagConversion.java)]
+# 6. ZigZag Conversion [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/ZigZagConversion.java)]
 
 ```Medium, String```
 
