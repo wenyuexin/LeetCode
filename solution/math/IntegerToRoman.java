@@ -6,12 +6,12 @@ package math;
  * 
  * No.12 Integer to Roman
  * 
+ * 参考：
+ * I 1, V 5, X 10, L 50, C 100, D 500, M 1000
+ * 
  * 解题思路：
  * 借鉴贪心算法的思想
  * 
- * 参考：
- * I 1    V 5    X 10    L 50
- * C 100  D 500  M 1000
  */
 
 public class IntegerToRoman {
@@ -85,6 +85,7 @@ public class IntegerToRoman {
 	
 
 	public static void main(String[] args) {
+		//输入数字的范围是 1 至 3999
 		int num = 3999; //MMMCMXCIX
 		//int num = 1000; //M
 		//int num = 3; //III
