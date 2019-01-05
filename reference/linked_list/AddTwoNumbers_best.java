@@ -1,28 +1,19 @@
-package linked_list_2;
+package linked_list;
 
-import linked_list.ListNode;
 
 /**
  * @author -
  * @creation 2018/12/04
  */
 
-class ListNode {
-	int val;
-	ListNode next;
-	ListNode(int x) { val = x; }
-}
+public class AddTwoNumbers_best {
 
-public class AddTwoNumbers {
-	/**
-	 * Definition for singly-linked list.
-	 * public class ListNode {
-	 *     int val;
-	 *     ListNode next;
-	 *     ListNode(int x) { val = x; }
-	 * }
-	 */
-
+	private class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) { val = x; }
+	}
+	
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode dummyHead = new ListNode(0);
 		ListNode p = l1, q = l2, curr = dummyHead;
@@ -42,5 +33,5 @@ public class AddTwoNumbers {
 		}
 		return dummyHead.next;
 	}
-
 }
+

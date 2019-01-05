@@ -1,13 +1,12 @@
-package hash_table_2;
-
+package hash_table;
 
 /** 
  * @author -
  * @creation 2018/12/08 22:12
  */
 
-public class LongestPalindromicSubstring {
-	int len = 0, maxLength = 0, start = 0;
+public class LongestPalindromicSubstring_best {
+ 	int len = 0, maxLength = 0, start = 0;
 
 	public String longestPalindrome(String s) {
 		char[] arr = s.toCharArray();
@@ -19,7 +18,7 @@ public class LongestPalindromicSubstring {
 		}
 		return s.substring(start, start + maxLength);
 	}
-
+	
 	public int getNextCenterAndProcess(char[] arr, int ctr) {
 		int left = ctr - 1;
 		int right = ctr;
@@ -37,8 +36,8 @@ public class LongestPalindromicSubstring {
 		}
 		return nextCenter;
 	}
-	
-	
+
+
 	public static void main(String[] args) {
 		//String s = "babad";
 		//String s = "cbbd";
@@ -51,10 +50,10 @@ public class LongestPalindromicSubstring {
 		
 		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
-		String str = new LongestPalindromicSubstring().longestPalindrome(s);
+		String str = new LongestPalindromicSubstring_best().longestPalindrome(s);
 		long t2 = System.nanoTime();
 		System.out.println("output: "+str);
 		System.out.printf("time: "+(t2-t1)/1.0E6+" ms");
-		
 	}
 }
+

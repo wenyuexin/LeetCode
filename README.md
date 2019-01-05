@@ -9,13 +9,13 @@
 | Folder |	Description |
 | :--: | ---- |
 | solution |	包括个人解题所写的java源文件  <br>Including java source files written by myself |
+| problem |	内含对问题题干描述的md文件  <br>Including markdown files containing description of leetcode problems |
 | reference | 附有leetcode提供的参考解法或者耗时较短的解法  <br>Including reference solutions provided by leetcode |
-| problem | 内含对问题题干描述的md文件  <br>Including markdown files containing description of leetcode problems |
 
 
 ## 2. Tag list  
 
-| No. | Tag | Solution folder | Problem folder |
+| # | Tag | Solution folder | Problem folder |
 | :----: | :---- | :----: | :----: |
 | 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) |
 | 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/blob/master/solution/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) |

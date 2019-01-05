@@ -1,7 +1,7 @@
-package math_2;
+package math;
 
 /** 
- * @author Apollo4634 
+ * @author - 
  * @creation 2018/12/15 16:12
  * 
  * No.7 Reverse Integer
@@ -12,7 +12,8 @@ package math_2;
  * We want to repeatedly "pop" the last digit off of xx and 
  * "push" it to the back of the rev. 
  * In the end, rev will be the reverse of the xx.
- * To "pop" and "push" digits without the help of some auxiliary stack/array, we can use math.
+ * To "pop" and "push" digits without the help of some auxiliary stack/array, 
+ * we can use math.
  * 
  * //pop operation:
  * pop = x % 10;
@@ -23,20 +24,20 @@ package math_2;
  * rev = temp;
  */
 
-public class ReverseInteger {
+public class ReverseInteger_best {
 	
 	public int reverse(int x) {
-        int rev = 0;
-        while (x != 0) {
-            int pop = x % 10;
-            x /= 10;
-            if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
-            if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
-            rev = rev * 10 + pop;
-        }
-        return rev;
-    }
-	
+	    int rev = 0;
+	    while (x != 0) {
+	        int pop = x % 10;
+	        x /= 10;
+	        if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+	        if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+	        rev = rev * 10 + pop;
+	    }
+	    return rev;
+	}
+
 	
 	public static void main(String[] args) {
 		//int x = 1534236469;
@@ -46,11 +47,12 @@ public class ReverseInteger {
 		int x = 1234560412;
 		
 		long t1 = System.nanoTime();
-		int xRev = new ReverseInteger().reverse(x);
+		int xRev = new ReverseInteger_best().reverse(x);
 		long t2 = System.nanoTime();
-
+	
 		System.out.println("intput: "+x);
 		System.out.println("output: "+xRev);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
+

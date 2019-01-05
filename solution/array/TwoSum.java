@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 //import java.util.Arrays;
 
 /** 
@@ -8,7 +10,10 @@ package array;
  * 
  * N0.1 Two Sum
  */
+
 public class TwoSum {
+	
+	//Solution
 	public int[] twoSum(int[] nums, int target) {
 		int[] indices = {-1,-1};
 		//Arrays.sort(nums,0,nums.length);
@@ -22,20 +27,18 @@ public class TwoSum {
         return indices;
     }
 	
+	
 	public static void main(String[] args) {
 		int target = 0;
-		
 		int[] nums = {-3,4,3,90};
-		for(int n: nums) {
-			System.out.print(n+" ");
-		}
-		System.out.println();
 		
+		long t1 = System.nanoTime();
 		int[] indices = new TwoSum().twoSum(nums, target); 
+		long t2 = System.nanoTime();
 		
-		for(int n: indices) {
-			System.out.print(n+" ");
-		}
-		System.out.println();
+		System.out.println("nums:   "+Arrays.toString(nums));
+		System.out.println("target: "+target);
+		System.out.println("output: "+Arrays.toString(indices));
+		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
