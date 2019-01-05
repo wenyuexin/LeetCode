@@ -1,11 +1,6 @@
+package math;
 
-
-
-
-
-
-```java
-public class RomanToInteger {
+public class RomanToInteger_best {
  	public static int romanToInt(String s) {
          int num = 0;
          int n = s.length();
@@ -42,7 +37,7 @@ public class RomanToInteger {
     	//String s = "III"; //3
     
     	long t1 = System.nanoTime();
-    	int num = RomanToInteger.romanToInt(s);
+    	int num = RomanToInteger_best.romanToInt(s);
     	long t2 = System.nanoTime();
     
     	System.out.println("input: "+s);
@@ -50,4 +45,4 @@ public class RomanToInteger {
     	System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
     }
 }
-```
+

@@ -11,8 +11,10 @@ import java.util.Arrays;
  * 
  * No.1 Two Sum
  */
+
 public class TwoSum2 {
 	
+	//Solution
 	public int[] twoSum(int[] nums, int target) {
 		int[] indices = {-1,-1};
 
@@ -36,38 +38,29 @@ public class TwoSum2 {
         return indices;
     }
 	
+	//Solution2 - 基于排序的方法过于耗时，未完
 	public int[] twoSum2(int[] nums, int target) {
 		int[] indices = {-1,-1};
 		
 		int[] arr = nums.clone();
 		Arrays.sort(arr);
-		//排序过于耗时，此法不可行
+		//...
 		
 		return indices;
-	}
-	
-	
-	
-	//Print the array
-	static void print(int[] nums) {
-		for(int n: nums) {
-			System.out.print(n+" ");
-		}
-		System.out.println();
 	}
 	
 	
 	public static void main(String[] args) {
 		int target = 1;
 		int[] nums = {-3,4,3,90};
-		TwoSum2.print(nums);
-		System.out.println("target: "+target);
 		
 		long t1 = System.nanoTime();
 		int[] indices = new TwoSum2().twoSum2(nums, target); 
 		long t2 = System.nanoTime();
 		
-		System.out.println("time_main: "+(t2-t1)/1000);
-		TwoSum2.print(indices);
+		System.out.println("nums:   "+Arrays.toString(nums));
+		System.out.println("target: "+target);
+		System.out.println("output: "+Arrays.toString(indices));
+		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

@@ -40,15 +40,7 @@ import java.util.Arrays;
 
 public class MedianOfTwoSortedArrays {
 	
-	//用于测试的函数
-	static void print(String s, int[] arr) {
-		System.out.print(s);
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+" ");
-		}
-		System.out.println();
-	}
-	
+	//for test
 	static double getMedian(int[] nums1, int[] nums2) {
 		double median = 0;
 
@@ -59,14 +51,13 @@ public class MedianOfTwoSortedArrays {
 		}
 		Arrays.sort(arr);
 		
-		MedianOfTwoSortedArrays.print("arr: ",arr);
 		median = arr[(int) Math.floor((arr.length-1)/2.0)];
 		median += arr[(int) Math.ceil((arr.length-1)/2.0)];
 		median /= 2.0;
 		return median;
 	}
 	
-	//Answer
+	//Solution
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 		double median = 0;
 		int len1 = nums1.length;
@@ -166,17 +157,14 @@ public class MedianOfTwoSortedArrays {
 	public static void main(String[] args) {
 		int[] nums1 = new int[] {1};
 		int[] nums2 = new int[] {2,3};
-		MedianOfTwoSortedArrays m = new MedianOfTwoSortedArrays();
-		double median = m.findMedianSortedArrays(nums1, nums2);
+		MedianOfTwoSortedArrays obj = new MedianOfTwoSortedArrays();
+		double median = obj.findMedianSortedArrays(nums1, nums2);
 		
-		MedianOfTwoSortedArrays.print("nums1: ",nums1);
-		MedianOfTwoSortedArrays.print("nums2: ",nums2);
-		System.out.println("median: "+
-				MedianOfTwoSortedArrays.getMedian(nums1, nums2));
+		System.out.println("nums1: "+Arrays.toString(nums1));
+		System.out.println("nums2: "+Arrays.toString(nums2));
+		
+		double median2 = MedianOfTwoSortedArrays.getMedian(nums1, nums2);
 		System.out.println("median: "+median);
-		
-		//MedianOfTwoSortedArrays.print(nums1);
-		//MedianOfTwoSortedArrays.print(nums2);
+		System.out.println("median: "+median2);
 	}
-	
 }

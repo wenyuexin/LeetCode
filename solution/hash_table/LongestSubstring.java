@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 public class LongestSubstring {
 	
+	//Solution
 	public int lengthOfLongestSubstring(String s) {
 		Integer one = Integer.valueOf(1);
 		Integer maxLen = Integer.valueOf(0);
@@ -49,7 +50,9 @@ public class LongestSubstring {
 		//String str = "aab";
 		//String str = "a";
 		String str = "tmmzuxt";
-		int len = new LongestSubstring().lengthOfLongestSubstring(str);
+		
+		LongestSubstring obj = new LongestSubstring();
+		int len = obj.lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
 }

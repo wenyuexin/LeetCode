@@ -1,7 +1,5 @@
 package math;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /** 
  * @author Apollo4634 
@@ -19,13 +17,6 @@ import java.util.Map;
  */
 
 public class RomanToInteger {
-
-	/*
-	private static int[] basicValue = new int[] {
-			1,4,5,9,10,40,50,90,100,400,500,900,1000};
-	private static String[] basicSymbolArr = new String[] {
-			"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
-	 */
 
 	//Solution
 	public int romanToInt(String s) {
