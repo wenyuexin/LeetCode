@@ -1,4 +1,4 @@
-package hash_table;
+package hash_table_2;
 
 
 /** 

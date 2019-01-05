@@ -1,6 +1,8 @@
-package array;
+package array_2;
 
 import java.util.Arrays;
+
+import array.MedianOfTwoSortedArrays;
 
 /**
  * @author -
