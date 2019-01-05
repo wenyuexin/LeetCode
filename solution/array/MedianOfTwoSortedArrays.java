@@ -2,8 +2,6 @@ package array;
 
 import java.util.Arrays;
 
-import array_2.MedianOfTwoSortedArrays;
-
 /**
  * @author Apollo4634
  * @creation 2018/11/30

@@ -6,6 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="solution"/>
-	<classpathentry kind="src" path="reference"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

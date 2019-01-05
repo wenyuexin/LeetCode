@@ -1,19 +1,17 @@
+
+
+```java
 package array_2;
 
 import java.util.Arrays;
-
-import array.MedianOfTwoSortedArrays;
 
 /**
  * @author -
  * @creation 2018/11/30
  * 
  * No.4 Median of Two Sorted Arrays
- * 
- * Best answer
- * Runtime: 23 ms
  */
-
+ 
 public class MedianOfTwoSortedArrays {
 	
 	//用于测试的函数
@@ -27,7 +25,7 @@ public class MedianOfTwoSortedArrays {
 	
 	static double getMedian(int[] nums1, int[] nums2) {
 		double median = 0;
-
+	
 		int newLength = nums1.length+nums2.length;
 		int[] arr = Arrays.copyOf(nums1, newLength);
 		for(int i=0; i<nums2.length; i++) {
@@ -71,7 +69,7 @@ public class MedianOfTwoSortedArrays {
 			return ((double) merge[len/2] + (double) merge[len/2-1] )/2;
 		}
 	}
-	
+
 	
 	public static void main(String[] args) {
 		int[] nums1 = new int[] {1};
@@ -88,5 +86,6 @@ public class MedianOfTwoSortedArrays {
 		//MedianOfTwoSortedArrays.print(nums1);
 		//MedianOfTwoSortedArrays.print(nums2);
 	}
-	
 }
+
+```

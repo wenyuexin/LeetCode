@@ -1,7 +1,5 @@
 package linked_list;
 
-import linked_list_2.AddTwoNumbers;
-import linked_list_2.ListNode;
 
 /**
  * @author Apollo4634
