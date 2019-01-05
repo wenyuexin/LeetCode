@@ -1,5 +1,8 @@
 package math;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /** 
  * @author Apollo4634 
  * @creation 2019/01/04 23:01
@@ -15,7 +18,7 @@ package math;
  * 
  */
 
-public class RomanToInteger2 {
+public class RomanToInteger {
 
 	/*
 	private static int[] basicValue = new int[] {
@@ -24,7 +27,7 @@ public class RomanToInteger2 {
 			"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
 	 */
 
-	//Solution - 施工中
+	//Solution
 	public int romanToInt(String s) {
 		char[] sCharArr = s.toCharArray();
 
@@ -71,7 +74,7 @@ public class RomanToInteger2 {
 		return num;
 	}
 
-
+	
 	public static void main(String[] args) {
 		//输入字符串对应数字的范围是 1 至 3999
 		String s = "LVIII"; //58
@@ -79,7 +82,7 @@ public class RomanToInteger2 {
 		//String s = "III"; //3
 
 		long t1 = System.nanoTime();
-		int num = new RomanToInteger2().romanToInt(s);
+		int num = new RomanToInteger().romanToInt(s);
 		long t2 = System.nanoTime();
 
 		System.out.println("input: "+s);

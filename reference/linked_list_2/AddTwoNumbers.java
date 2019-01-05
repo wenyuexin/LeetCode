@@ -1,4 +1,6 @@
-package linked_list;
+package linked_list_2;
+
+import linked_list.ListNode;
 
 /**
  * @author -
