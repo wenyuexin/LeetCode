@@ -1,4 +1,4 @@
-package math;
+package math_2;
 
 /** 
  * @author Apollo4634 

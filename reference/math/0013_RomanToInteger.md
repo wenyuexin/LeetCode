@@ -1,14 +1,14 @@
-package math;
 
-/** 
- * @author - 
- * @creation 2019/01/05 14:01
- */
 
+
+
+
+
+```java
 public class RomanToInteger {
-	public static int romanToInt(String s) {
-        int num = 0;
-        int n = s.length();
+ 	public static int romanToInt(String s) {
+         int num = 0;
+         int n = s.length();
         
         for (int i = 0; i < n-1; i++) {
             int curr = map(s.charAt(i));
@@ -33,20 +33,21 @@ public class RomanToInteger {
             default: return 0;
         }
     }
-    
-    
+
+  
     public static void main(String[] args) {
-		//输入字符串对应数字的范围是 1 至 3999
-		String s = "LVIII"; //58
-		//String s = "MCMXCIV"; //1994
-		//String s = "III"; //3
-
-		long t1 = System.nanoTime();
-		int num = RomanToInteger.romanToInt(s);
-		long t2 = System.nanoTime();
-
-		System.out.println("input: "+s);
-		System.out.println("output: "+num);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
-	}
+    	//输入字符串对应数字的范围是 1 至 3999
+    	String s = "LVIII"; //58
+    	//String s = "MCMXCIV"; //1994
+    	//String s = "III"; //3
+    
+    	long t1 = System.nanoTime();
+    	int num = RomanToInteger.romanToInt(s);
+    	long t2 = System.nanoTime();
+    
+    	System.out.println("input: "+s);
+    	System.out.println("output: "+num);
+    	System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+    }
 }
+```
