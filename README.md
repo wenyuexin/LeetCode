@@ -16,7 +16,7 @@
 ## 2. Tag list  
 
 | # | Tag | Solution folder | Problem folder |
-| :----: | :---- | :----: | :----: |
+| :----: | :----: | :----: | :----: |
 | 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) |
 | 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/blob/master/solution/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) |
 | 03 | [Linked List](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list) |

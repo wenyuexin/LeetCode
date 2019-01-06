@@ -1,5 +1,7 @@
 package string;
 
+import java.util.Arrays;
+
 /** 
  * @author Apollo4634 
  * @creation 2019/01/05 21:01
@@ -57,11 +59,12 @@ public class LongestCommonPrefix {
 	public static void main(String[] args) {
 		String[] strs = {"flower","flow","flight"};
 
-		long t1 = System.nanoTime();
 		LongestCommonPrefix obj = new LongestCommonPrefix();
+		long t1 = System.nanoTime();
 		String prefix = obj.longestCommonPrefix(strs);
 		long t2 = System.nanoTime();
 
+		System.out.println("input:  "+Arrays.toString(strs));
 		System.out.println("output: "+prefix);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
