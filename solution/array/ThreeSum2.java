@@ -98,7 +98,7 @@ public class ThreeSum2 {
 		return list;
 	}
 
-	//Solution2 - 施工中
+	//Solution2 - 勉强通过，效率极低
 	public List<List<Integer>> threeSum2(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new LinkedList<>();
@@ -127,11 +127,11 @@ public class ThreeSum2 {
 		if(maxNum<0 || minNum>0) return list;
 		if(positiveList.size()==0) return list;
 		if(negativeList.size()==0 && positiveList.size()<3) return list;
-		if(maxNum==0 && positiveList.size()<3) {
+		if(maxNum==0 && positiveList.size()>=3) {
 			list.add(new ArrayList<Integer>(Arrays.asList(0, 0, 0)));
 			return list;
 		}
-		
+
 		//搜索3元组：2负1正
 		ArrayList<Integer> triplet;
 		int e1, e2, e3;
@@ -171,14 +171,15 @@ public class ThreeSum2 {
 
 
 	public static void main(String[] args) {
-		int[] nums = {-1, 0, 1, 2, -1, -4};
+		//int[] nums = {-1, 0, 1, 2, -1, -4};
 		//int[] nums = {-1, 0, 1, 2, 0, -1, -4};
 		//int[] nums = {-3,-3,0,-5};
 		//int[] nums = {0,0,0};
+		int[] nums = {-2,-3,0,0,-2};
 
 		long t1 = System.nanoTime();
 		ThreeSum2 obj = new ThreeSum2();
-		List<List<Integer>> list = obj.threeSum(nums);
+		List<List<Integer>> list = obj.threeSum2(nums);
 		long t2 = System.nanoTime();
 
 		//System.out.println("input:  "+Arrays.toString(nums));
