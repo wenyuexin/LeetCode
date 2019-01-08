@@ -6,6 +6,14 @@ import java.util.List;
 /** 
  * @author Apollo4634 
  * @creation 2019/01/08 00:01
+ * 
+ * No.15 Three Sum
+ * 
+ * 解题思路：
+ * 假设和为0的三元组triplet包含e1 e2 e3三个元素，
+ * ThreeSum2提供了遍历e1 e2并搜索e3的方法，
+ * 
+ * 施工中
  */
 
 public class ThreeSum3 {
