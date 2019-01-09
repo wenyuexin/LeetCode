@@ -17,6 +17,8 @@ import java.util.List;
  */
 
 public class ThreeSum3 {
+	
+	//Solution
 	public List<List<Integer>> threeSum(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new LinkedList<>();
