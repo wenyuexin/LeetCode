@@ -21,7 +21,7 @@ import java.util.List;
 public class ThreeSum3 {
 
 	//Solution
-	private static int getLastIndex(int[] arr, int from, int to, int val) {
+	private static int getFirstIndex(int[] arr, int from, int to, int val) {
 		int idx_tmp = Arrays.binarySearch(arr, from, to, val);
 		if(idx_tmp<0) return idx_tmp;
 		
@@ -56,9 +56,9 @@ public class ThreeSum3 {
 			for (int j = i+1; j < arr.length-1; j++) {
 				if(arr[i]+arr[j]>0 || j+1>idx) break;
 				idx_tmp = Arrays.binarySearch(arr, j+1, idx, -(arr[i]+arr[j]));
-				if(idx_tmp<0) break;
-				idx = idx_tmp;
+				if(idx_tmp<0) continue;
 				
+				idx = idx_tmp;
 				triplet = new ArrayList<Integer>(Arrays.asList(arr[i], arr[j], arr[idx]));
 				if(!list.contains(triplet)) list.add(triplet);
 			}
