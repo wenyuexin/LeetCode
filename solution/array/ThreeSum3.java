@@ -99,6 +99,7 @@ public class ThreeSum3 {
 				if(!list.contains(triplet)) list.add(triplet);
 			}
 		}
+		
 		return list;
 	}
 
