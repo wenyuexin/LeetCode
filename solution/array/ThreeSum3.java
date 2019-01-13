@@ -17,6 +17,8 @@ import java.util.List;
  * 
  * 以下解法都是基于Arrays.sort()排序结果的方法，
  * 本地测试中排序是各方法中最耗时的部分
+ * 
+ * 推荐Solution4
  */
 
 public class ThreeSum3 {
@@ -131,49 +133,39 @@ public class ThreeSum3 {
 		return list;
 	}
 
-	//Solution4 - 施工中
+	//Solution4 - Recommend
 	public List<List<Integer>> threeSum4(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
 		if(numsLen<3) return list;
-
 		Arrays.sort(nums); //排序
 
-		int sum12;
-		int rightIdx = numsLen-1;
+		int sum12, rightIdx;
 		List<Integer> triplet;
 		for (int i = 0; i < numsLen-2; i++) {
 			if(nums[i]>0) break;
-
 			rightIdx = numsLen-1;
 			for (int j = i+1; j < numsLen-1; j++) {
 				sum12 = nums[i]+nums[j];
 				if(sum12>0) break;
-
-				System.out.println(""+i+"-"+nums[i]+"   "+j+"-"+nums[i]);
-
+				
 				for (int k = rightIdx; k>j; k--) {
 					if(nums[k]==-sum12) {
 						triplet = Arrays.asList(nums[i], nums[j], -sum12);
-						System.out.println(""+i+" "+j+" "+k+" "+triplet);
-						if(!list.contains(triplet)) list.add(triplet);
+						list.add(triplet);
+						//下面这条语句会大大增加leetcode中的运行时间
+						//if(!list.contains(triplet)) list.add(triplet);
 						rightIdx = k-1;
 						break;
 					} else if (nums[k]<-sum12) {
-						while (nums[k]==nums[k-1]) 
-							k--;
 						rightIdx = k;
 						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
 						break;
 					}
-
-					while (nums[j]==nums[j+1]) 
-						j++;
 				}
-
-				while (nums[i]==nums[i+1]) 
-					i++;
+				while (j<numsLen-1 && nums[j]==nums[j+1]) j++;
 			}
+			while (i<numsLen-2 && nums[i]==nums[i+1]) i++;
 		}
 		return list;
 	}
@@ -191,13 +183,16 @@ public class ThreeSum3 {
 		//int[] nums = {-2,-3,0,0,-2};
 
 		//[[-4,-2,6],[-4,0,4],[-4,1,3],[-4,2,2],[-2,-2,4],[-2,0,2]]
-		int[] nums = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6}; 
+		//int[] nums = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6}; 
 
 		//[[-1,-4,5],[-2,-3,5]]
 		//int[] nums = {-1,0,-4,-2,-3,5};
 
 		//[[-1,-1,2],[-1,0,1]]
 		//int[] nums = {-1,0,1,2,-1,-4};
+		
+		//[[-5,1,4],[-4,0,4],[-4,1,3],[-2,-2,4],[-2,1,1],[0,0,0]]
+		int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
 
 		long t1 = System.nanoTime();
 		ThreeSum3 obj = new ThreeSum3();
