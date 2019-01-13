@@ -15,8 +15,8 @@ import java.util.List;
  * 假设和为0的三元组triplet包含e1 e2 e3三个元素，
  * ThreeSum2提供了遍历e1 e2并搜索e3的方法，
  * 
- * 解法1和解法2都是基于Arrays.sort()排序结果的方法，
- * 排序是两种方法中最耗时的部分
+ * 以下解法都是基于Arrays.sort()排序结果的方法，
+ * 本地测试中排序是各方法中最耗时的部分
  */
 
 public class ThreeSum3 {
@@ -49,14 +49,11 @@ public class ThreeSum3 {
 
 	//Solution2
 	public List<List<Integer>> threeSum2(int[] nums) {
-		//long t0 = System.nanoTime(); //0-1: 0.308566 ms
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
-		//if(numsLen<3) return list;
+		if(numsLen<3) return list;
 
-		//long t1 = System.nanoTime(); //1-2: 0.16657 ms
 		Arrays.sort(nums);
-		//long t2 = System.nanoTime(); //2-3: 0.08192 ms
 
 		int zeroIdx = Arrays.binarySearch(nums, 0);
 		if(zeroIdx<0) {
@@ -69,7 +66,6 @@ public class ThreeSum3 {
 			if(zeroIdx-2>=0 && nums[zeroIdx-2]==0) nZeros++;
 			if(nZeros>=3) list.add(new ArrayList<Integer>(Arrays.asList(0, 0, 0)));
 		}
-		//long t3 = System.nanoTime(); //3-4: 0.004438 ms
 
 		int rightIdx, sum12;
 		ArrayList<Integer> triplet;
@@ -90,20 +86,95 @@ public class ThreeSum3 {
 							rightIdx = k;
 							continue LOOP;
 						} else if (nums[k]<-sum12) {
+							rightIdx = k+1;
+							if(rightIdx>numsLen-1) rightIdx=numsLen-1;
 							continue LOOP;
 						}
 					}
 				}
 		}
+		return list;
+	}
 
-		/*
-		long t4 = System.nanoTime(); 
-		System.out.println("Rumtime: "+(t1-t0)/1.0E6+" ms");
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
-		System.out.println("Rumtime: "+(t3-t2)/1.0E6+" ms");
-		System.out.println("Rumtime: "+(t4-t3)/1.0E6+" ms");
-		System.out.println("Rumtime: "+(t4-t0)/1.0E6+" ms"); //0-4: 0.561494 ms
-		 */
+	//Solution3
+	public List<List<Integer>> threeSum3(int[] nums) {
+		int numsLen = nums.length;
+		List<List<Integer>> list = new ArrayList<>();
+		if(numsLen<3) return list;
+
+		Arrays.sort(nums); //排序
+
+		int sum12;
+		int rightIdx = numsLen-1;
+		List<Integer> triplet;
+		for (int i = 0; i < numsLen-2; i++) {
+			if(nums[i]>0) break;
+			rightIdx = numsLen-1;
+			for (int j = i+1; j < numsLen-1; j++) {
+				sum12 = nums[i]+nums[j];
+				if(sum12>0) break;
+				for (int k = rightIdx; k>j; k--) {
+					if(nums[k]==-sum12) {
+						triplet = Arrays.asList(nums[i], nums[j], -sum12);
+						//System.out.println(""+i+" "+j+" "+k+" "+triplet);
+						if(!list.contains(triplet)) list.add(triplet);
+						rightIdx = k-1;
+						break;
+					} else if (nums[k]<-sum12) {
+						rightIdx = k;
+						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
+						break;
+					}
+				}
+			}
+		}
+		return list;
+	}
+
+	//Solution4 - 施工中
+	public List<List<Integer>> threeSum4(int[] nums) {
+		int numsLen = nums.length;
+		List<List<Integer>> list = new ArrayList<>();
+		if(numsLen<3) return list;
+
+		Arrays.sort(nums); //排序
+
+		int sum12;
+		int rightIdx = numsLen-1;
+		List<Integer> triplet;
+		for (int i = 0; i < numsLen-2; i++) {
+			if(nums[i]>0) break;
+
+			rightIdx = numsLen-1;
+			for (int j = i+1; j < numsLen-1; j++) {
+				sum12 = nums[i]+nums[j];
+				if(sum12>0) break;
+
+				System.out.println(""+i+"-"+nums[i]+"   "+j+"-"+nums[i]);
+
+				for (int k = rightIdx; k>j; k--) {
+					if(nums[k]==-sum12) {
+						triplet = Arrays.asList(nums[i], nums[j], -sum12);
+						System.out.println(""+i+" "+j+" "+k+" "+triplet);
+						if(!list.contains(triplet)) list.add(triplet);
+						rightIdx = k-1;
+						break;
+					} else if (nums[k]<-sum12) {
+						while (nums[k]==nums[k-1]) 
+							k--;
+						rightIdx = k;
+						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
+						break;
+					}
+
+					while (nums[j]==nums[j+1]) 
+						j++;
+				}
+
+				while (nums[i]==nums[i+1]) 
+					i++;
+			}
+		}
 		return list;
 	}
 
@@ -116,6 +187,7 @@ public class ThreeSum3 {
 		//[[0,0,0]]
 		//int[] nums = {0,0,0};
 
+		//[]
 		//int[] nums = {-2,-3,0,0,-2};
 
 		//[[-4,-2,6],[-4,0,4],[-4,1,3],[-4,2,2],[-2,-2,4],[-2,0,2]]
@@ -129,11 +201,14 @@ public class ThreeSum3 {
 
 		long t1 = System.nanoTime();
 		ThreeSum3 obj = new ThreeSum3();
-		List<List<Integer>> list = obj.threeSum2(nums);
+		List<List<Integer>> list = obj.threeSum4(nums);
 		long t2 = System.nanoTime();
 
-		//System.out.println("input:  "+Arrays.toString(nums));
-		System.out.println("output: "+list);
+		System.out.println("input array:  "+Arrays.toString(nums));
+		int[] sortedNums = nums.clone();
+		Arrays.sort(sortedNums);
+		System.out.println("sorted nums:  "+Arrays.toString(sortedNums));
+		System.out.println("output list:  "+list);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
