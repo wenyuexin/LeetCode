@@ -20,15 +20,13 @@ import java.util.List;
  * 但是下面这条语句对leetcode的运行时间影响极大，会极大增加runtime：
  * list.contains(triplet) //判断列表是否包含某个三元组
  * 
- * 
- * 
- * 
  * 个人推荐Solution4
  */
 
 public class ThreeSum {
 
 	//Solution1
+	//通过binarySearch确定e3的位置
 	public List<List<Integer>> threeSum(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new LinkedList<>();
@@ -55,6 +53,7 @@ public class ThreeSum {
 	}
 
 	//Solution2
+	//
 	public List<List<Integer>> threeSum2(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
@@ -82,23 +81,22 @@ public class ThreeSum {
 			if(rightIdx<0) rightIdx=-(rightIdx+1);
 			if(rightIdx>numsLen-1) rightIdx=numsLen-1;
 
-			LOOP:
-				for (int j = i+1; j < numsLen-1; j++) {
-					sum12 = nums[i]+nums[j];
-					if(sum12>0 || j+1>rightIdx) break;
-					for (int k = rightIdx; k>j && k>=zeroIdx; k--) {
-						if(nums[k]==-sum12) {
-							triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[k]));
-							if(!list.contains(triplet)) list.add(triplet);
-							rightIdx = k;
-							continue LOOP;
-						} else if (nums[k]<-sum12) {
-							rightIdx = k+1;
-							if(rightIdx>numsLen-1) rightIdx=numsLen-1;
-							continue LOOP;
-						}
+			for (int j = i+1; j < numsLen-1; j++) {
+				sum12 = nums[i]+nums[j];
+				if(sum12>0 || j+1>rightIdx) break;
+				for (int k = rightIdx; k>j && k>=zeroIdx; k--) {
+					if(nums[k]==-sum12) {
+						triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[k]));
+						if(!list.contains(triplet)) list.add(triplet);
+						rightIdx = k;
+						break;
+					} else if (nums[k]<-sum12) {
+						rightIdx = k+1;
+						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
+						break;
 					}
 				}
+			}
 		}
 		return list;
 	}
@@ -153,7 +151,7 @@ public class ThreeSum {
 			for (int j = i+1; j < numsLen-1; j++) {
 				sum12 = nums[i]+nums[j];
 				if(sum12>0) break;
-				
+
 				for (int k = rightIdx; k>j; k--) {
 					if(nums[k]==-sum12) {
 						triplet = Arrays.asList(nums[i], nums[j], -sum12);
@@ -195,7 +193,7 @@ public class ThreeSum {
 
 		//[[-1,-1,2],[-1,0,1]]
 		//int[] nums = {-1,0,1,2,-1,-4};
-		
+
 		//[[-5,1,4],[-4,0,4],[-4,1,3],[-2,-2,4],[-2,1,1],[0,0,0]]
 		int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
 
