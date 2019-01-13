@@ -16,12 +16,17 @@ import java.util.List;
  * ThreeSum2提供了遍历e1 e2并搜索e3的方法，
  * 
  * 以下解法都是基于Arrays.sort()排序结果的方法，
- * 本地测试中排序是各方法中最耗时的部分
+ * 本地测试中排序是这些方法中最耗时的部分，
+ * 但是下面这条语句对leetcode的运行时间影响极大，会极大增加runtime：
+ * list.contains(triplet) //判断列表是否包含某个三元组
  * 
- * 推荐Solution4
+ * 
+ * 
+ * 
+ * 个人推荐Solution4
  */
 
-public class ThreeSum3 {
+public class ThreeSum {
 
 	//Solution1
 	public List<List<Integer>> threeSum(int[] nums) {
@@ -195,7 +200,7 @@ public class ThreeSum3 {
 		int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
 
 		long t1 = System.nanoTime();
-		ThreeSum3 obj = new ThreeSum3();
+		ThreeSum obj = new ThreeSum();
 		List<List<Integer>> list = obj.threeSum4(nums);
 		long t2 = System.nanoTime();
 
