@@ -36,7 +36,19 @@ import java.util.List;
  * 对于前者直接保存新的三元组，然后更新e2(即j=j+1)，再从idx(e3)-1开始搜索新的e3
  * 对于后者更新e2(即j=j+1)，再从idx(e3)开始搜索新的e3
  * 
- * 个人推荐Solution4
+ * 第三，
+ * 对于某个e1(下标为i)，如果nums[i+1]==e1，那么更新e1(即i=i+1)后，
+ * 或者说以nums[i+1]为e1搜索得到的三元组和nums[i]为e1得到的三元组相同.
+ * 依次类推，如果nums[i]==nums[i+1]==...==nums[i+I]，那么
+ * 以nums[i]至nums[i+I]之间任意一个数为e1进行搜索得到的三元组相同.
+ * 
+ * 可以进一步推广，对于固定的e1，如果nums[j]==nums[j+1]==...==nums[j+J]
+ * 那么以nums[j]至nums[j+J]之间任意一个数为e2搜索得到的三元组也相同.
+ * 
+ * 值得注意的是，如果根据第三点对每次搜索的e1 e2进行更新，
+ * 那么不存在相同的三元组，因此不需要判断最终结果中是否存在重复的三元组
+ * 
+ * 个人推荐Solution3
  */
 
 public class ThreeSum {
@@ -147,11 +159,7 @@ public class ThreeSum {
 		//int[] nums = {-1, 0, 1, 2, -1, -4};
 		//int[] nums = {-1, 0, 1, 2, 0, -1, -4};
 		//int[] nums = {-3,-3,0,-5};
-
-		//[[0,0,0]]
 		//int[] nums = {0,0,0};
-
-		//[]
 		//int[] nums = {-2,-3,0,0,-2};
 
 		//[[-4,-2,6],[-4,0,4],[-4,1,3],[-4,2,2],[-2,-2,4],[-2,0,2]]
@@ -168,7 +176,7 @@ public class ThreeSum {
 
 		long t1 = System.nanoTime();
 		ThreeSum obj = new ThreeSum();
-		List<List<Integer>> list = obj.threeSum4(nums);
+		List<List<Integer>> list = obj.threeSum3(nums);
 		long t2 = System.nanoTime();
 
 		System.out.println("input array:  "+Arrays.toString(nums));
