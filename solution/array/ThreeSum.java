@@ -133,18 +133,14 @@ public class ThreeSum {
 			for (int j = i+1; j < numsLen-1; j++) {
 				sum12 = nums[i]+nums[j];
 				if(sum12>0) break;
-
 				for (int k = rightIdx; k>j; k--) {
 					if(nums[k]==-sum12) {
 						triplet = Arrays.asList(nums[i], nums[j], -sum12);
 						list.add(triplet);
-						//下面这条语句会大大增加leetcode中的运行时间
-						//if(!list.contains(triplet)) list.add(triplet);
 						rightIdx = k-1;
 						break;
 					} else if (nums[k]<-sum12) {
-						rightIdx = k;
-						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
+						rightIdx = (k>numsLen-1)?k:numsLen-1;
 						break;
 					}
 				}
