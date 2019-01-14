@@ -20,6 +20,22 @@ import java.util.List;
  * 但是下面这条语句对leetcode的运行时间影响极大，会极大增加runtime：
  * list.contains(triplet) //判断列表是否包含某个三元组
  * 
+ * 以下若干解法中可能存在部分优化：
+ * 假设e1 e2 e3的下标分别是i j k (三者满足i<j<k)
+ * 
+ * 第一，
+ * 如果找到了一组和为0的e1 e2 e3，那么可能存在另一组和为0的e1 e2' e3'，
+ * 且下标有idx(e2)<idx(e2')，因此需要固定i继续搜索，判断是否存在e2'和e3'.
+ * 对于固定的e1(即i不变)，当e2更新(即j=j+1)时，e2变大，如果要满足e1+e2+e3=0，
+ * 那么e3必然要变小，因此e3的搜索范围收缩为idx(e2)+1至 idx(e3)-1
+ * 
+ * 第二，
+ * 基于上一个改进，这里根据e1+e2+e3=0可以进一步收缩e3的搜索范围.
+ * 假设e1+e2+e3=0，更新e3(即k=k-1)，可以知道更新后可能有e1+e2+e3>0，
+ * 那么可以继续更新e3，直到e1+e2+e3'=0或者e1+e2+e3'<0，
+ * 对于前者直接保存新的三元组，然后更新e2(即j=j+1)，再从idx(e3)-1开始搜索新的e3
+ * 对于后者更新e2(即j=j+1)，再从idx(e3)开始搜索新的e3
+ * 
  * 个人推荐Solution4
  */
 
@@ -34,75 +50,28 @@ public class ThreeSum {
 
 		Arrays.sort(nums); //排序
 
-		int idx, idx_tmp;
+		int rightIdx; //对于固定的e1，idx是上一个和为0的三元组中e3的位置
+		int idx_tmp;
 		ArrayList<Integer> triplet;
 		for (int i = 0; i < nums.length-2; i++) { //搜索
 			if(nums[i]>0) break;
-			idx = nums.length;
+			rightIdx = nums.length; //切换e1后将idx更新为数组的最后一个元素处
 			for (int j = i+1; j < nums.length-1; j++) {
-				if(nums[i]+nums[j]>0 || j+1>idx) break;
-				idx_tmp = Arrays.binarySearch(nums, j+1, idx, -(nums[i]+nums[j]));
-				if(idx_tmp<0) continue;
+				if(nums[i]+nums[j]>0 || j+1>rightIdx) break;
+				idx_tmp = Arrays.binarySearch(nums, j+1, rightIdx, -(nums[i]+nums[j]));
+				if(idx_tmp<0) continue; //对于当前的e1 e2，若不存在符合的e3则更新下一个e2
 
-				idx = idx_tmp;
-				triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[idx]));
-				if(!list.contains(triplet)) list.add(triplet);
+				rightIdx = idx_tmp; //若e1+e2+e3=0，则将e3的下标作为新的rightIdx
+				triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[rightIdx]));
+				if(!list.contains(triplet)) list.add(triplet); //耗时
 			}
 		}
 		return list;
 	}
 
 	//Solution2
-	//
+	//对于固定的e1 e2，不用binarySearch，而使用for循环寻找e3
 	public List<List<Integer>> threeSum2(int[] nums) {
-		int numsLen = nums.length;
-		List<List<Integer>> list = new ArrayList<>();
-		if(numsLen<3) return list;
-
-		Arrays.sort(nums);
-
-		int zeroIdx = Arrays.binarySearch(nums, 0);
-		if(zeroIdx<0) {
-			zeroIdx = -(zeroIdx+1);
-		} else {
-			int nZeros = 1;
-			if(zeroIdx+1<nums.length && nums[zeroIdx+1]==0) nZeros++;
-			if(zeroIdx+2<nums.length && nums[zeroIdx+2]==0) nZeros++;
-			if(zeroIdx-1>=0 && nums[zeroIdx-1]==0) nZeros++;
-			if(zeroIdx-2>=0 && nums[zeroIdx-2]==0) nZeros++;
-			if(nZeros>=3) list.add(new ArrayList<Integer>(Arrays.asList(0, 0, 0)));
-		}
-
-		int rightIdx, sum12;
-		ArrayList<Integer> triplet;
-		for (int i = 0; i < numsLen-2; i++) {
-			if(nums[i]>0) break;
-			rightIdx = Arrays.binarySearch(nums, i+1, nums.length, -2*nums[i]);
-			if(rightIdx<0) rightIdx=-(rightIdx+1);
-			if(rightIdx>numsLen-1) rightIdx=numsLen-1;
-
-			for (int j = i+1; j < numsLen-1; j++) {
-				sum12 = nums[i]+nums[j];
-				if(sum12>0 || j+1>rightIdx) break;
-				for (int k = rightIdx; k>j && k>=zeroIdx; k--) {
-					if(nums[k]==-sum12) {
-						triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[k]));
-						if(!list.contains(triplet)) list.add(triplet);
-						rightIdx = k;
-						break;
-					} else if (nums[k]<-sum12) {
-						rightIdx = k+1;
-						if(rightIdx>numsLen-1) rightIdx=numsLen-1;
-						break;
-					}
-				}
-			}
-		}
-		return list;
-	}
-
-	//Solution3
-	public List<List<Integer>> threeSum3(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
 		if(numsLen<3) return list;
@@ -122,7 +91,7 @@ public class ThreeSum {
 					if(nums[k]==-sum12) {
 						triplet = Arrays.asList(nums[i], nums[j], -sum12);
 						//System.out.println(""+i+" "+j+" "+k+" "+triplet);
-						if(!list.contains(triplet)) list.add(triplet);
+						if(!list.contains(triplet)) list.add(triplet); //耗时
 						rightIdx = k-1;
 						break;
 					} else if (nums[k]<-sum12) {
@@ -136,8 +105,8 @@ public class ThreeSum {
 		return list;
 	}
 
-	//Solution4 - Recommend
-	public List<List<Integer>> threeSum4(int[] nums) {
+	//Solution3 - Recommend
+	public List<List<Integer>> threeSum3(int[] nums) {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
 		if(numsLen<3) return list;
