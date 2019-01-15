@@ -1,4 +1,4 @@
-# Stack
+# Binary Search Tree
 
 
 
