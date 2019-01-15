@@ -60,7 +60,6 @@ public class ThreeSum {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new LinkedList<>();
 		if(numsLen<3) return list;
-
 		Arrays.sort(nums); //排序
 
 		int rightIdx; //对于固定的e1，idx是上一个和为0的三元组中e3的位置
@@ -88,7 +87,6 @@ public class ThreeSum {
 		int numsLen = nums.length;
 		List<List<Integer>> list = new ArrayList<>();
 		if(numsLen<3) return list;
-
 		Arrays.sort(nums); //排序
 
 		int sum12;
@@ -140,7 +138,7 @@ public class ThreeSum {
 						rightIdx = k-1;
 						break;
 					} else if (nums[k]<-sum12) {
-						rightIdx = (k>numsLen-1)?k:numsLen-1;
+						rightIdx = (k>numsLen-1)?numsLen-1:k;
 						break;
 					}
 				}

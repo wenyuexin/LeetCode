@@ -7,10 +7,8 @@ import java.util.Arrays;
  * @creation 2018/11/30
  * 
  * No.4 Median of Two Sorted Arrays
- */
-
-/**
- * 说明：
+ *
+ * 解题思路：
  * 假定nums1的长度为len1，nums2的长度为len2
  * 同时假设nums1和nums2组合并排序后的数组为num3
  * 可以认为找中位数就是找到num3的前len_m=(len1+len2)/2个数arr[]
@@ -66,8 +64,7 @@ public class MedianOfTwoSortedArrays {
 		
 		//下面这一小段还可以改进，
 		//判断nums1整体都大于或者小于nums2的时候（相当于已经组合并且排好序了）
-		//这时就可以直接推断出中位数
-		//大概这么写：
+		//这时就可以直接推断出中位数，大概这么写：
 		// if(nums1[0]>nums2[len2-1]) {...} 
 		// if(nums2[0]>nums1[len1-1]) {...}
 		
