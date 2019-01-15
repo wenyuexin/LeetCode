@@ -19,6 +19,8 @@ package array;
  * 可知容器的宽度至少要大于等于width = max/height[i] -1
  * 因此j的取值范围是i+width至height.length-1，
  * 如果(i+width)>(height.length-1)则直接跳过当前的i而直接i++
+ * 
+ * 推荐Solution2
  */
 
 public class ContainerWithMostWater {
@@ -36,7 +38,7 @@ public class ContainerWithMostWater {
 		return max;
 	}
 	
-	//Solution2
+	//Solution2 - Recommend
 	public int maxArea2(int[] height) {
 		int hLen = height.length; //数组长度
 		int area = (hLen-1)*Math.min(height[0], height[hLen-1]);
@@ -58,6 +60,7 @@ public class ContainerWithMostWater {
 		return max;
 	}
 		
+	
 	public static void main(String[] args) {
 		int[] height = {1,8,6,2,5,4,8,3,7};
 		

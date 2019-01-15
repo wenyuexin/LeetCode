@@ -6,7 +6,6 @@ package hash_table;
  *
  * No.3 Longest Substring Without Repeating Characters
  * 
- * Runtime: 89 ms, faster than 17.39% of Java online submissions
  */
 
 public class LongestSubstring3 {
