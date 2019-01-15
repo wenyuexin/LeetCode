@@ -1,4 +1,4 @@
-# Stack
+# Binary Indexed Tree
 
 
 
