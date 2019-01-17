@@ -1,7 +1,6 @@
 package array;
 
 import java.util.Arrays;
-import java.util.List;
 
 /** 
  * @author Apollo4634 
@@ -10,15 +9,15 @@ import java.util.List;
  * No.16 3 Sum Closest
  * 
  * 解题思路：
- * 总体思路可以参考 No.15 Three Sum
+ * 总体思路可以参考 No.15 Three Sum，都是先排序后遍历，
  * 区别在于15题需要即使找到了符合要求的三元组仍然需要继续遍历，
  * 而本题的目标是寻找sum值最接近target的三元组，
  * 有时候则可以使用continue或者break直接跳过循环，
  * 如果刚好等于target可以直接return
- * 具体可以参考class ThreeSum中的threeSum3方法
+ * （具体可以参考class ThreeSum中的threeSum3方法）
  * 
  * 这里补充几点：
- * 假设三元组{e1,e2,e3}元素的下标分别是i j k (三者满足i<j<k)
+ * 假设三元组{e1,e2,e3}元素的下标分别是i j k，三者满足i<j<k
  * 假设numsLen=nums.length-1
  * 假设和target最接近的三元组的sum值为closestSum
  * 假设idx(e)表示元素e在数组nums中的下标
@@ -26,22 +25,20 @@ import java.util.List;
  * (A) 
  * 对于固定的i和j，对k进行循环遍历的目标是，
  * 在[j+1, rightIdx]区间内寻找是否存在某个值等e3=target-e1-e2
- * （这里，rightIdx是k的右界，初始状态为nums.length-1，
+ * （这里，rightIdx是k的右界，初始状态为numsLen-1，
  * 后续遍历过程中视情况有可能减小，从而缩小搜索范围）
  * 
  * 遍历过程中，根据nums[k]和e3的大小关系，可以分为2种情况：
- * a.若nums[k]==e3，那么直接 return target
+ * a.若nums[k]==e3，那么直接return target
  * b.若nums[k]!=e3，即数组nums中存在序列 
  * ... nums[k'-1], nums[k'] (e3) nums[k'+1] ...
- * 那么对k遍历时，差值diff = nums[k']-e3会存在一次变号，然后
+ * 那么对k遍历时，差值diff = nums[k']-e3会存在一次变号，
  * 可以判断(e1+e2+nums[k'])和(e1+e2+nums[k'+1])之间哪个数更接近target
- * （如果k'+1>rightIdx就不用判断了）
  * 
- * (B)
- * 关于A-b中的判断，在实际上不一定同时存在比e3小的nums[k']和比e3大的nums[k'+1]，
- * 例如
+ * (B)关于A-b中的判断
+ * 在实际上不一定同时存在比e3小的nums[k']和比e3大的nums[k'+1]，例如：
  * a. k'+1>rightIdx时自然就没有nums[k'+1]
- * b. 如果nums[i]>e3，即nums[i]至nums[rightIdx]之间的数都大于e3,
+ * b. 如果nums[j+1]>e3，即nums[j+1]至nums[rightIdx]之间的数都大于e3,
  * 那么就不存在比e3小的nums[k']，此时需要计算k=j+1时的sum值，
  * 即sum=nums[i]+nums[j]+nums[j+1]，然后判断是否可以更新closestSum
  * 
@@ -83,7 +80,7 @@ public class ThreeSumClosest {
 			for (int j = i+1; j < numsLen-1; j++) { //e2
 				int e3 = target - nums[i] - nums[j];
 				for (int k = rightIdx; k > j; k--) { //e3
-					if(nums[k]==e3) { return target; } 
+					if(nums[k]==e3) return target;
 					if(k!=j+1 && k+1<=rightIdx && nums[k]==nums[k+1]) continue;
 					
 					if(nums[k]<e3 || k==j+1) {
