@@ -13,10 +13,10 @@ import java.util.List;
  * 输入digits是一个包含多个数字的字符串，每个数字对应3至4中可能的字母，
  * 这里使用二维数mapping组保存数字和字母的对应关系
  * 
- * 首先将digits转化为int数组digitsArr，为了便于从mapping中读取字母，
+ * 首先将digits转化为int数组numbers，为了便于从mapping中读取字母，
  * 这里将数字的数值减2，例如，digits="6359"时，digitsArr=[4,1,3,7]
  * 
- * 基于digitsArr即可开始获取各种可能的字母组合：
+ * 基于numbers即可开始获取各种可能的字母组合：
  * 使用一个状态数组state表示当前的字母组合str，
  * 总体思路类似于使用数组加法计算，...
  * 
@@ -37,28 +37,28 @@ public class LetterCombinationsOfAPhoneNumber {
 		int nDigits = digits.length();
 		if(nDigits==0) return strList;
 		
-		int[] digitsArr = new int[nDigits];//输入字符串转int数组
+		int[] numbers = new int[nDigits];//输入字符串转int数组
 		int[] state = new int[nDigits];//字符的组合状态
 		int nStr = 1; //输出字符串的总数
 		StringBuilder sb = new StringBuilder();
 		for (int iDigit = 0; iDigit < nDigits; iDigit++) {
-			digitsArr[iDigit] = digits.charAt(iDigit)-50; //48+2
-			nStr *= ((digitsArr[iDigit]==5||digitsArr[iDigit]==7)?4:3);
-			sb.append(mapping[digitsArr[iDigit]][0]);
+			numbers[iDigit] = digits.charAt(iDigit)-50; //48+2
+			nStr *= ((numbers[iDigit]==5||numbers[iDigit]==7)?4:3);
+			sb.append(mapping[numbers[iDigit]][0]);
 		}
 		
 		int radix = 0; //基数
 		while (nStr>0) {
 			strList.add(sb.toString());
 			for (int iDigit = nDigits-1; iDigit>=0; iDigit--) {
-				radix = (digitsArr[iDigit]==5||digitsArr[iDigit]==7)?4:3;
+				radix = (numbers[iDigit]==5||numbers[iDigit]==7)?4:3;
 				if(state[iDigit]+1<radix) { 
 					state[iDigit]++;
-					sb.setCharAt(iDigit, mapping[digitsArr[iDigit]][state[iDigit]]);
+					sb.setCharAt(iDigit, mapping[numbers[iDigit]][state[iDigit]]);
 					break;
 				} else { //进位
 					state[iDigit] = 0;
-					sb.setCharAt(iDigit, mapping[digitsArr[iDigit]][0]);
+					sb.setCharAt(iDigit, mapping[numbers[iDigit]][0]);
 				}
 			}
 			nStr--;
