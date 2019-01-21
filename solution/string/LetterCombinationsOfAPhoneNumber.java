@@ -1,5 +1,6 @@
 package string;
 
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,11 +24,11 @@ public class LetterCombinationsOfAPhoneNumber {
 		{'t','u','v'}, {'w','x','y','z'}
 	};
 	
-	private static final int[] lens = new int[] {3,3,3,3,3,4,3,4};
+	private static final int[] lensArr = new int[] {3,3,3,3,3,4,3,4};
 	
-	private int[] digitsArr;
-	private int[] state; //字符的组合状态
-	private StringBuilder sb;
+	//private int[] digitsArr;
+	//private int[] state; //字符的组合状态
+	//private StringBuilder sb;
 	
 	/*
 	private static String getStr(int idx) {
@@ -53,29 +54,29 @@ public class LetterCombinationsOfAPhoneNumber {
 		int nDigits = digits.length();
 		if(nDigits==0) return strList;
 		
-		//int nStr = 1; //输出字符串数组的长度
 		int[] digitsArr = new int[nDigits];
-		state = new int[nDigits];
+		int[] state = new int[nDigits];//字符的组合状态
+		
+		int nStr = 1; //输出字符串的总数
 		for (int iDigit = 0; iDigit < nDigits; iDigit++) {
 			digitsArr[iDigit] = digits.charAt(iDigit)-50; //48+2
-			//nStr *= lens[digitsArr[iDigit]];
-			state[iDigit] = 0;
+			nStr *= lensArr[digitsArr[iDigit]];
 		}
 		
-		
-		String str = "";
-		boolean isLastOne = false;
-		for (int i = 0; i < state.length; i++) {
-			if(state[i]+1==lens[digitsArr[i]]) { //进位
-				
-			} else {
-				state[i]++;
+		StringBuilder sb = new StringBuilder();
+		int iStr = 0;
+		while (iStr<nStr) {
+			for (int iDigit = nDigits-1; iDigit>0; iDigit--) {
+				if(state[iDigit]+1<lensArr[digitsArr[iDigit]]) { 
+					state[iDigit]++;
+					sb.setCharAt(iDigit, mapping[digitsArr[iDigit]][state[iDigit]]);					
+				} else {
+					
+				}
 			}
+			strList.add(sb.toString());
+			iStr++;
 		}
-		
-		
-		
-		
 		
 		return strList;
 	}
