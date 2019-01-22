@@ -64,7 +64,7 @@ public class ThreeSum {
 
 		int rightIdx; //对于固定的e1，idx是上一个和为0的三元组中e3的位置
 		int idx_tmp;
-		ArrayList<Integer> triplet;
+		List<Integer> triplet;
 		for (int i = 0; i < nums.length-2; i++) { //搜索
 			if(nums[i]>0) break;
 			rightIdx = nums.length; //切换e1后将idx更新为数组的最后一个元素处
@@ -74,7 +74,7 @@ public class ThreeSum {
 				if(idx_tmp<0) continue; //对于当前的e1 e2，若不存在符合的e3则更新下一个e2
 
 				rightIdx = idx_tmp; //若e1+e2+e3=0，则将e3的下标作为新的rightIdx
-				triplet = new ArrayList<Integer>(Arrays.asList(nums[i], nums[j], nums[rightIdx]));
+				triplet = Arrays.asList(nums[i], nums[j], nums[rightIdx]);
 				if(!list.contains(triplet)) list.add(triplet); //耗时
 			}
 		}
