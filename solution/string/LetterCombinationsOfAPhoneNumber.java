@@ -11,12 +11,12 @@ import java.util.List;
  * 
  * 解题思路：
  * 输入digits是一个包含多个数字的字符串，每个数字对应3至4种可能的字母，
- * 这里使用二维数组mapping保存数字和字母的对应关系；
+ * 这里使用二维数组mapping保存数字d和字母c的对应关系；
  * 同时，为了便于从mapping中读取字母，先将digits转化为int数组numbers，
  * 并将数字的数值减2，例如，digits="639"时，numbers=[4,1,7]
  * 
- * 假设字符串digits里的数字个数为nDigits
- * 设输出的结果为strList，该列表中有nStr个字符串
+ * 假设字符串digits里的数字总数为nDigits
+ * 假设输出的结果为strList，且该列表包含nStr个字符串
  * 假设digits某一位数字对应的字母总数即为该位的基数radix
  * 
  * 这里使用状态数组state表示当前的字母组合str，例如，当digits="639"时，
@@ -62,7 +62,7 @@ public class LetterCombinationsOfAPhoneNumber {
 		int nStr = 1; //输出字符串的总数
 		StringBuilder sb = new StringBuilder();
 		for (int iDigit = 0; iDigit < nDigits; iDigit++) {
-			numbers[iDigit] = digits.charAt(iDigit)-50; //48+2
+			numbers[iDigit] = digits.charAt(iDigit)-'0'-2;
 			nStr *= ((numbers[iDigit]==5||numbers[iDigit]==7)?4:3);
 			sb.append(mapping[numbers[iDigit]][0]);
 		}
