@@ -20,7 +20,7 @@ package string;
  * 时间也就2ms以内，不知道为什么提交后的运行时间要那么长，无语
  */
 
-public class LongestPalindromicSubstring5 {
+public class LongestPalindromicSubstring4 {
 
 	//Solution1
 	public String longestPalindrome(String s) {
@@ -81,7 +81,7 @@ public class LongestPalindromicSubstring5 {
 	}
 
 	public static void main(String[] args) {
-		LongestPalindromicSubstring5 palindrome = new LongestPalindromicSubstring5();
+		LongestPalindromicSubstring4 palindrome = new LongestPalindromicSubstring4();
 		//String s = "babad";
 		//String s = "cbbd";
 		//String s = "abcda";

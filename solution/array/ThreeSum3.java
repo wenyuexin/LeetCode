@@ -17,7 +17,7 @@ import java.util.Map;
  * 
  */
 
-public class ThreeSum4 {
+public class ThreeSum3 {
 
 	//Solution - 暴力搜索法
 	public List<List<Integer>> threeSum(int[] nums) {
@@ -96,7 +96,7 @@ public class ThreeSum4 {
 		//int[] nums = {-1,0,1,2,-1,-4};
 
 		long t1 = System.nanoTime();
-		ThreeSum4 obj = new ThreeSum4();
+		ThreeSum3 obj = new ThreeSum3();
 		List<List<Integer>> list = obj.threeSum2(nums);
 		long t2 = System.nanoTime();
 
