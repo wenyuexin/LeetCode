@@ -8,7 +8,7 @@ import java.util.List;
  * @author Apollo4634 
  * @creation 2019/01/22 23:01
  * 
- * 18 four sum
+ * No.18 Four Sum
  * 
  */
 
@@ -37,7 +37,7 @@ public class FourSum2 {
 					if(sum12+sum34==target) {
 						list.add(Arrays.asList(
 							nums[i1], nums[i2], nums[i3], nums[i4]));
-						i3++；
+						i3++;
 					}
 				}
 				while (i2<numsLen-1 && nums[i2]==nums[i2+1]) i2++;
