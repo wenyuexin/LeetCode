@@ -14,6 +14,7 @@ import java.util.List;
 
 public class FourSum2 {
 
+	//Solution
 	public List<List<Integer>> fourSum(int[] nums, int target) {
 		List<List<Integer>> list = new LinkedList<>();
 		int numsLen = nums.length;
@@ -22,10 +23,8 @@ public class FourSum2 {
 		
 		int sum12, sum34, i3, i4;
 		for (int i1 = 0; i1 < numsLen-3; i1++) {
-			//if(nums[i1]>0) break;
 			for (int i2 = i1+1; i2 < numsLen-2; i2++) {
 				sum12 = nums[i1]+nums[i2];
-				//if(sum12>0) break;
 				
 				i3 = i2+1;
 				i4 = numsLen-1;
@@ -49,18 +48,16 @@ public class FourSum2 {
 
 	
 	public static void main(String[] args) {
-		
 		int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
+		int target = 0;
 
 		long t1 = System.nanoTime();
-		ThreeSum obj = new ThreeSum();
-		List<List<Integer>> list = obj.threeSum3(nums);
+		FourSum2 obj = new FourSum2();
+		List<List<Integer>> list = obj.fourSum(nums, target);
 		long t2 = System.nanoTime();
 
 		System.out.println("input array:  "+Arrays.toString(nums));
-		int[] sortedNums = nums.clone();
-		Arrays.sort(sortedNums);
-		System.out.println("sorted nums:  "+Arrays.toString(sortedNums));
+		System.out.println("input target: "+target);
 		System.out.println("output list:  "+list);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
