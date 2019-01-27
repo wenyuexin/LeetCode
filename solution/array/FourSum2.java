@@ -63,6 +63,5 @@ public class FourSum2 {
 		System.out.println("sorted nums:  "+Arrays.toString(sortedNums));
 		System.out.println("output list:  "+list);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
-		
 	}
 }
