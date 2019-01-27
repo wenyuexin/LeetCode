@@ -49,6 +49,20 @@ public class FourSum2 {
 
 	
 	public static void main(String[] args) {
+		
+		int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
 
+		long t1 = System.nanoTime();
+		ThreeSum obj = new ThreeSum();
+		List<List<Integer>> list = obj.threeSum3(nums);
+		long t2 = System.nanoTime();
+
+		System.out.println("input array:  "+Arrays.toString(nums));
+		int[] sortedNums = nums.clone();
+		Arrays.sort(sortedNums);
+		System.out.println("sorted nums:  "+Arrays.toString(sortedNums));
+		System.out.println("output list:  "+list);
+		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		
 	}
 }
