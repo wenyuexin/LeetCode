@@ -26,7 +26,7 @@ import java.util.List;
  * 遍历搜索中，这里根据一些特殊情况使用while循环跳过了一些不必要的搜索
  */
 
-public class FourSum2 {
+public class FourSum {
 
 	//Solution
 	public List<List<Integer>> fourSum(int[] nums, int target) {
@@ -67,7 +67,7 @@ public class FourSum2 {
 		int target = 0;
 		
 		long t1 = System.nanoTime();
-		FourSum2 obj = new FourSum2();
+		FourSum obj = new FourSum();
 		List<List<Integer>> list = obj.fourSum(nums, target);
 		long t2 = System.nanoTime();
 
