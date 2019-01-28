@@ -50,7 +50,6 @@ public class ThreeSum_best {
 		Arrays.sort(nums); //排序
 
 		int sum12, rightIdx;
-		List<Integer> triplet;
 		for (int i = 0; i < numsLen-2; i++) {
 			if(nums[i]>0) break;
 			rightIdx = numsLen-1;
@@ -59,8 +58,7 @@ public class ThreeSum_best {
 				if(sum12>0) break;
 				for (int k = rightIdx; k>j; k--) {
 					if(nums[k]==-sum12) {
-						triplet = Arrays.asList(nums[i], nums[j], -sum12);
-						list.add(triplet);
+						list.add(Arrays.asList(nums[i], nums[j], -sum12));
 						rightIdx = k-1;
 						break;
 					} else if (nums[k]<-sum12) {
