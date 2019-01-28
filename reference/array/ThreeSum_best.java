@@ -78,9 +78,7 @@ public class ThreeSum_best {
 	public static int[] stringToIntegerArray(String input) {
         input = input.trim();
         input = input.substring(1, input.length() - 1);
-        if (input.length() == 0) {
-          return new int[0];
-        }
+        if (input.length() == 0) return new int[0];
     
         String[] parts = input.split(",");
         int[] output = new int[parts.length];
@@ -92,9 +90,7 @@ public class ThreeSum_best {
     }
     
     public static String integerArrayListToString(List<Integer> nums, int length) {
-        if (length == 0) {
-            return "[]";
-        }
+        if (length == 0)  return "[]";
     
         String result = "";
         for(int index = 0; index < length; index++) {
@@ -124,11 +120,8 @@ public class ThreeSum_best {
         String line;
         while ((line = in.readLine()) != null) {
             int[] nums = stringToIntegerArray(line);
-            
             List<List<Integer>> ret = new ThreeSum_best().threeSum(nums);
-            
             String out = int2dListToString(ret);
-            
             System.out.println(out);
         }
     }
