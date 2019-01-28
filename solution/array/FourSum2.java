@@ -21,27 +21,33 @@ public class FourSum2 {
 		if(numsLen<4) return list;
 		Arrays.sort(nums); //排序
 		
-		int sum12, sum34, i3, i4;
+		int sum12, i3, i4;
 		for (int i1 = 0; i1 < numsLen-3; i1++) {
 			for (int i2 = i1+1; i2 < numsLen-2; i2++) {
 				sum12 = nums[i1]+nums[i2];
-				
 				i3 = i2+1;
 				i4 = numsLen-1;
 				while (i3<i4) {
-					sum34 = nums[i3]+nums[i4];
-					while(sum12+sum34<target) i3++;
-					while(sum12+sum34>target) i4--;
+					while(i3<i4 && sum12+nums[i3]+nums[i4]<target) i3++;
+					{
+						//if(i3<i4) i3++;
+						//while(i3<i4 && nums[i3]==nums[i3-1]) i3++;
+					}
 					
-					if(sum12+sum34==target) {
-						list.add(Arrays.asList(
-							nums[i1], nums[i2], nums[i3], nums[i4]));
+					while(i3<i4 && sum12+nums[i3]+nums[i4]>target) i4--;
+					{
+						//i4--;
+						//while(i3<i4 && nums[i4]==nums[i4+1]) i4--;
+					}
+					
+					if(i3<i4 && sum12+nums[i3]+nums[i4]==target) {
+						list.add(Arrays.asList(nums[i1],nums[i2],nums[i3],nums[i4]));
 						i3++;
 					}
 				}
-				while (i2<numsLen-1 && nums[i2]==nums[i2+1]) i2++;
+				while (i2<numsLen-2 && nums[i2]==nums[i2+1]) i2++;
 			}
-			while (i1<numsLen-2 && nums[i1]==nums[i1+1]) i1++;
+			while (i1<numsLen-3 && nums[i1]==nums[i1+1]) i1++;
 		}
 		return list;
 	}
