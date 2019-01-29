@@ -10,7 +10,8 @@ public class ValidParentheses2 {
 
 	//Solution
 	public boolean isValid(String s) {
-
+		
+		
 		return false;
 	}
 	
