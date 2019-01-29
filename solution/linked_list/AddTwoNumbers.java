@@ -3,7 +3,7 @@ package linked_list;
 
 /**
  * @author Apollo4634
- * @creation 2018/11/23
+ * @date 2018/11/23
  * 
  * No.2 Add Two Numbers
  */
@@ -11,17 +11,11 @@ package linked_list;
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode(int x) { val = x; }
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
  * }
  */
-
-class ListNode { //定义了一个单项链表
-	int val;
-	ListNode next;
-	ListNode(int x) { val = x; }
-}
 
 public class AddTwoNumbers {
 	//设置链表 - 方法1

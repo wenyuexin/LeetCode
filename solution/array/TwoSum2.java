@@ -1,13 +1,10 @@
 package array;
 
 import java.util.Arrays;
-//import java.util.Collections;
-//import java.util.HashMap;
-
 
 /** 
  * @author Apollo4634 
- * @creation 2018/11/22
+ * @date 2018/11/22
  * 
  * No.1 Two Sum
  */
