@@ -1,10 +1,12 @@
 package linked_list;
 
 /**
+ * Definition for singly-linked list
+ * 
  * @author Apollo4634
  * @date 2019/01/28 20:42
- * 
- * Definition for singly-linked list
+ * @see AddTwoNumbers
+ * @see RemoveNthNodeFromEndOfList
  */
 
 public class ListNode {

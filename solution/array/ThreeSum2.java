@@ -9,12 +9,6 @@ import java.util.List;
 import java.util.Set;
 
 /** 
- * @author Apollo4634 
- * @date 2019/01/06 00:01
- * 
- * No.15 Three Sum
- * 
- * 解题思路：
  * 先将数组nums依正负分为positiveList negativeList两组，然后分别排序，
  * 排序的作用是为了缩短以下操作的时间，即判断某个数是否在数组中。
  * 
@@ -26,6 +20,10 @@ import java.util.Set;
  * 在positiveList中取出e1 e2，然后判断negativeList中是否存在e3；
  * 在negativeList中取出e1 e2，然后判断positiveList中是否存在e3；
  * 在positiveList中判断是否存在3个0
+ * 
+ * @author Apollo4634 
+ * @date 2019/01/06 00:01
+ * @problem 15
  */
 
 public class ThreeSum2 {

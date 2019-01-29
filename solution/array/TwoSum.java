@@ -2,13 +2,10 @@ package array;
 
 import java.util.Arrays;
 
-//import java.util.Arrays;
-
 /** 
  * @author Apollo4634 
  * @date 2018/11/21
- * 
- * N0.1 Two Sum
+ * @problem 1
  */
 
 public class TwoSum {

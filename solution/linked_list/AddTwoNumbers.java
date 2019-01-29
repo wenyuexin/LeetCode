@@ -4,17 +4,8 @@ package linked_list;
 /**
  * @author Apollo4634
  * @date 2018/11/23
- * 
- * No.2 Add Two Numbers
- */
-
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
+ * @problem 2
+ * @see ListNode
  */
 
 public class AddTwoNumbers {

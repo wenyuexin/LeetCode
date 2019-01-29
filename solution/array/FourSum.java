@@ -5,12 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /** 
- * @author Apollo4634 
- * @date 2019/01/22 23:01
- * 
- * No.18 Four Sum
- * 
- * 解题思路：
  * 本题的目标是找到nums中所有满足e1+e2+e3+e4=target的四元组，
  * 基本思路请参考No.15 Three Sum
  * 
@@ -24,6 +18,10 @@ import java.util.List;
  * 元素e2的下标i2从i1+1至numsLen-3逐步递增，而在第2层循环内 
  * 元素e3和元素e4(i3和i4在区间[i2+1,numsLen-1]之间)作为左右端点逐步向中间收缩
  * 遍历搜索中，这里根据一些特殊情况使用while循环跳过了一些不必要的搜索
+ * 
+ * @author Apollo4634 
+ * @date 2019/01/22 23:01
+ * @problem 19
  */
 
 public class FourSum {
