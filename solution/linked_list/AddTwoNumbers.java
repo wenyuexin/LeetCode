@@ -54,8 +54,8 @@ public class AddTwoNumbers {
 		ListNode l1 = ListNode.setNodeList(arr1);
 		ListNode l2 = ListNode.setNodeList(arr2); 
 		
-		System.out.println("input list1: ["+l1.listToString()+"]");
-		System.out.println("input list2: ["+l2.listToString()+"]");
+		System.out.println("input list1: ["+ListNode.listToString(l1)+"]");
+		System.out.println("input list2: ["+ListNode.listToString(l2)+"]");
 		System.out.println("=====");
 		
 		long t1 = System.nanoTime();
@@ -63,9 +63,9 @@ public class AddTwoNumbers {
 		ListNode l3 = obj.addTwoNumbers(l1, l2);
 		long t2 = System.nanoTime();
 		
-		System.out.println("input list1:  ["+l1.listToString()+"]");
-		System.out.println("input list2:  ["+l2.listToString()+"]");
-		System.out.println("output list3: ["+l3.listToString()+"]");
+		System.out.println("input list1: ["+ListNode.listToString(l1)+"]");
+		System.out.println("input list2: ["+ListNode.listToString(l2)+"]");
+		System.out.println("input list2: ["+ListNode.listToString(l3)+"]");
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
