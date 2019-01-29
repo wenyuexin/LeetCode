@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @author Apollo4634
- * @creation 2018/11/30
+ * @date 2018/11/30
  * 
  * No.4 Median of Two Sorted Arrays
  *

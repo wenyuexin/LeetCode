@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /** 
  * @author Apollo4634 
- * @creation 2018/11/21
+ * @date 2018/11/21
  * 
  * N0.1 Two Sum
  */
