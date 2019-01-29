@@ -3,12 +3,6 @@ package array;
 import java.util.Arrays;
 
 /** 
- * @author Apollo4634 
- * @date 2019/01/15 23:01
- * 
- * No.16 3 Sum Closest
- * 
- * 解题思路：
  * 总体思路可以参考 No.15 Three Sum，都是先排序后遍历，
  * 区别在于15题需要即使找到了符合要求的三元组仍然需要继续遍历，
  * 而本题的目标是寻找sum值最接近target的三元组，
@@ -59,6 +53,10 @@ import java.util.Arrays;
  * 因此，nums[i]为e1搜索后不需要再以nums[i+i'] (i'=1,2,...,I)为e1进行搜索.
  * b. 同理，对于固定的e1，如果nums[j]==nums[j+1]==...==nums[j+J]==e2，
  * 那么以nums[j]为e2得到的三元组的集合也包含了以nums[j+J]为e2得到的三元组的集合.
+ * 
+ * @author Apollo4634 
+ * @date 2019/01/15 23:01
+ * @problem 16
  */
 
 public class ThreeSumClosest {

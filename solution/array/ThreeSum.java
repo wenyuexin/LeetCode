@@ -6,12 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /** 
- * @author Apollo4634 
- * @date 2019/01/08 00:01
- * 
- * No.15 Three Sum
- * 
- * 解题思路：
  * 假设和为0的三元组triplet包含e1 e2 e3三个元素，
  * ThreeSum2提供了遍历e1 e2并搜索e3的方法，
  * 
@@ -50,6 +44,10 @@ import java.util.List;
  * 那么不存在相同的三元组，因此不需要判断最终结果中是否存在重复的三元组
  * 
  * 个人推荐Solution3
+ * 
+ * @author Apollo4634 
+ * @date 2019/01/08 00:01
+ * @problem 15
  */
 
 public class ThreeSum {

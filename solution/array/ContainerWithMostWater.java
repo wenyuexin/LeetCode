@@ -1,11 +1,6 @@
 package array;
 
 /** 
- * @author Apollo4634 
- * @date 2018/12/25 00:12
- * 
- * No.11 Container With Most Water
- * 
  * 解题思路：
  * 假设容器左右两端的下标分别为i和j，那么容器的容量area为
  * area = (j-i)*min(height[i], height[j])
@@ -21,6 +16,10 @@ package array;
  * 如果(i+width)>(height.length-1)则直接跳过当前的i而直接i++
  * 
  * 推荐Solution2
+ * 
+ * @author Apollo4634 
+ * @date 2018/12/25 00:12
+ * @problem 11
  */
 
 public class ContainerWithMostWater {

@@ -5,8 +5,7 @@ import java.util.Arrays;
 /** 
  * @author Apollo4634 
  * @date 2018/11/22
- * 
- * No.1 Two Sum
+ * @problem 1
  */
 
 public class TwoSum2 {

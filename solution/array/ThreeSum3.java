@@ -10,11 +10,7 @@ import java.util.Map;
 /** 
  * @author Apollo4634 
  * @date 2019/01/13 21:01
- * 
- * No.15 Three Sum
- * 
- * 解题思路：
- * 
+ * @problem 15
  */
 
 public class ThreeSum3 {

@@ -3,12 +3,6 @@ package array;
 import java.util.Arrays;
 
 /**
- * @author Apollo4634
- * @date 2018/11/30
- * 
- * No.4 Median of Two Sorted Arrays
- *
- * 解题思路：
  * 假定nums1的长度为len1，nums2的长度为len2
  * 同时假设nums1和nums2组合并排序后的数组为num3
  * 可以认为找中位数就是找到num3的前len_m=(len1+len2)/2个数arr[]
@@ -34,6 +28,10 @@ import java.util.Arrays;
  * 当idx1+1超过了len1时候要适当的将n_left/2变小，防止越界，
  * 同时可以通过推断，直接在nums2中找出剩余的n_left个数
  * 上述方法复杂度符合O(log(len1+len2))的要求
+ * 
+ * @author Apollo4634
+ * @date 2018/11/30
+ * @problem 4
  */
 
 public class MedianOfTwoSortedArrays {
