@@ -4,12 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 /** 
- * @author Apollo4634 
- * @creation 2019/01/16 19:01
- * 
- * No.17 Letter Combinations of a Phone Number
- * 
- * 解题思路：
  * 输入digits是一个包含多个数字的字符串，每个数字对应3至4种可能的字母，
  * 这里使用二维数组mapping保存数字d和字母c的对应关系；
  * 同时，为了便于从mapping中读取字母，先将digits转化为int数组numbers，
@@ -41,6 +35,10 @@ import java.util.List;
  * 需要说明的是，state和某种字母组合str是一一对应的关系，
  * 每次更新state时，state中有些位存在更改，而有些位不存在更改，
  * 因而只需要基于上一次的str修改那些存在变化的位上的字母即可
+ * 
+ * @author Apollo4634 
+ * @creation 2019/01/16 19:01
+ * @problem 17
  */
 
 public class LetterCombinationsOfAPhoneNumber {
