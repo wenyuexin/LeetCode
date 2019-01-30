@@ -5,10 +5,11 @@ import java.util.List;
 
 /**
  * @author -
- * @creation 2019/01/22 15:09
+ * @creation 2019/01/22
+ * @problem 17
  */
 
-public class LetterCombinationsOfAPhoneNumber_best {
+public class LetterCombinationsOfAPhoneNumber_17 {
 
 	//Approch1
 	private static final char[][] mapping = new char[][] {

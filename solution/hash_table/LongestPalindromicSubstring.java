@@ -5,11 +5,10 @@ import java.util.HashMap;
 /** 
  * @author Apollo4634 
  * @creation 2018/11/26
- *
- * No.3 Longest Substring Without Repeating Characters
+ * @problem 3
  */
 
-public class LongestSubstring {
+public class LongestPalindromicSubstring {
 	
 	//Solution
 	public int lengthOfLongestSubstring(String s) {
@@ -51,7 +50,7 @@ public class LongestSubstring {
 		//String str = "a";
 		String str = "tmmzuxt";
 		
-		LongestSubstring obj = new LongestSubstring();
+		LongestPalindromicSubstring obj = new LongestPalindromicSubstring();
 		int len = obj.lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}

@@ -1,7 +1,11 @@
 package linked_list;
 
 /**
+ * 同时遍历两个链表，每次从两个链表中各取出一个节点，
+ * 然后将数值更小的节点添加到新链表的末尾，若相等则都添加
  * 
+ * 某一时刻，如果一个链表遍历结束而另一个链表中还存在节点，
+ * 则直接将后者剩余的节点添加到新链表中
  * 
  * @author Apollo4634
  * @date 2019/01/30
@@ -9,7 +13,7 @@ package linked_list;
  * @see ListNode
  */
 
-public class MergeTwoSortedLists2 {
+public class MergeTwoSortedLists {
 
 	//Solution
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -57,7 +61,7 @@ public class MergeTwoSortedLists2 {
 		System.out.println("input l2:  "+ListNode.listToString(l2));
 		
 		long t1 = System.nanoTime();
-		MergeTwoSortedLists2 obj = new MergeTwoSortedLists2();
+		MergeTwoSortedLists obj = new MergeTwoSortedLists();
 		ListNode l3 = obj.mergeTwoLists(l1, l2);
 		long t2 = System.nanoTime();
 		

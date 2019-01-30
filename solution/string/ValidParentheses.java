@@ -15,7 +15,7 @@ package string;
  * c) 如果某次循环中stack为空栈 (即下溢)，而当前s给出的字符是右括号，
  *   那么直接得出s无效
  * 
- * @author Apollo4634
+ * @author -
  * @date 2019/01/29
  * @problem 20
  */

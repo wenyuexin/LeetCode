@@ -1,9 +1,6 @@
 package math;
 
 /** 
- * @author - 
- * @creation 2018/12/15 16:12
- * 
  * No.7 Reverse Integer
  * 
  * Approach: Pop and Push Digits & Check before Overflow
@@ -22,9 +19,13 @@ package math;
  * //push operation:
  * temp = rev * 10 + pop;
  * rev = temp;
+ * 
+ * @author - 
+ * @creation 2018/12/15
+ * @problem 7
  */
 
-public class ReverseInteger_best {
+public class ReverseInteger_7 {
 	
 	public int reverse(int x) {
 	    int rev = 0;
@@ -47,7 +48,7 @@ public class ReverseInteger_best {
 		int x = 1234560412;
 		
 		long t1 = System.nanoTime();
-		int xRev = new ReverseInteger_best().reverse(x);
+		int xRev = new ReverseInteger_7().reverse(x);
 		long t2 = System.nanoTime();
 	
 		System.out.println("intput: "+x);

@@ -1,11 +1,12 @@
 package string;
 
 /** 
- * @author Apollo4634 
- * @creation 2019/01/05 22:01
+ * @author - 
+ * @creation 2019/01/05
+ * @problem 14
  */
 
-public class LongestCommonPrefix_best {
+public class LongestCommonPrefix_14 {
 
 	//Approach 1: Horizontal scanning
 	public String longestCommonPrefix(String[] strs) {
@@ -91,7 +92,7 @@ public class LongestCommonPrefix_best {
 		String[] strs = {"flower","flow","flight"};
 
 		long t1 = System.nanoTime();
-		LongestCommonPrefix_best obj = new LongestCommonPrefix_best();
+		LongestCommonPrefix_14 obj = new LongestCommonPrefix_14();
 		String prefix = obj.longestCommonPrefix2(strs);
 		long t2 = System.nanoTime();
 

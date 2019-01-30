@@ -8,7 +8,7 @@ package hash_table;
  * 
  */
 
-public class LongestSubstring3 {
+public class LongestPalindromicSubstring3 {
 	
 	public int lengthOfLongestSubstring(String s) {
 		int maxLen = 0;
@@ -43,7 +43,7 @@ public class LongestSubstring3 {
 		//String str = "a";
 		String str = "tmmzuxt"; //5
 		
-		int len = new LongestSubstring3().lengthOfLongestSubstring(str);
+		int len = new LongestPalindromicSubstring3().lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
 }
