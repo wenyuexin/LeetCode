@@ -10,12 +10,16 @@ package linked_list;
  */
 
 public class ListNode {
+	/*problem定义的内容*/
 	int val;
 	ListNode next;
 	ListNode(int x) { val = x; }
 
+	/*个人自定义的内容*/
+	
 	//链表初始化
 	static ListNode setNodeList(int[] arr) {
+		if(arr.length==0) return null;
 		ListNode listNode = new ListNode(arr[0]);//保留表头
 		ListNode listNode_tmp = listNode;
 		ListNode nextNode = null;

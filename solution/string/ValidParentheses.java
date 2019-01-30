@@ -20,7 +20,7 @@ package string;
  * @problem 20
  */
 
-public class ValidParentheses2 {
+public class ValidParentheses {
 
 	//Solution
 	public boolean isValid(String s) {
@@ -61,7 +61,7 @@ public class ValidParentheses2 {
 		//String s = "";
 		
 		long t1 = System.nanoTime();
-		ValidParentheses2 obj = new ValidParentheses2();
+		ValidParentheses obj = new ValidParentheses();
 		boolean validBool = obj.isValid(s);
 		long t2 = System.nanoTime();
 		
