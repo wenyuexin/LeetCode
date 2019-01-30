@@ -8,11 +8,10 @@ import java.util.Set;
 /** 
  * @author Apollo4634 
  * @creation 2018/11/26
- *
- * No.3 Longest Substring Without Repeating Characters
+ * @problem 3
  */
 
-public class LongestSubstring2 {
+public class LongestPalindromicSubstring2 {
 	
 	public int lengthOfLongestSubstring(String s) {
 		int maxLen = 0;
@@ -54,7 +53,7 @@ public class LongestSubstring2 {
 		//String str = "au";
 		//String str = "aab";
 		String str = "a";
-		int len = new LongestSubstring2().lengthOfLongestSubstring(str);
+		int len = new LongestPalindromicSubstring2().lengthOfLongestSubstring(str);
 		System.out.println(len);
 	}
 }

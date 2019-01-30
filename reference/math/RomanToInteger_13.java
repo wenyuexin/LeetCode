@@ -1,6 +1,12 @@
 package math;
 
-public class RomanToInteger_best {
+/**
+ * @author -
+ * @date 2019/01/05
+ * @problem 13
+ */
+
+public class RomanToInteger_13 {
  	public static int romanToInt(String s) {
          int num = 0;
          int n = s.length();
@@ -37,7 +43,7 @@ public class RomanToInteger_best {
     	//String s = "III"; //3
     
     	long t1 = System.nanoTime();
-    	int num = RomanToInteger_best.romanToInt(s);
+    	int num = RomanToInteger_13.romanToInt(s);
     	long t2 = System.nanoTime();
     
     	System.out.println("input: "+s);

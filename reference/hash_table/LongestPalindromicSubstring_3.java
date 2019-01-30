@@ -2,10 +2,11 @@ package hash_table;
 
 /** 
  * @author -
- * @creation 2018/12/08 22:12
+ * @creation 2018/12/08
+ * @problem 3
  */
 
-public class LongestPalindromicSubstring_best {
+public class LongestPalindromicSubstring_3 {
  	int len = 0, maxLength = 0, start = 0;
 
 	public String longestPalindrome(String s) {
@@ -50,7 +51,7 @@ public class LongestPalindromicSubstring_best {
 		
 		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
-		String str = new LongestPalindromicSubstring_best().longestPalindrome(s);
+		String str = new LongestPalindromicSubstring_3().longestPalindrome(s);
 		long t2 = System.nanoTime();
 		System.out.println("output: "+str);
 		System.out.printf("time: "+(t2-t1)/1.0E6+" ms");

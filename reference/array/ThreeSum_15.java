@@ -9,10 +9,11 @@ import java.util.List;
 
 /** 
  * @author - 
- * @creation 2019/01/15 12:01
+ * @creation 2019/01/15
+ * @problem 15
  */
 
-public class ThreeSum_best {
+public class ThreeSum_15 {
 
 	//Approach1
 	public List<List<Integer>> threeSum(int[] nums) {
@@ -120,7 +121,7 @@ public class ThreeSum_best {
         String line;
         while ((line = in.readLine()) != null) {
             int[] nums = stringToIntegerArray(line);
-            List<List<Integer>> ret = new ThreeSum_best().threeSum(nums);
+            List<List<Integer>> ret = new ThreeSum_15().threeSum(nums);
             String out = int2dListToString(ret);
             System.out.println(out);
         }

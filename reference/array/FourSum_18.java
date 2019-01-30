@@ -4,7 +4,13 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class FourSum_best {
+/**
+ * @author -
+ * @date 2019/01/28
+ * @problem 18
+ */
+
+public class FourSum_18 {
 	
 	//Solution
 	public List<List<Integer>> fourSum(int[] nums, int target) {

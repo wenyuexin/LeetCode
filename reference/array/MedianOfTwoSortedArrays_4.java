@@ -5,11 +5,10 @@ import java.util.Arrays;
 /**
  * @author -
  * @creation 2018/11/30
- * 
- * No.4 Median of Two Sorted Arrays
+ * @problem 4
  */
  
-public class MedianOfTwoSortedArrays_best {
+public class MedianOfTwoSortedArrays_4 {
 	
 	//for test
 	static double getMedian(int[] nums1, int[] nums2) {
@@ -62,7 +61,7 @@ public class MedianOfTwoSortedArrays_best {
 	public static void main(String[] args) {
 		int[] nums1 = new int[] {1};
 		int[] nums2 = new int[] {2,3};
-		MedianOfTwoSortedArrays_best obj = new MedianOfTwoSortedArrays_best();
+		MedianOfTwoSortedArrays_4 obj = new MedianOfTwoSortedArrays_4();
 		double median = obj.findMedianSortedArrays(nums1, nums2);
 		
 		System.out.println("nums1: "+Arrays.toString(nums1));

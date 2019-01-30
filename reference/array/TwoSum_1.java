@@ -8,12 +8,11 @@ import java.util.Map;
 
 /** 
  * @author - 
- * @creation 2019/01/15 00:01
- * 
- * N0.1 Two Sum
+ * @creation 2019/01/15
+ * @problem 1
  */
 
-public class TwoSum_best {
+public class TwoSum_1 {
 
 	//Approach 1: Brute Force 暴力搜索
 	//时间复杂度:O(n^2)  空间复杂度:O(1)
@@ -93,7 +92,7 @@ public class TwoSum_best {
 			line = in.readLine();
 			
 			int target = Integer.parseInt(line);
-			int[] ret = new TwoSum_best().twoSum(nums, target);
+			int[] ret = new TwoSum_1().twoSum(nums, target);
 
 			String out = integerArrayToString(ret, ret.length);
 			System.out.print(out);
