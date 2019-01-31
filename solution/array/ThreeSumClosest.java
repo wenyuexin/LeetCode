@@ -40,15 +40,17 @@ public class ThreeSumClosest {
 		int numsLen = nums.length;
 		if(numsLen<4) {
 			int closestSum = 0;
-			for (int num: nums) closestSum += num;
+			for (int num: nums) closestSum+=num;
 			return closestSum;
 		}
 		Arrays.sort(nums); //排序
 		
+		//确定搜索范围
 		int[] ret = calcSearchRange(nums, target);
 		if(ret[3]==1) return target;
 		int begin=ret[0], end=ret[1], minAbsDiff=ret[2];
 		
+		//开始搜索并计算
 		int i2, i3, e2e3, diff;
 		for (int i1 = begin; i1 < end-1; i1++) {
 			i2 = i1+1;
