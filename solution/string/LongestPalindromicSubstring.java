@@ -2,14 +2,9 @@ package string;
 
 
 /**
- * @author Apollo4634
- * @creation 2018/12/06
+ * 寻找最长回文子串
  * 
- * No.5 Longest Palindromic Substring - 最长回文子串
- */
-
-/**
- * 此方法是LongestPalindromicSubstring3的改进
+ * 此方法是LongestPalindromicSubstring的改进
  * 
  * 改进点如下：
  * 之前的方法是以某个中心点向两端搜索，直到字符串s第一个或最后一个字符
@@ -46,7 +41,12 @@ package string;
  * 
  * 修改：
  * 2018-12-09 基于上述方法，这里进一步将String转化为char[]后再处理
+ * 
+ * @author Apollo4634
+ * @creation 2018/12/06
+ * @problem 5
  */
+
 
 public class LongestPalindromicSubstring {
 	
@@ -151,7 +151,6 @@ public class LongestPalindromicSubstring {
 	}
 	
 	public static void main(String[] args) {
-		LongestPalindromicSubstring c = new LongestPalindromicSubstring();
 		//String s = "babad";
 		//String s = "cbbd";
 		//String s = "abcda";
@@ -161,10 +160,13 @@ public class LongestPalindromicSubstring {
 		//String s = "ac";
 		String s = "tattarrattat"; //"tattarrattat"
 		
-		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
-		String str = c.longestPalindrome2(s);
+		LongestPalindromicSubstring obj = 
+				new LongestPalindromicSubstring();
+		String str = obj.longestPalindrome2(s);
 		long t2 = System.nanoTime();
+		
+		System.out.println("input:  "+s);
 		System.out.println("output: "+str);
 		System.out.println("time:  "+(t2-t1)/1.0E6+" ms");
 	}

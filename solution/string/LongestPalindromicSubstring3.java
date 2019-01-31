@@ -5,8 +5,7 @@ package string;
 /**
  * @author Apollo4634
  * @creation 2018/12/05
- * 
- * No.5 Longest Palindromic Substring - 最长回文子串
+ * @problem 5
  */
 
 /**

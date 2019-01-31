@@ -1,13 +1,6 @@
 package string;
 
 
-/** 
- * @author Apollo4634 
- * @creation 2018/12/06 19:12
- * 
- * No.5 Longest Palindromic Substring
- */
-
 /**
  * 解题思路：
  * 和之前的解法差不多，区别在于：
@@ -16,8 +9,9 @@ package string;
  * 而之前的方法是，使用自定义的for循环实现该功能
  * 第二，按子串从长到短顺序比较，得到回文子串后直接退出搜索
  * 
- * 其实在个人主机上的运行时间不到0.1ms，运行部分testcase的
- * 时间也就2ms以内，不知道为什么提交后的运行时间要那么长，无语
+ * @author Apollo4634
+ * @creation 2018/12/06
+ * @problem 5
  */
 
 public class LongestPalindromicSubstring4 {
