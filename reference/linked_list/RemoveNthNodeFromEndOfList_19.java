@@ -3,11 +3,11 @@ package linked_list;
 /**
  * @author -
  * @date 2019/01/30
- * @problem 20
+ * @problem 19
  * @see ListNode
  */
 
-public class RemoveNthNodeFromEndOfList_20 {
+public class RemoveNthNodeFromEndOfList_19 {
 	
 	//My Solution
 	public ListNode removeNthFromEnd(ListNode head, int n) {
