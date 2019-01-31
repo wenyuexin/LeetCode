@@ -10,27 +10,30 @@ import java.util.Arrays;
 
 public class ThreeSumClosest {
 	
-	//Solution
+	/*My Solution*/
 	private int[] calcSearchRange(int[] nums, int target) {
 		int numsLen = nums.length;
-		int I1=0, i2, i3, e2e3, diff;
 		int minAbsDiff = Integer.MAX_VALUE;
+		if(numsLen<=6) return new int[] {0,numsLen-1,minAbsDiff,0};
+		
+		int begin=0, diff;
 		int tmp = nums[numsLen-2]+nums[numsLen-1]-target;
 		for (int i = 0; i < numsLen-2; i++) {
 			diff = nums[i]+tmp;
+			if(diff==0) return new int[] {0,0,0,1};
 			if(diff<0) { minAbsDiff=diff; } 
-			else { I1=(i>0)?i:0; break; }
+			else { begin=i; break; }
 		}
 		
-		int I3=numsLen-1;
-		int tmp2 = nums[0]+nums[1]-target;
-		for (int i = 0; i < numsLen-2; i++) {
+		int end=numsLen-1;
+		int tmp2 = nums[begin]+nums[begin+1]-target;
+		for (int i = numsLen-1; i > begin+1; i--) {
 			diff = nums[i]+tmp2;
-			if(diff>0) { minAbsDiff=diff; } 
-			else { I1=(i>0)?i:0; break; }
+			if(diff==0) return new int[] {0,0,0,1};
+			if(diff>0) { if(Math.abs(diff)<Math.abs(minAbsDiff)) minAbsDiff=diff; } 
+			else { end=i; break; }
 		}
-		
-		return new int[] {I1,I3,minAbsDiff};
+		return new int[] {begin,end,minAbsDiff,0};
 	}
 			
 	public int threeSumClosest(int[] nums, int target) {
@@ -41,19 +44,15 @@ public class ThreeSumClosest {
 			return closestSum;
 		}
 		Arrays.sort(nums); //排序
-
-		int I1=0, i2, i3, e2e3, diff;
-		int minAbsDiff = Integer.MAX_VALUE;
-		int tmp = nums[numsLen-2]+nums[numsLen-1]-target;
-		for (int i = 0; i < numsLen-2; i++) {
-			diff = nums[i]+tmp;
-			if(diff<0) { minAbsDiff=diff; } 
-			else { I1=(i>0)?i:0; break; }
-		}
 		
-		for (int i1 = I1; i1 < numsLen-2; i1++) {
+		int[] ret = calcSearchRange(nums, target);
+		if(ret[3]==1) return target;
+		int begin=ret[0], end=ret[1], minAbsDiff=ret[2];
+		
+		int i2, i3, e2e3, diff;
+		for (int i1 = begin; i1 < end-1; i1++) {
 			i2 = i1+1;
-			i3 = numsLen-1;
+			i3 = end;
 			e2e3 = target-nums[i1];
 			
 			diff = nums[i2]+nums[i2+1]-e2e3;
@@ -67,13 +66,13 @@ public class ThreeSumClosest {
 			
 			while(i2<i3) { //twoSumClosest
 				diff = nums[i2] + nums[i3] - e2e3;
-				if(diff == 0) return target;
+				if(diff==0) return target;
 				if(Math.abs(diff)<Math.abs(minAbsDiff)) minAbsDiff=diff;
 				
 				if(diff<0) { i2++; while(i2<i3 && nums[i2]==nums[i2-1]) i2++; } 
 				else { i3--; while(i2<i3 && nums[i3]==nums[i3+1]) i3--; }
 			}
-			while(i1<numsLen-2 && nums[i1+1]==nums[i1]) i1++;
+			while(i1<end-1 && nums[i1+1]==nums[i1]) i1++;
 		}
 		return target + minAbsDiff;
 	}
@@ -83,14 +82,14 @@ public class ThreeSumClosest {
 		//int[] nums = {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
 		//int target = 9;
 
-		//int[] nums = {-1,2,1,-4};
-		//int target = 1;
+		int[] nums = {-1,2,1,-4};
+		int target = 1;
 
 		//int[] nums = {1,1,1,1};
 		//int target = 1;
 		
-		int[] nums = { -1,0,1,1,55 };
-		int target = 3;
+		//int[] nums = { -1,0,1,1,55 };
+		//int target = 3;
 
 		long t1 = System.nanoTime();
 		ThreeSumClosest obj = new ThreeSumClosest();
