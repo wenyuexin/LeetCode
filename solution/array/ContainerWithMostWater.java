@@ -24,7 +24,7 @@ package array;
 
 public class ContainerWithMostWater {
 
-	//Solution1
+	//Solution1 - 暴力搜索
 	public int maxArea(int[] height) {
 		int max = 0;
 		int area = 0;
@@ -39,16 +39,16 @@ public class ContainerWithMostWater {
 	
 	//Solution2 - Recommend
 	public int maxArea2(int[] height) {
-		int hLen = height.length; //数组长度
-		int area = (hLen-1)*Math.min(height[0], height[hLen-1]);
-		if(hLen==2) return area;
+		int arrLen = height.length; //数组长度
+		int area = (arrLen-1)*Math.min(height[0], height[arrLen-1]);
+		if(arrLen==2) return area;
 			
 		int max = area; //最大容量
 		int width = 0;
-		for (int i = 0; i < hLen-2; i++) {
+		for (int i = 0; i < arrLen-2; i++) {
 			if(height[i]==0) continue;
 			width = max/height[i]-1;
-			for (int j = hLen-1; j > i+width; j--) {
+			for (int j = arrLen-1; j > i+width; j--) {
 				area = (j-i)*Math.min(height[i],height[j]);
 				if(area>max) {
 					max = area;
@@ -64,7 +64,9 @@ public class ContainerWithMostWater {
 		int[] height = {1,8,6,2,5,4,8,3,7};
 		
 		long t1 = System.nanoTime();
-		int maxValue = new ContainerWithMostWater().maxArea2(height);
+		ContainerWithMostWater obj = 
+				new ContainerWithMostWater();
+		int maxValue = obj.maxArea2(height);
 		long t2 = System.nanoTime();
 		
 		System.out.println("output: "+maxValue);
