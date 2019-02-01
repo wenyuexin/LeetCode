@@ -8,75 +8,45 @@ package math;
  * I 1, V 5, X 10, L 50, C 100, D 500, M 1000
  * 
  * @author Apollo4634 
- * @creation 2019/01/01 17:01
+ * @creation 2019/01/01
  * @problem 12
  */
 
 public class IntegerToRoman {
 
-	private static int[] basicValue = new int[] {
+	private static int[] basicValues = new int[] {
 			1,4,5,9,10,40,50,90,100,400,500,900,1000};
-	private static String[] basicSymbolArr = new String[] {
+	private static String[] basicSymbols = new String[] {
 			"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
 
 	//Solution - java11
 	public String intToRoman(int num) {
-		int residual = num;
 		int nSymbol = 0;
 		StringBuilder sb = new StringBuilder();
-		for (int i = basicValue.length-1; i>0; i--) {
-			if(residual>=basicValue[i]) {
-				nSymbol = residual/basicValue[i];
-				sb.append(basicSymbolArr[i].repeat(nSymbol));
-				residual -= nSymbol*basicValue[i];
+		for (int i = basicValues.length-1; i>0; i--) {
+			if(num>=basicValues[i]) {
+				nSymbol = num/basicValues[i];
+				sb.append(basicSymbols[i].repeat(nSymbol));
+				num -= nSymbol*basicValues[i];
 			}
 		}
 		return sb.toString();
 	}
 
+	
 	//Solution2
 	public String intToRoman2(int num) {
-		int residual = num;
-		int nSymbol = 0;
 		int idx = 12;
-		if(residual<=10) {
-			idx = 4;
-		} else if (residual<=100) {
-			idx = 8;
-		}
-
-		StringBuilder sb = new StringBuilder();
-		for (int i = idx; i>=0; i--) {
-			if(residual>=basicValue[i]) {
-				nSymbol = residual/basicValue[i];
-				residual -= nSymbol*basicValue[i];
-				while(nSymbol>0) {
-					sb.append(basicSymbolArr[i]);
-					nSymbol--;
-				}
-			}
-		}
-		return sb.toString();
-	}
-
-	//Solution3
-	public String intToRoman3(int num) {
-		int residual = num;
-		int idx = 12;
-		if(residual<=10) {
-			idx = 4;
-		} else if (residual<=100) {
-			idx = 8;
-		}
+		if(num<=10) { idx = 4; } 
+		else if (num<=100) { idx = 8; }
 		
-		StringBuilder sb = new StringBuilder(20);
-		while(residual>0) {
-			if(residual>=basicValue[idx]) {
-				residual -= basicValue[idx];
-				sb.append(basicSymbolArr[idx]);
-			} else {
-				idx--;
+		StringBuilder sb = new StringBuilder();
+		while(num>0) {
+			if(num<basicValues[idx]) { 
+				idx--; continue; 
 			}
+			num -= basicValues[idx];
+			sb.append(basicSymbols[idx]);
 		}
 		return sb.toString();
 	}
@@ -89,7 +59,8 @@ public class IntegerToRoman {
 		//int num = 3; //III
 
 		long t1 = System.nanoTime();
-		String romanStr = new IntegerToRoman().intToRoman3(num);
+		IntegerToRoman obj = new IntegerToRoman(); 
+		String romanStr = obj.intToRoman2(num);
 		long t2 = System.nanoTime();
 
 		System.out.println("input: "+num);
