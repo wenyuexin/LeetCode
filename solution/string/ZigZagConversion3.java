@@ -100,8 +100,8 @@ public class ZigZagConversion3 {
 		String str = new ZigZagConversion3().convert(s, numRows);
 		long t2 = System.nanoTime();
 		
-		System.out.println("intput: "+s);
-		System.out.println("output: "+str);
+		System.out.println("Intput: "+s);
+		System.out.println("Output: "+str);
 		System.out.println(str.equals("PINALSIGYAHRPI"));
 		System.out.println(str.equals("PAHNAPLSIIGYIR"));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
