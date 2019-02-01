@@ -13,30 +13,24 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	
 	//Solution
 	public int lengthOfLongestSubstring(String s) {
-		Integer one = Integer.valueOf(1);
-		Integer maxLen = Integer.valueOf(0);
-		Integer strLen = Integer.valueOf(0);
-		Integer idx_left = Integer.valueOf(0);
-		Integer idx_tmp = Integer.valueOf(0);
+		int maxLen=0, strLen=0, left=0, tmpIdx=0;
 		
 		Map<Character,Integer> map = new HashMap<>();
 		for(int i=0; i<s.length(); i++) {
-			Character character = Character.valueOf(s.charAt(i));
-			Integer integer = Integer.valueOf(i);
-			
-			if (!map.containsKey(character)) { //判断char是否在keys中
-				strLen += one;
-			} else { //如果在
-				idx_tmp = map.get(character);
-				if(idx_tmp<idx_left) {
-					strLen += one;
+			char c = s.charAt(i);
+			if (!map.containsKey(c)) { //判断char是否在keys中
+				strLen++;
+			} else {
+				tmpIdx = map.get(c);
+				if(tmpIdx<left) {
+					strLen++;
 				} else {
-					strLen = integer - idx_tmp;
-					idx_left = idx_tmp + one;
+					strLen = i - tmpIdx;
+					left = tmpIdx + 1;
 				}
 			}
-			map.put(character,integer);//更新map				
-			if(maxLen<strLen) maxLen = strLen;
+			map.put(c,i);//更新map				
+			if(maxLen<strLen) maxLen=strLen;
 		}
 		return maxLen;
     }
