@@ -8,7 +8,7 @@ import java.util.HashMap;
  * @problem 3
  */
 
-public class LongestPalindromicSubstring {
+public class LongestSubstringWithoutRepeatingCharacters {
 	
 	//Solution
 	public int lengthOfLongestSubstring(String s) {
@@ -50,8 +50,14 @@ public class LongestPalindromicSubstring {
 		//String str = "a";
 		String str = "tmmzuxt";
 		
-		LongestPalindromicSubstring obj = new LongestPalindromicSubstring();
+		long t1 = System.nanoTime();
+		LongestSubstringWithoutRepeatingCharacters obj = 
+				new LongestSubstringWithoutRepeatingCharacters();
 		int len = obj.lengthOfLongestSubstring(str);
-		System.out.println(len);
+		long t2 = System.nanoTime();
+		
+		System.out.println("Input:  "+str);
+		System.out.println("Output: "+len);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
