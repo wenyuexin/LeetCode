@@ -41,11 +41,11 @@ public class LongestSubstringWithoutRepeatingCharacters3 {
 		//String str = "au";
 		//String str = "aab";
 		//String str = "a";
-String str = "tmmzuxt";
+		String str = "tmmzuxt";
 		
 		long t1 = System.nanoTime();
 		LongestSubstringWithoutRepeatingCharacters3 obj = 
-				new LongestSubstringWithoutRepeatingCharacters3();
+			new LongestSubstringWithoutRepeatingCharacters3();
 		int len = obj.lengthOfLongestSubstring(str);
 		long t2 = System.nanoTime();
 

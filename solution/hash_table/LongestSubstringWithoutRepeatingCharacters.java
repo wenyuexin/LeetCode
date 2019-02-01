@@ -1,6 +1,7 @@
 package hash_table;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /** 
  * @author Apollo4634 
@@ -18,7 +19,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		Integer idx_left = Integer.valueOf(0);
 		Integer idx_tmp = Integer.valueOf(0);
 		
-		HashMap<Character,Integer> map = new HashMap<>();
+		Map<Character,Integer> map = new HashMap<>();
 		for(int i=0; i<s.length(); i++) {
 			Character character = Character.valueOf(s.charAt(i));
 			Integer integer = Integer.valueOf(i);
@@ -52,7 +53,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		
 		long t1 = System.nanoTime();
 		LongestSubstringWithoutRepeatingCharacters obj = 
-				new LongestSubstringWithoutRepeatingCharacters();
+			new LongestSubstringWithoutRepeatingCharacters();
 		int len = obj.lengthOfLongestSubstring(str);
 		long t2 = System.nanoTime();
 		
