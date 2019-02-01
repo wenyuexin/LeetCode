@@ -1,17 +1,15 @@
 package math;
 
 /** 
- * @author Apollo4634 
- * @creation 2019/01/01 17:01
- * 
- * No.12 Integer to Roman
+ * 解题思路：
+ * 借鉴贪心算法的思想
  * 
  * 参考：
  * I 1, V 5, X 10, L 50, C 100, D 500, M 1000
  * 
- * 解题思路：
- * 借鉴贪心算法的思想
- * 
+ * @author Apollo4634 
+ * @creation 2019/01/01 17:01
+ * @problem 12
  */
 
 public class IntegerToRoman {
