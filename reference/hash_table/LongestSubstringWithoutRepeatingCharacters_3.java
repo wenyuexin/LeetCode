@@ -44,8 +44,7 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 			if (!set.contains(s.charAt(j))){
 				set.add(s.charAt(j++));
 				ans = Math.max(ans, j - i);
-			}
-			else {
+			} else {
 				set.remove(s.charAt(i++));
 			}
 		}
@@ -53,10 +52,10 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 	}
 
 
-	//Approach 3: Sliding Window Optimized
+	//Approach 3: Sliding Window Optimized - Recommend
 	public int lengthOfLongestSubstring3(String s) {
 		int n = s.length(), ans = 0;
-		Map<Character, Integer> map = new HashMap<>(); //current index of character
+		Map<Character, Integer> map = new HashMap<>();//current index of character
 		// try to extend the range [i, j]
 		for (int j = 0, i = 0; j < n; j++) {
 			if (map.containsKey(s.charAt(j))) {
@@ -88,7 +87,7 @@ public class LongestSubstringWithoutRepeatingCharacters_3 {
 			if( chrIdx != -1 && chrIdx > idx - curLen ) {
 				curLen = idx - chrIdx;
 			} else { // if charecter has not been encountered
-				maxSubLen = maxSubLen > curLen ? maxSubLen : curLen;                             
+				maxSubLen = Math.max(maxSubLen, curLen);                             
 			}
 			charArr[arr[idx]] = idx++;
 		}
