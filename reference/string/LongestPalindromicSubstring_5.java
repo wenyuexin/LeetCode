@@ -1,4 +1,4 @@
-package hash_table;
+package string;
 
 /** 
  * @author -
@@ -6,7 +6,7 @@ package hash_table;
  * @problem 3
  */
 
-public class LongestPalindromicSubstring_3 {
+public class LongestPalindromicSubstring_5 {
  	int len = 0, maxLength = 0, start = 0;
 
 	public String longestPalindrome(String s) {
@@ -49,12 +49,15 @@ public class LongestPalindromicSubstring_3 {
 		//String s = "ac";
 		String s = "acdfghertysdarveartb";
 		
-		System.out.println("input:  "+s);
 		long t1 = System.nanoTime();
-		String str = new LongestPalindromicSubstring_3().longestPalindrome(s);
+		LongestPalindromicSubstring_5 obj = 
+			new LongestPalindromicSubstring_5();
+		String str = obj.longestPalindrome(s);
 		long t2 = System.nanoTime();
-		System.out.println("output: "+str);
-		System.out.printf("time: "+(t2-t1)/1.0E6+" ms");
+		
+		System.out.println("Input:  "+s);
+		System.out.println("Output: "+str);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
 

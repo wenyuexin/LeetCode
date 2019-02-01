@@ -56,7 +56,7 @@ public class LongestSubstringWithoutRepeatingCharacters2 {
 		
 		long t1 = System.nanoTime();
 		LongestSubstringWithoutRepeatingCharacters2 obj = 
-				new LongestSubstringWithoutRepeatingCharacters2();
+			new LongestSubstringWithoutRepeatingCharacters2();
 		int len = obj.lengthOfLongestSubstring(str);
 		long t2 = System.nanoTime();
 
