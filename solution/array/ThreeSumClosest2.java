@@ -57,7 +57,7 @@ import java.util.Arrays;
  * 那么以nums[j]为e2得到的三元组的集合也包含了以nums[j+J]为e2得到的三元组的集合.
  * 
  * @author Apollo4634 
- * @date 2019/01/15 23:01
+ * @create 2019/01/15
  * @problem 16
  */
 

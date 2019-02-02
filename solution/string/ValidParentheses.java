@@ -16,7 +16,7 @@ package string;
  *   那么直接得出s无效
  * 
  * @author -
- * @date 2019/01/29
+ * @create 2019/01/29
  * @problem 20
  */
 

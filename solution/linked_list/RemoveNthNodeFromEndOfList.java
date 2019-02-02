@@ -10,7 +10,7 @@ package linked_list;
  * 即链表并不存在反向的第n+1个节点，此时直接返回head.next即可
  * 
  * @author Apollo4634
- * @date 2019/01/28
+ * @create 2019/01/28
  * @problem 20
  * @see ListNode
  */
