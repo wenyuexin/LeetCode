@@ -8,7 +8,7 @@ package linked_list;
  * 则直接将后者剩余的节点添加到新链表中
  * 
  * @author Apollo4634
- * @date 2019/01/30
+ * @create 2019/01/30
  * @problem 21
  * @see ListNode
  */

@@ -2,7 +2,7 @@ package linked_list;
 
 /**
  * @author -
- * @date 2019/01/30
+ * @create 2019/01/30
  * @problem 21
  * @see ListNode
  */
