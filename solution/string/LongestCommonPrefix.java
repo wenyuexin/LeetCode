@@ -3,11 +3,6 @@ package string;
 import java.util.Arrays;
 
 /** 
- * @author Apollo4634 
- * @creation 2019/01/05 21:01
- *  
- * No.14 Longest Common Prefix
- * 
  * 解题思路：
  * 可以认为输入的数组strs是一个二维字符矩阵， 一行代表一个字符串:
  * s1: s1c1 s1c2 s1c3 s1c4 ...
@@ -29,6 +24,10 @@ import java.util.Arrays;
  * 即，输入的字符串数组strs的前若干个字符串存在共同前缀p1,
  * 而后半部分的若干字符串的共同前缀是p2，如果p1的长度远大于p2，
  * 那么就会进行多次不必要的比较
+ * 
+ * @author Apollo4634 
+ * @creation 2019/01/05 21:01
+ * @problem 14
  */
 
 public class LongestCommonPrefix {

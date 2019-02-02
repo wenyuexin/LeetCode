@@ -94,8 +94,8 @@ public class LetterCombinationsOfAPhoneNumber {
 		List<String> strList = obj.letterCombinations(digits);
 		long t2 = System.nanoTime();
 
-		System.out.println("input:   "+digits);
-		System.out.println("output:  "+strList.size()+" "+strList);
+		System.out.println("Input:   "+digits);
+		System.out.println("Output:  "+strList.size()+" "+strList);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

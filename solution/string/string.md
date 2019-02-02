@@ -16,6 +16,7 @@
 | 0014 | **[Longest Common Prefix](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0014_LongestCommonPrefix.md)** |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/LongestCommonPrefix.java) |                                                              |
 | 0017 | **[Letter Combinations of a Phone Number](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0017_LetterCombinationsOfAPhoneNumber.md)** |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/LetterCombinationsOfAPhoneNumber.java) | [Backtracking](https://github.com/Apollo4634/LeetCode/blob/master/solution/backtracking/backtracking.md) |
 | 0020 | **[Valid Parentheses](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0020_ValidParentheses.md)** |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/ValidParentheses.java) | [Stack](https://github.com/Apollo4634/LeetCode/blob/master/solution/stack/stack.md) |
+| 0022 | **[Generate Parentheses](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0022_GenerateParentheses.md)** |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/ValidParentheses.java) | [Backtracking](https://github.com/Apollo4634/LeetCode/blob/master/solution/backtracking/backtracking.md) |
 |      |                                                              |            |                                                              |                                                              |
 |      |                                                              |            |                                                              |                                                              |
 |      |                                                              |            |                                                              |                                                              |
@@ -27,5 +28,6 @@
 |      |                                                              |            |                                                              |                                                              |
 |      |                                                              |            |                                                              |                                                              |
 |      |                                                              |            |                                                              |                                                              |
-|      |                                                              |            |                                                              |                                                              |
+
+
 
