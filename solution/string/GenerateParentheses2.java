@@ -14,7 +14,11 @@ public class GenerateParentheses2 {
 	public List<String> generateParenthesis(int n) {
 		List<String> list = null;
 		
-		
+		int L=0, R=0;
+		StringBuild sb = new StringBuild();
+		while() {
+		    
+		}
 		
 		
 		return list;
