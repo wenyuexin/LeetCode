@@ -11,11 +11,14 @@ import java.util.List;
 public class GenerateParentheses2 {
 
 	//Solution
-	private boolean get(StringBuilder sb, int n, int i) {
+	private void get(StringBuilder sb, int n, int L, int R) {
+		if (L+R==n) return;
+		int white = 0;
+		if (L>=R) {
+			
+		}
 		
-		
-		if (i==n-1) return true;
-		return false;
+		return;
 	}
 	
 	public List<String> generateParenthesis(int n) {
@@ -24,17 +27,8 @@ public class GenerateParentheses2 {
 		int L=0, R=0;
 		StringBuilder sb = new StringBuilder();
 		
-		if()
+		//if() {}
 		
-		
-		/*
-		while(true) {
-		    
-			if (true) {
-				list.add(sb.toString());
-			}
-		}
-		*/
 		
 		return list;
 	}
