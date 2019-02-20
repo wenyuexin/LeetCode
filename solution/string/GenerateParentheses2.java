@@ -1,5 +1,6 @@
 package string;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,23 +12,32 @@ import java.util.List;
 public class GenerateParentheses2 {
 
 	//Solution
-	private void get(StringBuilder sb, int n, int L, int R) {
-		if (L+R==n) return;
-		int white = 0;
-		if (L>=R) {
+	private List<String> list;
+	private int N;
+	
+	private void get(StringBuilder sb, int i, int L, int R) {
+		if (L==N && R==N) {
+			list.add(sb.toString());
+		} else {
+			int sign = 0;
 			
+			if (L>=R) {
+				
+			}			
 		}
+		
 		
 		return;
 	}
 	
 	public List<String> generateParenthesis(int n) {
-		List<String> list = null;
+		list = new LinkedList<String>();
+		N = n;
 		
 		int L=0, R=0;
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder(2*n);
 		
-		//if() {}
+		get(sb, 0, L, R);
 		
 		
 		return list;
