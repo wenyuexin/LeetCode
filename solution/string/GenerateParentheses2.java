@@ -17,9 +17,20 @@ public class GenerateParentheses2 {
 		if (L+R==n) return;
 		int flag = 0;
 		if (L>=R) {
+	private List<String> list;
+	private int N;
+	
+	private void get(StringBuilder sb, int i, int L, int R) {
+		if (L==N && R==N) {
+			list.add(sb.toString());
+		} else {
+			int sign = 0;
 			
 			
 			
+			if (L>=R) {
+				
+			}			
 		}
 		
 		return;
