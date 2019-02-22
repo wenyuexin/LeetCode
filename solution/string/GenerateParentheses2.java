@@ -3,6 +3,8 @@ package string;
 import java.util.List;
 
 /**
+ * 
+ * 
  * @author Apollo4634
  * @create 2019/02/01
  * @problem 22
@@ -13,8 +15,10 @@ public class GenerateParentheses2 {
 	//Solution
 	private void get(StringBuilder sb, int n, int L, int R) {
 		if (L+R==n) return;
-		int white = 0;
+		int flag = 0;
 		if (L>=R) {
+			
+			
 			
 		}
 		
@@ -28,6 +32,7 @@ public class GenerateParentheses2 {
 		StringBuilder sb = new StringBuilder();
 		
 		//if() {}
+	
 		
 		
 		return list;
