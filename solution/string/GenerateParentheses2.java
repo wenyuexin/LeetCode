@@ -13,28 +13,29 @@ import java.util.List;
 public class GenerateParentheses2 {
 
 	//Solution
-	private void get(StringBuilder sb, int n, int L, int R) {
-		if (L+R==n) return;
-		int flag = 0;
-		if (L>=R) {
 	private List<String> list;
 	private int N;
 	
-	private void get(StringBuilder sb, int i, int L, int R) {
+	private void get(StringBuilder sb, boolean isLeft, int L, int R) {
+		//boolean left = false;
+		//boolean right = false;
+		
+		if (isLeft) L += 1;
+		else        R += 1;
+		
+		if (L<R || L>N || R>N) return;
 		if (L==N && R==N) {
 			list.add(sb.toString());
 		} else {
-			int sign = 0;
 			
 			
-			
-			if (L>=R) {
-				
-			}			
+			get(sb, true, L+1, R);
+			get(sb, false, L, R+1);
 		}
 		
 		return;
 	}
+	
 	
 	public List<String> generateParenthesis(int n) {
 		List<String> list = null;
