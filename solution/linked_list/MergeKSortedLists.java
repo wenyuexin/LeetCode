@@ -13,18 +13,31 @@ package linked_list;
 public class MergeKSortedLists {
 
 	private ListNode[] heap;
+	private int N;
 	private int K;
-
-	private void sink() {
-		
+	
+	private void swap(int i, int j) {
+		ListNode temp = heap[i];
+		heap[i] = heap[j];
+		heap[j] = temp;
+	}
+	
+	private void sink(int idx) {
+		for (int i = idx; 2*i+1 <= K; i++) {
+			int j = (heap[2*i].val < heap[2*i].val)? 2*i : 2*i+1;
+			if (heap[i].val >= heap[j].val) break;
+			swap(i ,j);
+		}
 	}
 
 	private void insert(ListNode node) {
-		
+		//heap[K+1] = heap[1];
+		//sink(1);
 	}
 	
 	private ListNode deleteMin() {
 
+		
 		return null;
 	}
 
@@ -33,6 +46,8 @@ public class MergeKSortedLists {
 		heap = new ListNode[K+2];
 		for (int i = 0; i < K; i++) {
 			heap[i+1] = lists[i];
+			if (lists[i].next != null) 
+				lists[i] = lists[i].next;
 		}
 		
 		
