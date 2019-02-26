@@ -46,8 +46,8 @@ public class MergeTwoSortedLists {
 		int[] nums1 = new int[] {  };
 		int[] nums2 = new int[] { 0 };
 
-		ListNode l1 = ListNode.setNodeList(nums1); 
-		ListNode l2 = ListNode.setNodeList(nums2);
+		ListNode l1 = ListNode.toNodeList(nums1); 
+		ListNode l2 = ListNode.toNodeList(nums2);
 
 		System.out.println("input l1:  "+ListNode.listToString(l1));
 		System.out.println("input l2:  "+ListNode.listToString(l2));

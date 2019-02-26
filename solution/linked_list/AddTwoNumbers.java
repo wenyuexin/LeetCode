@@ -51,8 +51,8 @@ public class AddTwoNumbers {
 		int[] arr1 = new int[] {5,8};
 		int[] arr2 = new int[] {5,4};
 		
-		ListNode l1 = ListNode.setNodeList(arr1);
-		ListNode l2 = ListNode.setNodeList(arr2); 
+		ListNode l1 = ListNode.toNodeList(arr1);
+		ListNode l2 = ListNode.toNodeList(arr2); 
 		
 		System.out.println("input list1: ["+ListNode.listToString(l1)+"]");
 		System.out.println("input list2: ["+ListNode.listToString(l2)+"]");
