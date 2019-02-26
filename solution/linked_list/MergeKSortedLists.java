@@ -3,12 +3,14 @@ package linked_list;
 
 /** 
  * 此为基于最小堆的解法
+ * 顺带一提，这里是手动实现了最小堆
  * 
  * @author Apollo4634 
  * @create 2019/02/25
  * @problem 23
  * @see ListNode
  * @see MergeKSortedLists_23
+ * @see java.util.PriorityQueue
  */
 
 public class MergeKSortedLists {
@@ -31,7 +33,7 @@ public class MergeKSortedLists {
 	}
 
 	private void swim(int idx) {
-		for (int i = idx; i>>1 > 0 && heap[i].val < heap[i>>1].val; i /= 2) {
+		for (int i = idx; i>>1 > 0 && heap[i].val < heap[i>>1].val; i = i>>1) {
 			swap(i, i>>1);
 		}
 	}
@@ -57,7 +59,6 @@ public class MergeKSortedLists {
 		for(int i = 0; i < lists.length; i++) {
 			if (lists[i] != null) insert(lists[i]);
 		}
-		
 		ListNode head = new ListNode(0);
 		ListNode node = head;
 		while(true) {
