@@ -28,7 +28,60 @@ public class MergeKSortedLists_23 {
 	/* Approach 3: Optimize Approach 2 by Priority Queue
 	 * Almost the same as the one above but optimize the comparison process by priority queue. 
 	 */
+	private ListNode[] heap;
+	private int N;
 
+	private void swap(int i, int j) {
+		ListNode temp = heap[i];
+		heap[i] = heap[j];
+		heap[j] = temp;
+	}
+
+	private void sink(int idx) {
+		for (int i = idx, j = idx<<1; j <= N; i = j, j = i<<1) {
+			if(j+1 <= N && heap[j].val > heap[j+1].val) j += 1;
+			if(heap[i].val <= heap[j].val) break;
+			swap(i ,j);
+		}
+	}
+
+	private void swim(int idx) {
+		for (int i = idx; i>>1 > 0 && heap[i].val < heap[i>>1].val; i = i>>1) {
+			swap(i, i>>1);
+		}
+	}
+
+	private void insert(ListNode node) {
+		N += 1;
+		heap[N] = node;
+		swim(N);
+	}
+
+	private ListNode deleteMin() {
+		if(N==0) return null;
+		ListNode min = heap[1];
+		swap(1, N);
+		N -= 1;
+		sink(1);
+		return min;
+	}
+
+	public ListNode mergeKLists3(ListNode[] lists) {
+		N = 0;
+		heap = new ListNode[lists.length+1];
+		for(int i = 0; i < lists.length; i++) {
+			if (lists[i] != null) insert(lists[i]);
+		}
+		ListNode head = new ListNode(0);
+		ListNode node = head;
+		while(true) {
+			node.next = deleteMin();
+			if(node.next == null) break;
+			node = node.next;
+			if(node.next != null) insert(node.next);
+		}
+		return head.next;
+	}
 
 	/* Approach 4: Merge lists one by one
 	 * Convert merge k lists problem to merge 2 lists (k-1) times. 
@@ -45,7 +98,7 @@ public class MergeKSortedLists_23 {
 	 * Thus, we'll traverse almost NN nodes per pairing and merging, 
 	 * and repeat this procedure about log2(k) times.
 	 */
-	public ListNode mergeKLists(ListNode[] lists) {
+	public ListNode mergeKLists4(ListNode[] lists) {
 		return mergeKLists(lists, 0, lists.length - 1);
 	}
 
