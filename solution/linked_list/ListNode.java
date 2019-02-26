@@ -16,19 +16,29 @@ public class ListNode {
 	ListNode(int x) { val = x; }
 
 	/*个人自定义的内容*/
-	
+
 	//链表初始化
-	static ListNode setNodeList(int[] arr) {
+	static ListNode toNodeList(int[] arr) {
 		if(arr.length==0) return null;
 		ListNode listNode = new ListNode(arr[0]);//保留表头
 		ListNode listNode_tmp = listNode;
 		ListNode nextNode = null;
-		for(int i=1; i<arr.length; i++) {
+		for(int i = 1; i < arr.length; i++) {
 			nextNode = new ListNode(arr[i]);
 			listNode_tmp.next = nextNode;
 			listNode_tmp = nextNode;
 		}
 		return listNode;
+	}
+
+	//链表初始化
+	static ListNode[] toNodeLists(int[][] arr) {
+		if(arr.length==0) return null;
+		ListNode[] lists = new ListNode[arr.length];
+		for(int i = 0; i < arr.length; i++) {
+			lists[i] = toNodeList(arr[i]);
+		}
+		return lists;
 	}
 
 	//将单个节点转为字符串
@@ -39,14 +49,27 @@ public class ListNode {
 
 	//将整个链表转为字符串
 	public static String listToString(ListNode head) {
-		if(head==null) return "";
-		StringBuilder sb = new StringBuilder();
+		if (head==null) return "";
+		StringBuilder sb = new StringBuilder("[");
 		ListNode node = head;
 		while(node.next != null) {
 			sb.append(node+", ");
 			node = node.next;
 		}
 		sb.append(node);
+		sb.append("]");
+		return sb.toString();
+	}
+
+	//将链表数组转为字符串
+	public static String listsToString(ListNode[] lists) {
+		if (lists==null) return "";
+		StringBuilder sb = new StringBuilder("[ ");
+		for (int i = 0; i < lists.length; i++) {
+			sb.append(listToString(lists[i]));
+			if (i < lists.length-1) sb.append(", ");
+		}
+		sb.append(" ]");
 		return sb.toString();
 	}
 

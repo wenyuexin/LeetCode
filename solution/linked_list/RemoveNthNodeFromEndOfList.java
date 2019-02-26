@@ -42,7 +42,7 @@ public class RemoveNthNodeFromEndOfList {
 		int[] nums = new int[] { 1 };
 		int n = 1;
 
-		ListNode head = ListNode.setNodeList(nums);
+		ListNode head = ListNode.toNodeList(nums);
 		System.out.println("input list:  "+ListNode.listToString(head));
 		System.out.println("input n:     "+n);
 		
