@@ -8,7 +8,13 @@ package linked_list;
 public class SwapNodesInPairs {
 	
 	public ListNode swapPairs(ListNode head) {
+		ListNode h = new ListNode(0);
+		ListNode node1 = head;
+		ListNode node2 = head.next;
 		
+		while (node1 != null) {
+			
+		}
 		
 		return null;
 	}

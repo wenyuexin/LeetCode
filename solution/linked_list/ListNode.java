@@ -17,8 +17,14 @@ public class ListNode {
 
 	/*个人自定义的内容*/
 
+	//将单个节点转为字符串
+	@Override
+	public String toString() {
+		return Integer.toString(val);
+	}
+	
 	//链表初始化
-	static ListNode toNodeList(int[] arr) {
+	public static ListNode toNodeList(int[] arr) {
 		if(arr.length==0) return null;
 		ListNode listNode = new ListNode(arr[0]);//保留表头
 		ListNode listNode_tmp = listNode;
@@ -31,8 +37,8 @@ public class ListNode {
 		return listNode;
 	}
 
-	//链表初始化
-	static ListNode[] toNodeLists(int[][] arr) {
+	//链表数组初始化
+	public static ListNode[] toNodeLists(int[][] arr) {
 		if(arr.length==0) return null;
 		ListNode[] lists = new ListNode[arr.length];
 		for(int i = 0; i < arr.length; i++) {
@@ -41,13 +47,7 @@ public class ListNode {
 		return lists;
 	}
 
-	//将单个节点转为字符串
-	@Override
-	public String toString() {
-		return Integer.toString(val);
-	}
-
-	//将整个链表转为字符串
+	//单个链表转为字符串
 	public static String listToString(ListNode head) {
 		if (head==null) return "";
 		StringBuilder sb = new StringBuilder("[");
@@ -61,7 +61,7 @@ public class ListNode {
 		return sb.toString();
 	}
 
-	//将链表数组转为字符串
+	//链表数组转为字符串
 	public static String listsToString(ListNode[] lists) {
 		if (lists==null) return "";
 		StringBuilder sb = new StringBuilder("[ ");
