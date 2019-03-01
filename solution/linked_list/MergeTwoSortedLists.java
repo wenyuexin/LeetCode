@@ -49,15 +49,15 @@ public class MergeTwoSortedLists {
 		ListNode l1 = ListNode.toNodeList(nums1); 
 		ListNode l2 = ListNode.toNodeList(nums2);
 
-		System.out.println("input l1:  "+ListNode.listToString(l1));
-		System.out.println("input l2:  "+ListNode.listToString(l2));
+		System.out.println("Input list1:   "+ListNode.listToString(l1));
+		System.out.println("Input list2:   "+ListNode.listToString(l2));
 
 		long t1 = System.nanoTime();
 		MergeTwoSortedLists obj = new MergeTwoSortedLists();
 		ListNode l3 = obj.mergeTwoLists(l1, l2);
 		long t2 = System.nanoTime();
 
-		System.out.println("output l3: "+ListNode.listToString(l3));
+		System.out.println("Output list3:  "+ListNode.listToString(l3));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
