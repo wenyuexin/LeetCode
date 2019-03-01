@@ -49,7 +49,7 @@ public class ListNode {
 
 	//单个链表转为字符串
 	public static String listToString(ListNode head) {
-		if (head==null) return "";
+		if (head==null) return "[]";
 		StringBuilder sb = new StringBuilder("[");
 		ListNode node = head;
 		while(node.next != null) {
@@ -63,7 +63,7 @@ public class ListNode {
 
 	//链表数组转为字符串
 	public static String listsToString(ListNode[] lists) {
-		if (lists==null) return "";
+		if (lists==null) return "[]";
 		StringBuilder sb = new StringBuilder("[ ");
 		for (int i = 0; i < lists.length; i++) {
 			sb.append(listToString(lists[i]));
