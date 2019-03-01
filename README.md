@@ -18,12 +18,12 @@
 
 | # | Tag | Problem folder | Solution folder | Reference folder |
 | :----: | :----: | :----: | :----: | :----: |
-| 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/array) |  |
-| 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/blob/master/solution/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/hash_table) |  |
-| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/linked_list) |  |
-| 04 | [Math](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/math.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/math) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/math) |  |
+| 01 | [Array](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/reference/array) |
+| 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/blob/master/solution/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/reference/hash_table) |
+| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/reference/linked_list) |
+| 04 | [Math](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/math.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/math) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/math) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/reference/math) |
 | 05 | [Two Pointers](https://github.com/Apollo4634/LeetCode/blob/master/solution/two_pointers/two_pointers.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/two_pointers)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/two_pointers)||
-| 06 | [String](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/string.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/string)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/string)||
+| 06 | [String](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/string.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/string)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/string)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/reference/string)|
 | 07 | [Binary Search](https://github.com/Apollo4634/LeetCode/blob/master/solution/binary_search/binary_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/binary_search)||
 | 08 | [Divide and Conquer](https://github.com/Apollo4634/LeetCode/blob/master/solution/divide_and_conquer/divide_and_conquer.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/divide_and_conquer)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/divide_and_conquer)||
 | 09 | [Dynamic Programming](https://github.com/Apollo4634/LeetCode/blob/master/solution/dynamic_programming/dynamic_programming.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/dynamic_programming)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/solution/dynamic_programming)||
@@ -58,3 +58,4 @@
 **Note:**  
 
 Click tag to jump to the corresponding markdown file, through which you can find the problem you want.
+
