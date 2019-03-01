@@ -1,4 +1,4 @@
-# 24. Swap Nodes in Pairs
+# 24. Swap Nodes in Pairs [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/SwapNodesInPairs.java)]
 
 ```Medium, Linked List```
 
