@@ -1,6 +1,6 @@
 # 26. Remove Duplicates from Sorted Array [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/RemoveDuplicatesFromSortedArray.java)]
 
-```Easy, Array, Linked List```
+```Easy, Array, Two Pointers```
 
 Given a sorted array *nums*, remove the duplicates **[in-place](https://en.wikipedia.org/wiki/In-place_algorithm)** such that each element appear only *once* and return the new length.
 
