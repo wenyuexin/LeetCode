@@ -83,7 +83,7 @@ public class StringToInteger {
 		int num = obj.myAtoi(str);
 		long t2 = System.nanoTime();
 
-		System.out.println("Intput: \""+str+"\"");
+		System.out.println("Input: \""+str+"\"");
 		System.out.println("Output: "+num);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}

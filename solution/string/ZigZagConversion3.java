@@ -3,16 +3,6 @@ package string;
 import java.util.Arrays;
 
 /** 
- * @author Apollo4634 
- * @creation 2018/12/10 23:12
- * 
- * No.6 ZigZag Conversion
- * 
- * Rumtime: 0.035602 ms
- */
-
-/**
- * 解题思路：
  * 参考problem文件夹中的0006_ZigZagConversion.md
  * 
  * 首先，输入s对应的字符数组是 char[] sCharArr = s.toCharArray()
@@ -21,6 +11,12 @@ import java.util.Arrays;
  * 先计算各行子串s1 s2 s3...的长度数组strLenArr，
  * 然后使用2层for循环，依次对各行子串进行遍历，
  * 依次将各个字符复制到strCharArr中，最后返回new String(strCharArr)
+ * 
+ * 
+ * @author Apollo4634 
+ * @creation 2018/12/10 23:12
+ * @problem 6
+ * @see ZigZagConversion_6
  */
 
 
@@ -100,7 +96,7 @@ public class ZigZagConversion3 {
 		String str = new ZigZagConversion3().convert(s, numRows);
 		long t2 = System.nanoTime();
 		
-		System.out.println("Intput: "+s);
+		System.out.println("Input:  "+s);
 		System.out.println("Output: "+str);
 		System.out.println(str.equals("PINALSIGYAHRPI"));
 		System.out.println(str.equals("PAHNAPLSIIGYIR"));

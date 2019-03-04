@@ -51,7 +51,7 @@ public class ReverseInteger {
 		int xRev = new ReverseInteger().reverse(x);
 		long t2 = System.nanoTime();
 
-		System.out.println("intput: "+x);
+		System.out.println("Input: "+x);
 		System.out.println("output: "+xRev);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
