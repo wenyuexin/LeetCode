@@ -26,9 +26,9 @@ public class RegularExpressionMatching {
 		boolean flag = new RegularExpressionMatching().isMatch(s,p);
 		long t2 = System.nanoTime();
 		
-		System.out.println("intput: s -> \""+s+"\"");
-		System.out.println("intput: p -> \""+p+"\"");
-		System.out.println("output: "+flag);
+		System.out.println("Input: s -> \""+s+"\"");
+		System.out.println("Input: p -> \""+p+"\"");
+		System.out.println("Output: "+flag);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

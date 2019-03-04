@@ -13,6 +13,7 @@ package string;
  * @author Apollo4634 
  * @creation 2018/12/09
  * @problem 6
+ * @see ZigZagConversion_6
  */
 
 
@@ -107,8 +108,8 @@ public class ZigZagConversion {
 		String str = new ZigZagConversion().convert2(s, numRows);
 		long t2 = System.nanoTime();
 		
-		System.out.println("intput: "+s);
-		System.out.println("output: "+str);
+		System.out.println("Input:  "+s);
+		System.out.println("Output: "+str);
 		System.out.println(str.equals("PINALSIGYAHRPI"));
 		System.out.println(str.equals("PAHNAPLSIIGYIR"));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");

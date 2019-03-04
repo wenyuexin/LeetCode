@@ -60,8 +60,8 @@ public class RegularExpressionMatching3 {
 		boolean flag = new RegularExpressionMatching3().isMatch(s,p);
 		long t2 = System.nanoTime();
 
-		System.out.println("intput: s -> \""+s+"\"");
-		System.out.println("intput: p -> \""+p+"\"");
+		System.out.println("Input:  s -> \""+s+"\"");
+		System.out.println("Input:  p -> \""+p+"\"");
 		System.out.println("output: "+flag);
 		System.out.println("output: "+Pattern.matches(p, s));
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
