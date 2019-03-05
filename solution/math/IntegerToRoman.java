@@ -63,8 +63,8 @@ public class IntegerToRoman {
 		String romanStr = obj.intToRoman2(num);
 		long t2 = System.nanoTime();
 
-		System.out.println("input: "+num);
-		System.out.println("output: "+romanStr);
+		System.out.println("Input:  "+num);
+		System.out.println("Output: "+romanStr);
 		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
