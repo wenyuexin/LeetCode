@@ -106,6 +106,7 @@ public class DivideTwoIntegers {
 		
 		long factor = sum; //factor = times*d2
 		while (d1>sum && factor>=d2) {
+			//System.out.println(factor+" "+sum);
 			if (d1 >= sum+factor) {
 				quotient += times;
 				sum += factor;
@@ -113,6 +114,7 @@ public class DivideTwoIntegers {
 				factor = (factor>>1);
 				times = (times>>1);
 			}
+			//System.out.println(factor+" "+sum+"\n");
 		}
 		if ((dividend<0) != (divisor<0)) quotient = -quotient;
 		return quotient;
@@ -129,7 +131,8 @@ public class DivideTwoIntegers {
 		//int dividend = 20;	int divisor = 2;
 		//int dividend = 200;	int divisor = 2;
 		//int dividend = 2147483647;	int divisor = 2;
-		int dividend = -2147483648;	int divisor = 2;
+		//int dividend = -2147483648;	int divisor = 2;
+		int dividend = -380;	int divisor = 3;
 		
 		System.out.println("Input:  "+dividend);
 		System.out.println("Input:  "+divisor);
