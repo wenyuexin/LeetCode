@@ -2,7 +2,7 @@ package math;
 
 /**
  * @author Apollo4634
- * @creation 2019/03/06
+ * @create 2019/03/06
  * @problem 29
  * @see DivideTwoIntegers
  */
