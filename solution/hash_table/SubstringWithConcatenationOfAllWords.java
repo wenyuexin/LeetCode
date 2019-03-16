@@ -1,9 +1,10 @@
 package hash_table;
 
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+
 
 /** 
  * 施工中 ...
@@ -19,14 +20,23 @@ public class SubstringWithConcatenationOfAllWords {
 	public List<Integer> findSubstring(String s, String[] words) {
 		if (s==null || words==null || words.length==0) return null;
 		int wordLen = words[0].length();
-		if (s.length() < wordLen) return null;
+		int totalLen = words.length * wordLen;
+		if (s.length() < totalLen) return null;
 		
-		Set<String> set = new HashSet<>(Arrays.asList(words));
-		for (int i = 0; i < words.length-wordLen; ) {
-			if (set.contains(s.substring(i, wordLen))) i += wordLen;
-			else i += 1;
+		Map<String, Integer> map = new HashMap<String,Integer>();
+		for (int i = 0; i < words.length; i++) {
+			
 		}
-		
+
+		for (int i = 0; i < s.length() - totalLen; i++) {
+			
+			for (int j = 0; j < words.length; j++) {
+				if (!map.keySet().contains(s.substring(i, wordLen))) break;
+				else {
+					
+				}
+			}
+		}
 		
 		return null;
 	}
