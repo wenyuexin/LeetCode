@@ -2,12 +2,13 @@ package hash_table;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 
 /** 
- * 施工中 ...
+ * 
  * 
  * @author Apollo4634 
  * @create 2019/03/11
@@ -16,28 +17,69 @@ import java.util.Map;
  */
 
 public class SubstringWithConcatenationOfAllWords {
-	
+
+	//Solution 1
 	public List<Integer> findSubstring(String s, String[] words) {
-		if (s==null || words==null || words.length==0) return null;
+		List<Integer> list = new LinkedList<Integer>();
+		if (s==null || words==null || words.length==0) return list;
 		int wordLen = words[0].length();
 		int totalLen = words.length * wordLen;
-		if (s.length() < totalLen) return null;
-		
+		if (s.length() < totalLen) return list;
+
 		Map<String, Integer> map = new HashMap<String,Integer>();
 		for (int i = 0; i < words.length; i++) {
-			
-		}
-
-		for (int i = 0; i < s.length() - totalLen; i++) {
-			
-			for (int j = 0; j < words.length; j++) {
-				if (!map.keySet().contains(s.substring(i, wordLen))) break;
-				else {
-					
-				}
-			}
+			if (!map.keySet().contains(words[i])) map.put(words[i], 1);
+			else map.put(words[i], map.get(words[i])+1);
 		}
 		
-		return null;
+		int j = 0;
+		int max = s.length() - totalLen;
+		Map<String, Integer> tempMap = new HashMap<>();
+		for (int left = 0; left <= max; left++) {
+			for (j = 0; j < words.length; j++) {
+				int idx = left + j*wordLen;
+				String word = s.substring(idx, idx + wordLen);
+				if (!map.keySet().contains(word)) { tempMap.clear(); break; }
+				int cnt = tempMap.getOrDefault(word, 0);
+				if (cnt + 1 > map.getOrDefault(word, 0)) { tempMap.clear(); break; }
+				tempMap.put(word, cnt+1);
+			}	
+			if (j == words.length) list.add(left);
+			tempMap.clear();
+		}
+		return list;
+	}
+
+
+	//Solution 2
+	public List<Integer> findSubstring2(String s, String[] words) {
+		List<Integer> list = new LinkedList<Integer>();
+		
+		
+		return list;
+	}
+	
+	
+	public static void main(String[] args) {		
+		//String s = "barfoothefoobarman";
+		//String[] words = new String[] { "foo","bar" }; //0,9
+
+		//String s = "wordgoodgoodgoodbestword";
+		//String[] words = new String[] { "word","good","best","good" };//8
+
+		String s = "wordgoodgoodgoodbestword";
+		String[] words = new String[] { "word","good","best","word" };//[]
+				
+		System.out.println("Input:  "+s);
+		System.out.println("Input:  "+Arrays.toString(words));
+
+		long t1 = System.nanoTime();
+		SubstringWithConcatenationOfAllWords obj = 
+				new SubstringWithConcatenationOfAllWords();
+		List<Integer> list = obj.findSubstring(s, words);
+		long t2 = System.nanoTime();
+
+		System.out.println("Output: "+list);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
