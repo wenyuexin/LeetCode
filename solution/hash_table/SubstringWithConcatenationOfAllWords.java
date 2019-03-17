@@ -8,7 +8,11 @@ import java.util.Map;
 
 
 /** 
+ * 使用了2个Map，其中map用于保存words中各个单词出现的次数
+ * 而tempMap用于记录s某区间内包含的words中的单词的次数
  * 
+ * 如果s中出现了不在words中的单次，则跳过该区间
+ * 否则将tempMap对应单次的计数加1
  * 
  * @author Apollo4634 
  * @create 2019/03/11
@@ -41,7 +45,7 @@ public class SubstringWithConcatenationOfAllWords {
 				String word = s.substring(idx, idx + wordLen);
 				if (!map.keySet().contains(word)) { tempMap.clear(); break; }
 				int cnt = tempMap.getOrDefault(word, 0);
-				if (cnt + 1 > map.getOrDefault(word, 0)) { tempMap.clear(); break; }
+				if (cnt + 1 > map.get(word)) { tempMap.clear(); break; }
 				tempMap.put(word, cnt+1);
 			}	
 			if (j == words.length) list.add(left);
