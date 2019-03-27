@@ -8,16 +8,13 @@ import java.util.Map;
 import graph.Node;
 
 /** 
- * 基于DFS的图的遍历
- * 
  * @author Apollo4634 
- * @create 2019/03/24
+ * @create 2019/03/28
  * @problem 133
- * @see CloneGraph_133
+ * @see CloneGraph
  */
 
-public class CloneGraph {
-	
+public class CloneGraph_133 {
 	Map<Node, Node> marked;
 
 	public Node cloneGraph(Node node) {
@@ -46,18 +43,5 @@ public class CloneGraph {
 			prevCopy.neighbors.add(neighborCopy);
 			visit(neighbor);
 		}
-	}
-	
-	
-	public static void main(String[] args) {
-		Node node = null;
-		
-		long t1 = System.nanoTime();
-		CloneGraph obj = new CloneGraph();
-		Node dummy = obj.cloneGraph(node);
-		long t2 = System.nanoTime();
-		
-		System.out.println("output: "+dummy);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
