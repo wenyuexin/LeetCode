@@ -117,17 +117,11 @@ class MainClass {
         return sb.toString();
     }
     
-    public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String line;
-        while ((line = in.readLine()) != null) {
-            TreeNode root = stringToTreeNode(line);
-            
-            List<List<Integer>> ret = new Solution().levelOrder(root);
-            
-            String out = int2dListToString(ret);
-            
-            System.out.print(out);
-        }
+    public static void main(String[] args){
+        String line = "[0,1,2]";
+        TreeNode root = stringToTreeNode(line);
+        List<List<Integer>> ret = new BinaryTreeLevelOrderTraversal().levelOrder(root);
+        String out = int2dListToString(ret);
+        System.out.print(out);
     }
 }
