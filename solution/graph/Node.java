@@ -7,6 +7,9 @@ import java.util.List;
  * 
  * @author Apollo4634 
  * @create 2019/03/24
+ * @related Graph
+ * @related Depth-first Search
+ * @related Breadth-first Search
  */
 
 public class Node {
