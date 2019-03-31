@@ -1,7 +1,8 @@
-package depth_first_search;
+package topological_sort;
 
 import java.util.LinkedList;
 import java.util.List;
+
 
 /** 
  * @author Apollo4634 
@@ -11,10 +12,10 @@ import java.util.List;
  * @related Breadth-first Search
  * @related Graph
  * @related Topological Sort
- * @see CourseSchedule
+ * @see CourseSchedule_207
  */
 
-public class CourseSchedule_207 {
+public class CourseSchedule {
 
 	private List<Integer>[] adjList;
 	private boolean[] marked;
@@ -49,5 +50,23 @@ public class CourseSchedule_207 {
 		}
 		onStack[i] = false;
 		return true;
+	}
+	
+	
+	public static void main(String[] args) {
+		int numCourses = 2;
+		//int[][] prerequisites = new int[][] {{1,0}};
+		int[][] prerequisites = new int[][] {{1,0},{0,1}};
+		
+		System.out.println("Input: "+numCourses);
+		System.out.println("Input: "+java.util.Arrays.deepToString(prerequisites));
+		
+		long t1 = System.nanoTime();
+		CourseSchedule obj = new CourseSchedule();
+		boolean flag = obj.canFinish(numCourses, prerequisites);
+		long t2 = System.nanoTime();
+		
+		System.out.println("Output: "+flag);
+		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

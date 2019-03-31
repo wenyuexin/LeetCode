@@ -1,4 +1,4 @@
-package depth_first_search;
+package topological_sort;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
