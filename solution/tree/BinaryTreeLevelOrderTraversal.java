@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+
 /** 
  * @author Apollo4634 
  * @create 2019/03/31
@@ -15,30 +16,118 @@ import java.util.Queue;
  */
 
 public class BinaryTreeLevelOrderTraversal {
-
-	LinkedList<List<Integer>> levelOrderList;
-	Queue<TreeNode> queue;
 	
 	public List<List<Integer>> levelOrder(TreeNode root) {
-		levelOrderList = new LinkedList<>();
-		queue = new LinkedList<>();
+		List<List<Integer>> levelOrderList = new LinkedList<>();
+		if (root == null) return levelOrderList;
+		Queue<TreeNode> queue = new LinkedList<>();
+		TreeNode nextLevel = new TreeNode(-1);
 		
-		List<Integer> tempList = Arrays.asList(root.val);
 		queue.add(root);
-		levelOrderList.add(tempList);
-		
+		queue.add(nextLevel);
+		List<Integer> tempList = new LinkedList<Integer>();
 		while (!queue.isEmpty()) {
-			for (TreeNode node : queue) {
-				tempList = new LinkedList<Integer>();
+			TreeNode node = queue.remove();
+			if (node != nextLevel) {				
 				tempList.add(node.val);
+				if (node.left != null) queue.add(node.left);
+				if (node.right != null) queue.add(node.right);
+			} else {
+				levelOrderList.add(tempList);
+				if (queue.isEmpty()) break;
+				tempList = new LinkedList<Integer>();
+				queue.add(nextLevel);
 			}
 		}
-		
-		return (List<List<Integer>>) levelOrderList;
+		return levelOrderList;
     }
-	
-	
-	private void visit(TreeNode i, int currentLevel) {
-		
-	}
+}
+
+
+class MainClass {
+    public static TreeNode stringToTreeNode(String input) {
+        input = input.trim();
+        input = input.substring(1, input.length() - 1);
+        if (input.length() == 0) {
+            return null;
+        }
+    
+        String[] parts = input.split(",");
+        String item = parts[0];
+        TreeNode root = new TreeNode(Integer.parseInt(item));
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.add(root);
+    
+        int index = 1;
+        while(!nodeQueue.isEmpty()) {
+            TreeNode node = nodeQueue.remove();
+    
+            if (index == parts.length) {
+                break;
+            }
+    
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int leftNumber = Integer.parseInt(item);
+                node.left = new TreeNode(leftNumber);
+                nodeQueue.add(node.left);
+            }
+    
+            if (index == parts.length) {
+                break;
+            }
+    
+            item = parts[index++];
+            item = item.trim();
+            if (!item.equals("null")) {
+                int rightNumber = Integer.parseInt(item);
+                node.right = new TreeNode(rightNumber);
+                nodeQueue.add(node.right);
+            }
+        }
+        return root;
+    }
+    
+    public static String integerArrayListToString(List<Integer> nums, int length) {
+        if (length == 0) {
+            return "[]";
+        }
+    
+        String result = "";
+        for(int index = 0; index < length; index++) {
+            Integer number = nums.get(index);
+            result += Integer.toString(number) + ", ";
+        }
+        return "[" + result.substring(0, result.length() - 2) + "]";
+    }
+    
+    public static String integerArrayListToString(List<Integer> nums) {
+        return integerArrayListToString(nums, nums.size());
+    }
+    
+    public static String int2dListToString(List<List<Integer>> nums) {
+        StringBuilder sb = new StringBuilder("[");
+        for (List<Integer> list: nums) {
+            sb.append(integerArrayListToString(list));
+            sb.append(",");
+        }
+    
+        sb.setCharAt(sb.length() - 1, ']');
+        return sb.toString();
+    }
+    
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            TreeNode root = stringToTreeNode(line);
+            
+            List<List<Integer>> ret = new Solution().levelOrder(root);
+            
+            String out = int2dListToString(ret);
+            
+            System.out.print(out);
+        }
+    }
 }
