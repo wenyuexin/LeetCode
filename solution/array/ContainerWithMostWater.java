@@ -20,6 +20,7 @@ package array;
  * @author Apollo4634 
  * @create 2018/12/25
  * @problem 11
+ * @see ContainerWithMostWater_11
  */
 
 public class ContainerWithMostWater {
@@ -37,7 +38,7 @@ public class ContainerWithMostWater {
 		return max;
 	}
 	
-	//Solution2 - Recommend
+	//Solution2 - recommended
 	public int maxArea2(int[] height) {
 		int arrLen = height.length; //数组长度
 		int area = (arrLen-1)*Math.min(height[0], height[arrLen-1]);
