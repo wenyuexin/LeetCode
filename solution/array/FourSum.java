@@ -21,7 +21,8 @@ import java.util.List;
  * 
  * @author Apollo4634 
  * @create 2019/01/22 23:01
- * @problem 19
+ * @problem 18
+ * @see FourSum_18
  */
 
 public class FourSum {
@@ -69,9 +70,9 @@ public class FourSum {
 		List<List<Integer>> list = obj.fourSum(nums, target);
 		long t2 = System.nanoTime();
 
-		System.out.println("input array:  "+Arrays.toString(nums));
-		System.out.println("input target: "+target);
-		System.out.println("output list:  "+list);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		System.out.println("Input array:  "+Arrays.toString(nums));
+		System.out.println("Input target: "+target);
+		System.out.println("Output list:  "+list);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

@@ -1,7 +1,8 @@
 package array;
 
+
 /**
- * leetcode url:
+ * LeetCode url:
  * https://leetcode.com/problems/container-with-most-water/solution/
  * 
  * Approach 1: Brute Force

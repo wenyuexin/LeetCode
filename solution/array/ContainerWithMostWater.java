@@ -15,8 +15,6 @@ package array;
  * 因此j的取值范围是i+width至height.length-1，
  * 如果(i+width)>(height.length-1)则直接跳过当前的i而直接i++
  * 
- * 推荐Solution2
- * 
  * @author Apollo4634 
  * @create 2018/12/25
  * @problem 11
@@ -28,7 +26,7 @@ public class ContainerWithMostWater {
 	//Solution1 - 暴力搜索
 	public int maxArea(int[] height) {
 		int max = 0;
-		int area = 0;
+		int area;
 		for (int i = 0; i < height.length; i++) {
 			for (int j = i+1; j < height.length; j++) {
 				area = (j-i)*Math.min(height[i],height[j]);
@@ -38,14 +36,14 @@ public class ContainerWithMostWater {
 		return max;
 	}
 	
-	//Solution2 - recommended
+	//Solution2 - Recommended
 	public int maxArea2(int[] height) {
 		int arrLen = height.length; //数组长度
 		int area = (arrLen-1)*Math.min(height[0], height[arrLen-1]);
 		if(arrLen==2) return area;
 			
 		int max = area; //最大容量
-		int width = 0;
+		int width;
 		for (int i = 0; i < arrLen-2; i++) {
 			if(height[i]==0) continue;
 			width = max/height[i]-1;
@@ -70,7 +68,7 @@ public class ContainerWithMostWater {
 		int maxValue = obj.maxArea2(height);
 		long t2 = System.nanoTime();
 		
-		System.out.println("output: "+maxValue);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		System.out.println("Output: "+maxValue);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
