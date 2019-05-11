@@ -1,4 +1,4 @@
-# 207. Course Schedule [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/topological_sort/CourseSchedule.java)]
+# 207. Course Schedule [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort/solution/CourseSchedule.java)]
 
 ```Medium, Depth-first Search, Breadth-first Search, Graph, Topological Sort```
 

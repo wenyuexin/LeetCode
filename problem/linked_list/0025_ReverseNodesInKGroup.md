@@ -1,4 +1,4 @@
-# 25. Reverse Nodes in k-Group [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/ReverseNodesInKGroup.java)]
+# 25. Reverse Nodes in k-Group [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/ReverseNodesInKGroup.java)]
 
 ```Hard, Linked List```
 

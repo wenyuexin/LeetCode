@@ -1,4 +1,4 @@
-# 1. Two Sum [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/TwoSum.java)]
+# 1. Two Sum [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/TwoSum.java)]
 
 ```Easy, Array, Hash Table ```
 

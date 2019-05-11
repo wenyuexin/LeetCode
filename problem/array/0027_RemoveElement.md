@@ -1,4 +1,4 @@
-# 27. Remove Element [[Go](github.com/Apollo4634/LeetCode/blob/master/solution/array/RemoveElement.java)]
+# 27. Remove Element [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/RemoveElement.java)]
 
 ```Easy, Array, Two Pointers```
 
