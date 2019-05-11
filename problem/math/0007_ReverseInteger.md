@@ -1,4 +1,4 @@
-# 7. Reverse Integer [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/ReverseInteger.java)]
+# 7. Reverse Integer [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/ReverseInteger.java)]
 
 ```Easy, Math```
 

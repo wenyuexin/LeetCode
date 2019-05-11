@@ -1,4 +1,4 @@
-# 2. Add Two Numbers [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/AddTwoNumbers.java)]
+# 2. Add Two Numbers [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/AddTwoNumbers.java)]
 
 ```Medium, Linked List, Math```
 
