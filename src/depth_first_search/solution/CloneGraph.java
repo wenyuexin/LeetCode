@@ -1,11 +1,11 @@
-package depth_first_search;
+package depth_first_search.solution;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import graph.Node;
+import graph.utils.Node;
 
 /** 
  * 基于DFS的图的遍历
@@ -13,7 +13,7 @@ import graph.Node;
  * @author Apollo4634 
  * @create 2019/03/24
  * @problem 133
- * @see CloneGraph_133
+ * @see depth_first_search.reference.CloneGraph_133
  */
 
 public class CloneGraph {
