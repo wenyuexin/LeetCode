@@ -1,6 +1,6 @@
 package hash_table.reference;
 
-import hash_table.SubstringWithConcatenationOfAllWords;
+import hash_table.solution.SubstringWithConcatenationOfAllWords;
 
 import java.util.ArrayList;
 import java.util.HashMap;
