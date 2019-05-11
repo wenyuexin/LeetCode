@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import depth_first_search.CloneGraph;
-import graph.Node;
+import depth_first_search.solution.CloneGraph;
+import graph.utils.Node;
 
 /** 
  * @author Apollo4634 

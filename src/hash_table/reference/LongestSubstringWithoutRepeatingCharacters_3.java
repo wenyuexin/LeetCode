@@ -1,6 +1,6 @@
 package hash_table.reference;
 
-import hash_table.LongestSubstringWithoutRepeatingCharacters;
+import hash_table.solution.LongestSubstringWithoutRepeatingCharacters;
 
 import java.util.HashMap;
 import java.util.HashSet;
