@@ -1,4 +1,4 @@
-# 23. Merge k Sorted Lists [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/linked_list/MergeKSortedLists.java)]
+# 23. Merge k Sorted Lists [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/MergeKSortedLists.java)]
 
 ```Hard, Linked List, Divide and Conquer, Heap```
 

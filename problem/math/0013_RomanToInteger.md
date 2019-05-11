@@ -1,4 +1,4 @@
-# 13. Roman to Integer [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/RomanToInteger.java)]
+# 13. Roman to Integer [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/RomanToInteger.java)]
 
 ``Easy, Math, String``
 

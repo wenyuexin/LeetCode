@@ -1,4 +1,4 @@
-# 12. Integer to Roman [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/IntegerToRoman.java)]
+# 12. Integer to Roman [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/IntegerToRoman.java)]
 
 ``Medium, Math, String``
 

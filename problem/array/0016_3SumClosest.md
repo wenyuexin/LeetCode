@@ -1,4 +1,4 @@
-# 16. 3 Sum Closest [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/array/ThreeSumClosest.java)]
+# 16. 3 Sum Closest [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/ThreeSumClosest.java)]
 
 ```Medium, Array, Two Pointers```
 

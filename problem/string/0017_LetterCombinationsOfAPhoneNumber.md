@@ -1,4 +1,4 @@
-# 17. Letter Combinations of a Phone Number [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/string/LetterCombinationsOfAPhoneNumber.java)]
+# 17. Letter Combinations of a Phone Number [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LetterCombinationsOfAPhoneNumber.java)]
 
 ```Medium, String, Backtracking```
 

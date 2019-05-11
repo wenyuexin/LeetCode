@@ -1,4 +1,4 @@
-# 9. Palindrome Number [[Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/math/PalindromeNumber.java)]
+# 9. Palindrome Number [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/PalindromeNumber.java)]
 
 ``Easy, Math``
 
