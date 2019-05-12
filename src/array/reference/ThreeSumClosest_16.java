@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author -
  * @create 2019/01/31
  * @problem 16
- * @see array.solution.ThreeSumClosest
+ * @see array.solution.ThreeSumClosest_16
  */
 
 public class ThreeSumClosest_16 {

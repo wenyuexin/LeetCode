@@ -2,7 +2,7 @@ package math.solution;
 
 /** 
  * @author Apollo4634 
- * @creation 2018/12/16 17:12
+ * @create 2018/12/16 17:12
  * 
  * No.9 Palindrome Number
  * 
@@ -12,7 +12,7 @@ package math.solution;
 
 public class PalindromeNumber2 {
 	
-	//Solution1
+	//Solution
 	public boolean isPalindrome(int x) {
 		if(x<0) return false;
 		if(x<10) return true;
@@ -36,8 +36,8 @@ public class PalindromeNumber2 {
 		boolean flag = new PalindromeNumber2().isPalindrome(x);
 		long t2 = System.nanoTime();
 		
-		System.out.println("input:  "+x);
-		System.out.println("output: "+flag);
+		System.out.println("Input:  "+x);
+		System.out.println("Output: "+flag);
 		System.out.println("time:  "+(t2-t1)/1.0E6+" ms");
 	}
 }

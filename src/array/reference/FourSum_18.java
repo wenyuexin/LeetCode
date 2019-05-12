@@ -9,7 +9,7 @@ import java.util.List;
  * @author -
  * @create 2019/01/28
  * @problem 18
- * @see array.solution.FourSum
+ * @see array.solution.FourSum_18
  */
 
 public class FourSum_18 {

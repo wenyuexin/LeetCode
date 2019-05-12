@@ -2,7 +2,7 @@ package math.solution;
 
 /**
  * @author Apollo4634
- * @creation 2018/12/14 20:56
+ * @create 2018/12/14 20:56
  * 
  * No.7 Reverse Integer
  * 
@@ -17,7 +17,7 @@ package math.solution;
 
 public class ReverseInteger2 {
 	
-	//Solution1
+	//Solution
 	public int reverse(int x) {
 		if(x==Integer.MIN_VALUE) return 0;
 		int sgn = (x>0)?1:-1;
@@ -61,7 +61,7 @@ public class ReverseInteger2 {
 		long t2 = System.nanoTime();
 		
 		System.out.println("Input: "+x);
-		System.out.println("output: "+xRev);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		System.out.println("Output: "+xRev);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

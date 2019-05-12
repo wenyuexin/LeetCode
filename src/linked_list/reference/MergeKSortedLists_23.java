@@ -1,7 +1,6 @@
 package linked_list.reference;
 
 import linked_list.utils.ListNode;
-import linked_list.solution.MergeKSortedLists;
 
 /**
  * https://leetcode.com/problems/merge-k-sorted-lists/solution/
@@ -10,7 +9,7 @@ import linked_list.solution.MergeKSortedLists;
  * @create 2019/02/26
  * @problem 23
  * @see ListNode
- * @see MergeKSortedLists
+ * @see linked_list.solution.MergeKSortedLists_23
  */
 
 public class MergeKSortedLists_23 {

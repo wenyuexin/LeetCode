@@ -6,8 +6,8 @@ package tree.utils;
  * 
  * @author Apollo4634 
  * @create 2019/03/31
- * @related Tree
- * @related Breadth-first Search
+ * @tag Tree
+ * @tag Breadth-first Search
  */
 
 public class TreeNode {

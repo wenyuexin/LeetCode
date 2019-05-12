@@ -1,7 +1,5 @@
 package topological_sort.reference;
 
-import topological_sort.solution.CourseSchedule;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,11 +8,11 @@ import java.util.List;
  * @author Apollo4634 
  * @create 2019/03/31
  * @problem 207
- * @related Depth-first Search
- * @related Breadth-first Search
- * @related Graph
- * @related Topological Sort
- * @see CourseSchedule
+ * @tag Depth-first Search
+ * @tag Breadth-first Search
+ * @tag Graph
+ * @tag Topological Sort
+ * @see topological_sort.reference.CourseSchedule_207
  */
 
 public class CourseSchedule_207 {

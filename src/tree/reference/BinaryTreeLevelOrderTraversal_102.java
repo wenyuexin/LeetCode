@@ -11,9 +11,9 @@ import java.util.Queue;
  * @author Apollo4634 
  * @create 2019/03/31
  * @problem 102
- * @related Tree
- * @related Breadth-first Search
- * @see tree.solution.BinaryTreeLevelOrderTraversal
+ * @tag Tree
+ * @tag Breadth-first Search
+ * @see tree.solution.BinaryTreeLevelOrderTraversal_102
  */
 
 public class BinaryTreeLevelOrderTraversal_102 {
@@ -44,7 +44,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
 		return levelOrderList;
     }
 	
-	//Others - based on preorder traversal
+	//Others - based on pre-order traversal
 	public void levelOrder(TreeNode root, Integer level, List<List<Integer>> list) {
         if (root == null) return;
 

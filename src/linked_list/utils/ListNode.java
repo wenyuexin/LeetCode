@@ -1,15 +1,11 @@
 package linked_list.utils;
 
-import linked_list.solution.AddTwoNumbers;
-import linked_list.solution.RemoveNthNodeFromEndOfList;
 
 /**
  * Definition for singly-linked list
  * 
  * @author Apollo4634
  * @create 2019/01/28
- * @see AddTwoNumbers
- * @see RemoveNthNodeFromEndOfList
  */
 
 public class ListNode {
