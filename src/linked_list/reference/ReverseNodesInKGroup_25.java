@@ -1,14 +1,13 @@
 package linked_list.reference;
 
 import linked_list.utils.ListNode;
-import linked_list.solution.ReverseNodesInKGroup;
 
 /**
  * @author Apollo4634 
  * @create 2019/03/02
  * @problem 25
  * @see ListNode
- * @see ReverseNodesInKGroup
+ * @see linked_list.solution.ReverseNodesInKGroup_25
  */
 
 public class ReverseNodesInKGroup_25 {

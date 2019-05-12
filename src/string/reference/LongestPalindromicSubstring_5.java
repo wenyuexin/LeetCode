@@ -2,8 +2,9 @@ package string.reference;
 
 /** 
  * @author -
- * @creation 2018/12/08
- * @problem 3
+ * @create 2018/12/08
+ * @problem 5
+ * @see string.solution.LongestPalindromicSubstring_5
  */
 
 public class LongestPalindromicSubstring_5 {

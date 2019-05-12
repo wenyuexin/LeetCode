@@ -8,7 +8,7 @@ import java.util.Map;
 
 /** 
  * @author - 
- * @creation 2019/01/15
+ * @create 2019/01/15
  * @problem 1
  * @see array.solution.TwoSum
  */

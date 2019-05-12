@@ -46,9 +46,9 @@ public class RomanToInteger_13 {
     	int num = RomanToInteger_13.romanToInt(s);
     	long t2 = System.nanoTime();
     
-    	System.out.println("input: "+s);
-    	System.out.println("output: "+num);
-    	System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+    	System.out.println("Input: "+s);
+    	System.out.println("Output: "+num);
+    	System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
     }
 }
 

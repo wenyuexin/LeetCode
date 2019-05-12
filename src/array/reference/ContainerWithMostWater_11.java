@@ -11,7 +11,7 @@ package array.reference;
  * @author -
  * @create 2019/01/30
  * @problem 11
- * @see array.solution.ContainerWithMostWater
+ * @see array.solution.ContainerWithMostWater_11
  */
 
 public class ContainerWithMostWater_11 {

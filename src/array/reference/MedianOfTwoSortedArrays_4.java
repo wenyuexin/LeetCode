@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 /**
  * @author -
- * @creation 2018/11/30
+ * @create 2018/11/30
  * @problem 4
- * @see array.solution.MedianOfTwoSortedArrays
+ * @see array.solution.MedianOfTwoSortedArrays_4
  */
  
 public class MedianOfTwoSortedArrays_4 {
@@ -68,7 +68,7 @@ public class MedianOfTwoSortedArrays_4 {
 		System.out.println("nums1: "+Arrays.toString(nums1));
 		System.out.println("nums2: "+Arrays.toString(nums2));
 		
-		double median2 = MedianOfTwoSortedArrays_4.getMedian(nums1, nums2);
+		double median2 = array.reference.MedianOfTwoSortedArrays_4.getMedian(nums1, nums2);
 		System.out.println("median: "+median);
 		System.out.println("median: "+median2);
 	}

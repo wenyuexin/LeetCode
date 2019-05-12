@@ -2,7 +2,7 @@ package string.reference;
 
 /** 
  * @author - 
- * @creation 2019/01/05
+ * @create 2019/01/05
  * @problem 14
  */
 
@@ -96,7 +96,7 @@ public class LongestCommonPrefix_14 {
 		String prefix = obj.longestCommonPrefix2(strs);
 		long t2 = System.nanoTime();
 
-		System.out.println("output: "+prefix);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		System.out.println("Output: "+prefix);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

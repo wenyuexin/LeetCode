@@ -1,14 +1,13 @@
 package linked_list.reference;
 
 import linked_list.utils.ListNode;
-import linked_list.solution.SwapNodesInPairs;
 
 /**
  * @author - 
  * @create 2019/03/01
  * @problem 24
  * @see ListNode
- * @see SwapNodesInPairs
+ * @see linked_list.solution.SwapNodesInPairs_24
  */
 
 public class SwapNodesInPairs_24 {

@@ -1,7 +1,5 @@
 package hash_table.reference;
 
-import hash_table.solution.SubstringWithConcatenationOfAllWords;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,7 +9,7 @@ import java.util.Map;
  * @author Apollo4634 
  * @create 2019/03/17
  * @problem 30
- * @see SubstringWithConcatenationOfAllWords
+ * @see hash_table.solution.SubstringWithConcatenationOfAllWords_30
  */
 
 public class SubstringWithConcatenationOfAllWords_30 {

@@ -3,9 +3,10 @@ package linked_list.reference;
 
 /**
  * @author -
- * @creation 2018/12/04
+ * @create 2018/12/04
  * @problem 2
- * @see ListNode
+ * @see linked_list.utils.ListNode
+ * @see linked_list.solution.AddTwoNumbers_2
  */
 
 public class AddTwoNumbers_2 {

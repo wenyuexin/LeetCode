@@ -1,12 +1,10 @@
 package math.reference;
 
-import math.solution.DivideTwoIntegers;
-
 /**
  * @author Apollo4634
  * @create 2019/03/06
  * @problem 29
- * @see DivideTwoIntegers
+ * @see math.solution.DivideTwoIntegers_29
  */
 
 public class DivideTwoIntegers_29 {

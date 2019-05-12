@@ -21,7 +21,7 @@ package math.reference;
  * rev = temp;
  * 
  * @author - 
- * @creation 2018/12/15
+ * @create 2018/12/15
  * @problem 7
  */
 
@@ -53,7 +53,7 @@ public class ReverseInteger_7 {
 	
 		System.out.println("Input:  "+x);
 		System.out.println("Output: "+xRev);
-		System.out.println("Rumtime: "+(t2-t1)/1.0E6+" ms");
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }
 

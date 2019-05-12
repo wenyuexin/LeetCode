@@ -1,7 +1,5 @@
 package hash_table.reference;
 
-import hash_table.solution.LongestSubstringWithoutRepeatingCharacters;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -11,7 +9,7 @@ import java.util.Set;
  * @author -
  * @create 2019/02/01
  * @problem 3
- * @see LongestSubstringWithoutRepeatingCharacters
+ * @see hash_table.solution.LongestSubstringWithoutRepeatingCharacters_3
  */
 
 public class LongestSubstringWithoutRepeatingCharacters_3 {
