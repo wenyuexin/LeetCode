@@ -9,9 +9,9 @@ import java.util.List;
 
 /** 
  * @author - 
- * @creation 2019/01/15
+ * @create 2019/01/15
  * @problem 15
- * @see array.solution.ThreeSum
+ * @see array.solution.ThreeSum_15
  */
 
 public class ThreeSum_15 {

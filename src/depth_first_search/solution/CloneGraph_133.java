@@ -1,4 +1,4 @@
-package depth_first_search.reference;
+package depth_first_search.solution;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,13 +8,16 @@ import java.util.Map;
 import graph.utils.Node;
 
 /** 
+ * 基于DFS的图的遍历
+ * 
  * @author Apollo4634 
- * @create 2019/03/28
+ * @create 2019/03/24
  * @problem 133
- * @see depth_first_search.solution.CloneGraph_133
+ * @see depth_first_search.reference.CloneGraph_133
  */
 
 public class CloneGraph_133 {
+	
 	Map<Node, Node> marked;
 
 	public Node cloneGraph(Node node) {
@@ -43,5 +46,18 @@ public class CloneGraph_133 {
 			prevCopy.neighbors.add(neighborCopy);
 			visit(neighbor);
 		}
+	}
+	
+	
+	public static void main(String[] args) {
+		Node node = null;
+		
+		long t1 = System.nanoTime();
+		CloneGraph_133 obj = new CloneGraph_133();
+		Node dummy = obj.cloneGraph(node);
+		long t2 = System.nanoTime();
+		
+		System.out.println("Output: "+dummy);
+		System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
 	}
 }

@@ -5,7 +5,7 @@ package array.reference;
  * @author Apollo4634 
  * @create 2019/03/03
  * @problem 26
- * @see array.solution.RemoveDuplicatesFromSortedArray
+ * @see array.solution.RemoveDuplicatesFromSortedArray_26
  */
 
 public class RemoveDuplicatesFromSortedArray_26 {

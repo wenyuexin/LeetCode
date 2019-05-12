@@ -5,7 +5,7 @@ package array.reference;
  * @author Apollo4634 
  * @create 2019/03/04
  * @problem 27
- * @see array.solution.RemoveElement
+ * @see array.solution.RemoveElement_27
  */
 
 public class RemoveElement_27 {
