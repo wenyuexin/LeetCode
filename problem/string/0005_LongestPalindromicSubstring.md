@@ -1,4 +1,4 @@
-# 5. Longest Palindromic Substring [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestPalindromicSubstring.java)]
+# 5. Longest Palindromic Substring [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestPalindromicSubstring5.java)]
 
 ```Medium, String, Dynamic Programming```
 

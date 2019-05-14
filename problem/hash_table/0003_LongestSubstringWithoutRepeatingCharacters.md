@@ -1,4 +1,4 @@
-# 3. Longest Substring Without Repeating Characters [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/LongestSubstring.java)]
+# 3. Longest Substring Without Repeating Characters [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/LongestSubstring_3.java)]
 
 ```Medium, Hash Table, Two Pointers, String```
 

@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @see array.reference.TwoSum_1
  */
 
-public class TwoSum {
+public class TwoSum_1 {
 	
 	//Solution 1
 	public static class Solution {
@@ -63,7 +63,7 @@ public class TwoSum {
 		System.out.println("Input:  target: "+target);
 
 		long t1 = System.nanoTime();
-		int[] indices = new TwoSum.Solution().twoSum(nums, target);
+		int[] indices = new Solution().twoSum(nums, target);
 		long t2 = System.nanoTime();
 
 		System.out.println("Output: "+Arrays.toString(indices));

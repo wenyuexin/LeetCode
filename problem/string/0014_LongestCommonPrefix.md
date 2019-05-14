@@ -1,4 +1,4 @@
-# 14. Longest Common Prefix [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestCommonPrefix.java)]
+# 14. Longest Common Prefix [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestCommonPrefix_14.java)]
 
 ```Easy, String```
 

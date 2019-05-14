@@ -1,4 +1,4 @@
-# 133. Clone Graph [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search/solution/CloneGraph.java)]
+# 133. Clone Graph [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search/solution/CloneGraph_133.java)]
 
 ```Medium, Depth-firsh Search, Breadth-firsh Search, Graph```
 
