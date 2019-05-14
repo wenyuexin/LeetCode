@@ -1,4 +1,4 @@
-# 8. String to Integer (atoi) [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/StringToInteger.java)]
+# 8. String to Integer (atoi) [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/StringToInteger_8.java)]
 
 ``Medium, Math, String``
 

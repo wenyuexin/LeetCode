@@ -1,4 +1,4 @@
-# 28. Implement strStr() [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/two_pointers/solution/ImplementStrStr.java)]
+# 28. Implement strStr() [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/two_pointers/solution/ImplementStrStr_28.java)]
 
 ```Easy, Two Pointers, String```
 

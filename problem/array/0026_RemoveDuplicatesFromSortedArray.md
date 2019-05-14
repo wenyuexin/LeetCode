@@ -1,4 +1,4 @@
-# 26. Remove Duplicates from Sorted Array [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/RemoveDuplicatesFromSortedArray.java)]
+# 26. Remove Duplicates from Sorted Array [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/RemoveDuplicatesFromSortedArray_26.java)]
 
 ```Easy, Array, Two Pointers```
 
