@@ -1,4 +1,4 @@
-# 20. Valid Parentheses [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses.java)]
+# 20. Valid Parentheses [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses_20.java)]
 
 ```Easy, String, Stack```
 

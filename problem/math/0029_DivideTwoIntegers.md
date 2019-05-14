@@ -1,4 +1,4 @@
-# 29. Divide Two Integers [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/DivideTwoIntegers.java)]
+# 29. Divide Two Integers [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/DivideTwoIntegers_29.java)]
 
 ```Medium, Math, Binary Search```
 

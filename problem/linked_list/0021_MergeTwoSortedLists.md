@@ -1,4 +1,4 @@
-# 21. Merge Two Sorted Lists [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/MergeTwoSortedLists.java)]
+# 21. Merge Two Sorted Lists [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/MergeTwoSortedLists_21.java)]
 
 ```Easy, Linked List```
 

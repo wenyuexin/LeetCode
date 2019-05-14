@@ -1,4 +1,4 @@
-# 30. Substring with Concatenation of All Words [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/SubstringWithConcatenationOfAllWords.java)]
+# 30. Substring with Concatenation of All Words [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/SubstringWithConcatenationOfAllWords_30.java)]
 
 ```Hard, Hash Table, Two Pointers, String```
 

@@ -1,4 +1,4 @@
-# 22. Generate Parentheses [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses.java)]
+# 22. Generate Parentheses [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses_22.java)]
 
 ```Medium, String, Backtracking```
 

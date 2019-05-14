@@ -1,4 +1,4 @@
-# 19. Remove Nth Node From End of List [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/RemoveNthNodeFromEndOfList.java)]
+# 19. Remove Nth Node From End of List [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/solution/RemoveNthNodeFromEndOfList_19.java)]
 
 ```Medium, Linked List, Two Pointers```
 
