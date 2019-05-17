@@ -39,7 +39,7 @@ public class MedianOfTwoSortedArrays_4 {
 	
 	//for test
 	static double getMedian(int[] nums1, int[] nums2) {
-		double median = 0;
+		double median;
 
 		int newLength = nums1.length+nums2.length;
 		int[] arr = Arrays.copyOf(nums1, newLength);
