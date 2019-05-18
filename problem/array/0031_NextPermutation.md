@@ -1,4 +1,4 @@
-# 31. Next Permutation [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/NextPermutation_31.java)]
+# 31. Next Permutation [[Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/NextPermutation_31.java)]
 
 ```Medium, Array```
 
