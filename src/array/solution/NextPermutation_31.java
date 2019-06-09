@@ -50,7 +50,6 @@ public class NextPermutation_31 {
     }
 
 
-
     public static void main(String[] args) {
         //int[] nums = new int[] { 1,1,5 };
         //int[] nums = new int[] { 1,5,1 }; //[5,1,1]
