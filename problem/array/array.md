@@ -16,7 +16,7 @@
 | 0027 | [Remove Element](https://github.com/Apollo4634/LeetCode/blob/master/problem/array/0027_RemoveElement.md) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/RemoveElement_27.java) |
 | 0031 | [Next Permutation](https://github.com/Apollo4634/LeetCode/blob/master/problem/array/0031_NextPermutation.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/NextPermutation_31.java) |
 | 0033 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/SearchInRotatedSortedArray_33.java) |
-| 0034 |                                                              |            |                                                              |
+| 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/FindFirstAndLastPositionOfElementInSortedArray_34.java) |
 | 0035 |                                                              |            |                                                              |
 | 0039 |                                                              |            |                                                              |
 | 0040 |                                                              |            |                                                              |

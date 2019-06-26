@@ -17,6 +17,10 @@
 ```
 .
 ├── problem
+|   └── tag 1
+|   ├── tag 2
+|   ...
+|   └── tag 3
 └── src
     ├── tag 1
     |   ├── reference
@@ -26,9 +30,7 @@
     |   ├── reference
     |   ├── solution
     |   └── utils
-    |
     ...
-    |   
     └── tag N
         ├── reference
         ├── solution
@@ -41,42 +43,42 @@
 
 | # | Tag | Problem folder | Src folder |
 | :----: | :----: | :----: | :----: |
-| 01 | [Array](https://github.com/Apollo4634/LeetCode/tree/master/src/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
-| 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table) |
-| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list) |
-| 04 | [Math](https://github.com/Apollo4634/LeetCode/tree/master/src/math/math.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/math) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math) |
-| 05 | [Two Pointers](https://github.com/Apollo4634/LeetCode/tree/master/src/two_pointers/two_pointers.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/two_pointers)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/two_pointers)|
-| 06 | [String](https://github.com/Apollo4634/LeetCode/tree/master/src/string/string.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/string)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string)|
-| 07 | [Binary Search](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search/binary_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search)|
-| 08 | [Divide and Conquer](https://github.com/Apollo4634/LeetCode/tree/master/src/divide_and_conquer/divide_and_conquer.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/divide_and_conquer)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/divide_and_conquer)|
-| 09 | [Dynamic Programming](https://github.com/Apollo4634/LeetCode/tree/master/src/dynamic_programming/dynamic_programming.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/dynamic_programming)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/dynamic_programming)|
-| 10 | [Backtracking](https://github.com/Apollo4634/LeetCode/tree/master/src/backtracking/backtracking.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/backtracking)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/backtracking)|
-| 11 | [Stack](https://github.com/Apollo4634/LeetCode/tree/master/src/stack/stack.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/stack)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/stack)|
-| 12 | [Heap](https://github.com/Apollo4634/LeetCode/tree/master/src/heap/heap.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/heap)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/heap)|
-| 13 | [Greedy](https://github.com/Apollo4634/LeetCode/tree/master/src/greedy/greedy.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/greedy)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/greedy)|
-| 14 | [Sort](https://github.com/Apollo4634/LeetCode/tree/master/src/sort/sort.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/sort)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/sort)|
-| 15 | [Bit Manipulation](https://github.com/Apollo4634/LeetCode/tree/master/src/bit_manipulation/bit_manipulation.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/bit_manipulation)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/bit_manipulation)|
-| 16 | [Tree](https://github.com/Apollo4634/LeetCode/tree/master/src/tree/tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/tree)|
-| 17 | [Depth-first Search](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search/depth_first_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/depth_first_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search)|
-| 18 | [Breadth-first Search](https://github.com/Apollo4634/LeetCode/tree/master/src/breadth_first_search/breadth_first_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/breadth_first_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/breadth_first_search)|
-| 19 | [Union Find](https://github.com/Apollo4634/LeetCode/tree/master/src/union_find/union_find.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/union_find)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/union_find)|
-| 20 | [Graph](https://github.com/Apollo4634/LeetCode/tree/master/src/graph/graph.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/graph)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/graph)|
-| 21 | [Design](https://github.com/Apollo4634/LeetCode/tree/master/src/design/design.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/design)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/design)|
-| 22 | [Topological Sort](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort/topological_sort.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/topological_sort)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort)|
-| 23 | [Trie](https://github.com/Apollo4634/LeetCode/tree/master/src/trie/trie.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/reference/problem/trie)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/trie)|
-| 24 | [Binary Indexed Tree](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_indexed_tree/binary_indexed_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_indexed_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_indexed_tree)|
-| 25 | [Segment Tree](https://github.com/Apollo4634/LeetCode/tree/master/src/segment_tree/segment_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/segment_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/segment_tree)|
-| 26 | [Binary Search Tree](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search_tree/binary_search_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search_tree)|
-| 27 | [Recursion](https://github.com/Apollo4634/LeetCode/tree/master/src/recursion/recursion.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/recursion)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/recursion)|
-| 28 | [Brainteaser](https://github.com/Apollo4634/LeetCode/tree/master/src/brainteaser) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/brainteaser)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/brainteaser)|
-| 29 | [Memoization](https://github.com/Apollo4634/LeetCode/tree/master/src/memoization/memoization.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/memoization)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/memoization)|
-| 30 | [Queue](https://github.com/Apollo4634/LeetCode/tree/master/src/queue/queue.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/queue)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/queue)|
-| 31 | [Minimax](https://github.com/Apollo4634/LeetCode/tree/master/src/minimax/minimax.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/minimax)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/minimax)|
-| 32 | [Reservoir Sampling](https://github.com/Apollo4634/LeetCode/tree/master/src/reservoir_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/reservoir_sampling)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/reservoir_sampling)|
-| 33 | [Map](https://github.com/Apollo4634/LeetCode/tree/master/src/map/map.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/map)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/map)|
-| 34 | [Geometry](https://github.com/Apollo4634/LeetCode/tree/master/src/geometry/geometry.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/geometry)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/geometry)|
-| 35 | [Random](https://github.com/Apollo4634/LeetCode/tree/master/src/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/random)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
-| 36 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/rejection_sampling)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
+| 01 | [Array](https://github.com/Apollo4634/LeetCode/tree/master/problem/array/array.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/array) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array) |
+| 02 | [Hash Table](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table/hash_table.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/hash_table) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table) |
+| 03 | [Linked List](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list/linked_list.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/linked_list) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/linked_list) |
+| 04 | [Math](https://github.com/Apollo4634/LeetCode/tree/master/problem/math/math.md) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/math) | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math) |
+| 05 | [Two Pointers](https://github.com/Apollo4634/LeetCode/tree/master/problem/two_pointers/two_pointers.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/two_pointers)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/two_pointers)|
+| 06 | [String](https://github.com/Apollo4634/LeetCode/tree/master/problem/string/string.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/string)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string)|
+| 07 | [Binary Search](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search/binary_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search)|
+| 08 | [Divide and Conquer](https://github.com/Apollo4634/LeetCode/tree/master/problem/divide_and_conquer/divide_and_conquer.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/divide_and_conquer)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/divide_and_conquer)|
+| 09 | [Dynamic Programming](https://github.com/Apollo4634/LeetCode/tree/master/problem/dynamic_programming/dynamic_programming.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/dynamic_programming)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/dynamic_programming)|
+| 10 | [Backtracking](https://github.com/Apollo4634/LeetCode/tree/master/problem/backtracking/backtracking.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/backtracking)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/backtracking)|
+| 11 | [Stack](https://github.com/Apollo4634/LeetCode/tree/master/problem/stack/stack.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/stack)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/stack)|
+| 12 | [Heap](https://github.com/Apollo4634/LeetCode/tree/master/problem/heap/heap.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/heap)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/heap)|
+| 13 | [Greedy](https://github.com/Apollo4634/LeetCode/tree/master/problem/greedy/greedy.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/greedy)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/greedy)|
+| 14 | [Sort](https://github.com/Apollo4634/LeetCode/tree/master/problem/sort/sort.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/sort)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/sort)|
+| 15 | [Bit Manipulation](https://github.com/Apollo4634/LeetCode/tree/master/problem/bit_manipulation/bit_manipulation.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/bit_manipulation)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/bit_manipulation)|
+| 16 | [Tree](https://github.com/Apollo4634/LeetCode/tree/master/problem/tree/tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/tree)|
+| 17 | [Depth-first Search](https://github.com/Apollo4634/LeetCode/tree/master/problem/depth_first_search/depth_first_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/depth_first_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search)|
+| 18 | [Breadth-first Search](https://github.com/Apollo4634/LeetCode/tree/master/problem/breadth_first_search/breadth_first_search.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/breadth_first_search)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/breadth_first_search)|
+| 19 | [Union Find](https://github.com/Apollo4634/LeetCode/tree/master/problem/union_find/union_find.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/union_find)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/union_find)|
+| 20 | [Graph](https://github.com/Apollo4634/LeetCode/tree/master/problem/graph/graph.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/graph)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/graph)|
+| 21 | [Design](https://github.com/Apollo4634/LeetCode/tree/master/problem/design/design.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/design)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/design)|
+| 22 | [Topological Sort](https://github.com/Apollo4634/LeetCode/tree/master/problem/topological_sort/topological_sort.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/topological_sort)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort)|
+| 23 | [Trie](https://github.com/Apollo4634/LeetCode/tree/master/problem/trie/trie.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/reference/problem/trie)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/trie)|
+| 24 | [Binary Indexed Tree](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_indexed_tree/binary_indexed_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_indexed_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_indexed_tree)|
+| 25 | [Segment Tree](https://github.com/Apollo4634/LeetCode/tree/master/problem/segment_tree/segment_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/segment_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/segment_tree)|
+| 26 | [Binary Search Tree](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search_tree/binary_search_tree.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/binary_search_tree)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/binary_search_tree)|
+| 27 | [Recursion](https://github.com/Apollo4634/LeetCode/tree/master/problem/recursion/recursion.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/recursion)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/recursion)|
+| 28 | [Brainteaser](https://github.com/Apollo4634/LeetCode/tree/master/problem/brainteaser) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/brainteaser)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/brainteaser)|
+| 29 | [Memoization](https://github.com/Apollo4634/LeetCode/tree/master/problem/memoization/memoization.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/memoization)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/memoization)|
+| 30 | [Queue](https://github.com/Apollo4634/LeetCode/tree/master/problem/queue/queue.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/queue)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/queue)|
+| 31 | [Minimax](https://github.com/Apollo4634/LeetCode/tree/master/problem/minimax/minimax.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/minimax)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/minimax)|
+| 32 | [Reservoir Sampling](https://github.com/Apollo4634/LeetCode/tree/master/problem/reservoir_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/reservoir_sampling)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/reservoir_sampling)|
+| 33 | [Map](https://github.com/Apollo4634/LeetCode/tree/master/problem/map/map.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/map)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/map)|
+| 34 | [Geometry](https://github.com/Apollo4634/LeetCode/tree/master/problem/geometry/geometry.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/geometry)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/geometry)|
+| 35 | [Random](https://github.com/Apollo4634/LeetCode/tree/master/problem/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/random)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
+| 36 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/tree/master/problem/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/rejection_sampling)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
 
 **Note:**  
 
