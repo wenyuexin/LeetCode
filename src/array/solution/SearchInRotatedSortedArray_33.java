@@ -8,7 +8,6 @@ import java.util.Arrays;
  * @author Apollo4634
  * @create 2019/06/09
  * @problem 33
- * //@see array.reference.SearchInRotatedSortedArray_33
  */
 
 public class SearchInRotatedSortedArray_33 {
@@ -29,25 +28,68 @@ public class SearchInRotatedSortedArray_33 {
 
             int left = 0;
             int right = numsLen-1;
-            int mid = (left+right)/2;
+            int mid, midVal;
             if (target > nums[0]) {
-                while (mid>left && mid<right) {
-                    if (nums[mid] == target) return mid;
-                    if (nums[mid] > target) {
+                while (left < right) {
+                    mid = (left + right)/2;
+                    midVal = nums[mid];
+
+                    if (midVal > target) {
+                        right = mid;
                         index = Arrays.binarySearch(nums, left, right, target);
                         return (index<0)? -1 : index;
-                    } else {
-                        if (nums[mid]<nums[0]) {
-
+                    } else if (midVal < target) {
+                        if (midVal < nums[0]) {
+                            right = mid;
+                        } else {
+                            left = mid + 1;
                         }
+                    } else {
+                        return mid;
                     }
                 }
-
+                if (left == right && target == nums[left]) return left;
             }
 
+            if (target < nums[right]) {
+                while (left < right) {
+                    mid = (left + right)/2;
+                    midVal = nums[mid];
+
+                    if (midVal < target) {
+                        left = mid + 1;
+                        index = Arrays.binarySearch(nums, left, right, target);
+                        return (index<0)? -1 : index;
+                    } else if (midVal > target) {
+                        if (midVal > nums[right]) {
+                            left = mid + 1;
+                        } else {
+                            right = mid;
+                        }
+                    } else {
+                        return mid;
+                    }
+                }
+                if (left == right && target == nums[left]) return left;
+            }
 
             return -1;
         }
     }
 
+
+    public static void main(String[] args) {
+        int[] nums = { 4,5,6,7,0,1,2 };
+        int target = 8;
+
+        System.out.println("Input:  "+Arrays.toString(nums));
+        System.out.println("Input:  "+target);
+
+        long t1 = System.nanoTime();
+        int index = new Solution().search(nums, target);
+        long t2 = System.nanoTime();
+
+        System.out.println("Output: "+index);
+        System.out.println("Runtime: "+(t2-t1)/1.0E6+" ms");
+    }
 }
