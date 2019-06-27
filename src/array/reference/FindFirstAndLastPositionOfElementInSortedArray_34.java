@@ -3,6 +3,11 @@ package array.reference;
 /**
  * @author Apollo4634
  * @create 2019/06/27
+ * @problem 34
+ * @tag Array
+ * @tag Binary Search
+ * @see java.util.Arrays - binarySearch()
+ * @see array.solution.FindFirstAndLastPositionOfElementInSortedArray_34
  */
 
 public class FindFirstAndLastPositionOfElementInSortedArray_34 {
