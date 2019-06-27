@@ -8,7 +8,8 @@ import java.util.Arrays;
  * @author Apollo4634
  * @create 2019/06/27
  * @problem 34
- * @tag Array, Binary Search
+ * @tag Array
+ * @tag Binary Search
  * @see java.util.Arrays - binarySearch()
  */
 
