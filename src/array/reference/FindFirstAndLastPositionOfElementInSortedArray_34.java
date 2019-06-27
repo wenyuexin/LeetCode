@@ -27,7 +27,6 @@ public class FindFirstAndLastPositionOfElementInSortedArray_34 {
                     lo = mid+1;
                 }
             }
-
             return lo;
         }
 
