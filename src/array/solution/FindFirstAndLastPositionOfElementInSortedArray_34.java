@@ -11,6 +11,7 @@ import java.util.Arrays;
  * @tag Array
  * @tag Binary Search
  * @see java.util.Arrays - binarySearch()
+ * @see array.reference.FindFirstAndLastPositionOfElementInSortedArray_34
  */
 
 public class FindFirstAndLastPositionOfElementInSortedArray_34 {
