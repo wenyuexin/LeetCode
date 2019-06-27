@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @create 2019/06/09
  * @problem 33
  * @tag Array, Binary Search
- * @see java.util.Arrays - public static int binarySearch(int[], int, int, int)
+ * @see java.util.Arrays - binarySearch()
  */
 
 public class SearchInRotatedSortedArray_33 {
