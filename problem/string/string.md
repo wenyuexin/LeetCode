@@ -19,7 +19,7 @@
 | 0022 | [Generate Parentheses](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0022_GenerateParentheses.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses_22.java) |
 | 0028 | [Implement strStr()](https://github.com/Apollo4634/LeetCode/blob/master/problem/two_pointers/0028_ImplementStrStr.md) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/solution/two_pointers/solution/ImplementStrStr_28.java) |
 | 0030 | [Substring with Concatenation of All Words](https://github.com/Apollo4634/LeetCode/blob/master/problem/hash_table/0030_SubstringWithConcatenationOfAllWords.md) |    Hard    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/SubstringWithConcatenationOfAllWords_30.java) |
-|      |                                                              |            |                                                              |
+| 0038 | [Count and Say](https://leetcode.com/problems/count-and-say) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/CountAndSay_38.java) |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
