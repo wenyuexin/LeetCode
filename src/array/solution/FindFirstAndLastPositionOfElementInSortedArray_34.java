@@ -15,6 +15,8 @@ import java.util.Arrays;
  */
 
 public class FindFirstAndLastPositionOfElementInSortedArray_34 {
+
+    //耗时少，Recommend
     static class Solution {
         public int[] searchRange(int[] nums, int target) {
             int[] range = new int[] { -1,-1 };

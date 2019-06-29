@@ -13,6 +13,8 @@ import java.util.Arrays;
  */
 
 public class SearchInRotatedSortedArray_33 {
+
+    //此法耗时少，Recommend
     public static class Solution {
         public int search(int[] nums, int target) {
             if (nums == null || nums.length == 0) return -1;
@@ -74,7 +76,6 @@ public class SearchInRotatedSortedArray_33 {
                 }
                 if (left == right && target == nums[left]) return left;
             }
-
             return -1;
         }
     }

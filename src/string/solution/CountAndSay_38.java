@@ -8,10 +8,12 @@ package string.solution;
  * @create 2019/06/28
  * @problem 38
  * @tag String
- * @see string.reference.CountAndSay_38
+ * @see string.reference.CountAndSay_38 - Recommend
  */
 
 public class CountAndSay_38 {
+
+    //此解法较为耗时
     static class Solution {
         public String countAndSay(int n) {
             int capacity = (int) Math.pow(1.4, n);
@@ -44,7 +46,7 @@ public class CountAndSay_38 {
     }
 
 
-    //此解法不推荐
+    //抖机灵的解法，不推荐
     static class Solution3 {
         public String countAndSay(int n) {
             String[] table = new String[] {
