@@ -32,20 +32,24 @@ public class CombinationSum_39 {
             return combinations;
         }
 
-        private void search(int idx, int[] candidates, int from, int target) {
-            int s = sum + candidates[from];
-            if (s == target) {
-                set[idx] = candidates[from];
-                idx += 1;
-                combinations.add(Arrays.asList(set));
-            } else if (s < target) {
-                set[idx] = candidates[from];
-                idx += 1;
-                search(candidates, from, target);
-            } else {
-                from += 1;
-                search(candidates, from, target);
+        private boolean search(int idx, int[] candidates, int from, int target) {
+            for (int i = from; i < candidates.length; i++) {
+                int s = sum + candidates[from];
+                if (s == target) {
+                    set[idx] = candidates[from];
+                    idx += 1;
+                    combinations.add(Arrays.asList(set));
+                } else if (s < target) {
+                    set[idx] = candidates[from];
+                    idx += 1;
+                    if (!search(idx+1, candidates, from, target)) {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
             }
+            return true;
         }
     }
 }
