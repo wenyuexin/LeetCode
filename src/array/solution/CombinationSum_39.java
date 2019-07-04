@@ -40,7 +40,7 @@ public class CombinationSum_39 {
                     System.out.println("= "+ Arrays.toString(Arrays.copyOfRange(set, 0, last+1)) + " " + last);
                 } else if (nums[i] < target) {
                     set[last] = nums[i];
-                    search(last+1, from, target-nums[i]);
+                    search(last+1, i, target-nums[i]);
                     System.out.println("< "+ Arrays.toString(Arrays.copyOfRange(set, 0, last+1)) + " " + last);
                 } else {
                     set[last] = nums[i];
