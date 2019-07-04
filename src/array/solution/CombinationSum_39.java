@@ -27,6 +27,7 @@ public class CombinationSum_39 {
             combinations = new LinkedList<>();
             for (int i = 0; i < candidates.length; i++) {
                 search(0, i, target);
+                System.out.println("  " + Arrays.toString(Arrays.copyOfRange(set, 0, 1)));
             }
             return combinations;
         }
