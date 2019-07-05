@@ -10,7 +10,7 @@
 | 0017 | [Letter Combinations of a Phone Number](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0017_LetterCombinationsOfAPhoneNumber.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LetterCombinationsOfAPhoneNumber_17.java) |
 | 0022 | [Generate Parentheses](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0022_GenerateParentheses.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/ValidParentheses_22.java) |
 | 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/CombinationSum_39.java) |
-|      |                                                              |            |                                                              |
+| 0040 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/CombinationSum2_39.java) |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
