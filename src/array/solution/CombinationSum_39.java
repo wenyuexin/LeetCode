@@ -11,6 +11,7 @@ import java.util.List;
  * @tag Array
  * @tag Backtracking
  * @see array.reference.CombinationSum_39
+ * @see array.solution.CombinationSum2_40
  */
 
 public class CombinationSum_39 {
