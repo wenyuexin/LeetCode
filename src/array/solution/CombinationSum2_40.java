@@ -1,8 +1,6 @@
 package array.solution;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Apollo4634
@@ -15,16 +13,18 @@ import java.util.List;
 
 public class CombinationSum2_40 {
     static class Solution {
-        List<List<Integer>> combinations;
+        Set<List<Integer>> combinations;
 
         public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-            combinations = new LinkedList<>();
-            if (candidates == null || candidates.length == 0) return combinations;
+            combinations = new HashSet<>();
+            if (candidates == null || candidates.length == 0) {
+                return new ArrayList<>();
+            }
 
             Arrays.sort(candidates);
             List<Integer> set = new LinkedList<>();
             search(set, candidates, 0, target);
-            return combinations;
+            return new ArrayList<>(combinations);
         }
 
         private void search(List<Integer> set, int[] nums, int from, int target) {
