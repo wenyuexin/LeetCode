@@ -24,7 +24,7 @@ public class MultiplyStrings_43 {
                 num1 = num2;
                 num2 = temp;
             }
-            arr = num1.toCharArray();
+            arr = num2.toCharArray();
 
             int c = 0;
             for (int i = 0; i < num2.length(); i++) {
