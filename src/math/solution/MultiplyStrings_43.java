@@ -1,47 +1,63 @@
 package math.solution;
 
+
 /**
+ *
+ *
  * @author Apollo4634
  * @create 2019/07/09
  * @problem 43
  * @tag Math
  * @tag String
+ * @see math.reference.MultiplyStrings_43
  */
 
 public class MultiplyStrings_43 {
     static class Solution {
         StringBuilder sb;
-        char[] arr;
+        int[] arr1;
+        int[] arr2;
 
         public String multiply(String num1, String num2) {
             if ("0".equals(num1) || "0".equals(num2)) return "0";
             if ("1".equals(num1)) return num2;
             if ("1".equals(num2)) return num1;
-            sb = new StringBuilder();
 
-            if (num1.length() > num2.length()) {
-                String temp = num1;
-                num1 = num2;
-                num2 = temp;
+            int len = num1.length() + num2.length() - 1;
+            sb = new StringBuilder(len+1);
+            if (num1.length() >= num2.length()) {
+                arr1 = toIntArray(num1);
+                arr2 = toIntArray(num2);
+            } else {
+                arr1 = toIntArray(num2);
+                arr2 = toIntArray(num1);
             }
-            arr = num2.toCharArray();
 
             int c = 0;
-            for (int i = 0; i < num2.length(); i++) {
-                c = calc(i,num2.charAt(i) - '0', c);
+            for (int i = 0; i < len; i++) {
+                c = calc(i, c);
             }
 
             if (c > 0) sb.append(c);
             return sb.reverse().toString();
         }
 
-        private int calc(int idx, int n2, int c) {
-            int sum = c;
-            for (int i = 0; i < arr.length; i++) {
-                int n1 = arr[i] - '0';
-                sum += (arr[i]*n2);
+        private int[] toIntArray(String s) {
+            int max = s.length() - 1;
+            int[] a = new int[max+1];
+            for (int i = 0; i <= max; i++) {
+                a[i] = s.charAt(max - i) - '0';
             }
-            c = sum / 10;
+            return a;
+        }
+
+        private int calc(int idx, int c) {
+            int sum = c;
+            for (int i2 = 0, i1 = idx-i2; i2 < arr2.length && i2 <= idx; i2++, i1 = idx-i2) {
+                if (i1 >= arr1.length) continue;
+                sum += (arr1[i1] * arr2[i2]);
+            }
+            c = sum / 10; //carry output
             sb.append((c > 0)? sum%10 : sum);
             return c;
         }
@@ -49,8 +65,8 @@ public class MultiplyStrings_43 {
 
 
     public static void main(String[] args) {
-        String num1 = "45";
-        String num2 = "123";
+        String num1 = "4567";
+        String num2 = "1234";
 
         System.out.println("Input:  "+num1);
         System.out.println("Input:  "+num2);
