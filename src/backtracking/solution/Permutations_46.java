@@ -47,6 +47,7 @@ public class Permutations_46 {
     public static void main(String[] args) {
         int[] nums = new int[] { 1,2,3,4 };
         System.out.println("Input:  "+ Arrays.toString(nums));
+
         long t1 = System.nanoTime();
         List<List<Integer>> list = new Solution().permute(nums);
         long t2 = System.nanoTime();
