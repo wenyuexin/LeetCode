@@ -14,7 +14,7 @@
 | 0040 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/CombinationSum2_39.java) |
 | 0044 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching) |    Hard    |                                                              |
 | 0046 | [Permutations](https://leetcode.com/problems/permutations)   |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/Permutations_46.java) |
-| 0047 | [Permutations II](https://leetcode.com/problems/permutations-ii) |            |                                                              |
+| 0047 | [Permutations II](https://leetcode.com/problems/permutations-ii) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/Permutations2_47.java) |
 | 0051 | [N-Queens](https://leetcode.com/problems/n-queens)           |            |                                                              |
 | 0052 |                                                              |            |                                                              |
 | 0060 |                                                              |            |                                                              |
