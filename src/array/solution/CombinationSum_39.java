@@ -10,13 +10,14 @@ import java.util.List;
  * @problem 39
  * @tag Array
  * @tag Backtracking
+ * @see array.reference.CombinationSum_39
+ * @see array.solution.CombinationSum2_40
  */
 
 public class CombinationSum_39 {
     static class Solution {
         int[] nums;
         Integer[] set;
-        //int lastIdx;
         List<List<Integer>> combinations;
 
         public List<List<Integer>> combinationSum(int[] candidates, int target) {
@@ -25,10 +26,7 @@ public class CombinationSum_39 {
             int capacity = (int) (1.0 * target / candidates[0]) + 1;
             set = new Integer[capacity];
             combinations = new LinkedList<>();
-            for (int i = 0; i < candidates.length; i++) {
-                search(0, i, target);
-                System.out.println("  " + Arrays.toString(Arrays.copyOfRange(set, 0, 1)));
-            }
+            search(0, 0, target);
             return combinations;
         }
 
@@ -37,14 +35,10 @@ public class CombinationSum_39 {
                 if (nums[i] == target) {
                     set[last] = nums[i];
                     combinations.add(Arrays.asList(Arrays.copyOfRange(set, 0, last+1)));
-                    System.out.println("= "+ Arrays.toString(Arrays.copyOfRange(set, 0, last+1)) + " " + last);
+                    break;
                 } else if (nums[i] < target) {
                     set[last] = nums[i];
                     search(last+1, i, target-nums[i]);
-                    System.out.println("< "+ Arrays.toString(Arrays.copyOfRange(set, 0, last+1)) + " " + last);
-                } else {
-                    set[last] = nums[i];
-                    System.out.println("> "+ Arrays.toString(Arrays.copyOfRange(set, 0, last+1)) + " " + last);
                 }
             }
         }
@@ -52,8 +46,11 @@ public class CombinationSum_39 {
 
 
     public static void main(String[] args) {
-        int[] nums = new int[] { 2,3,6,7 };
-        int target = 7;
+        //int[] nums = new int[] { 2,3,6,7 };
+        //int target = 7;
+
+        int[] nums = new int[] { 2,3,5 };
+        int target = 8;
 
         System.out.println("Input:  "+ Arrays.toString(nums));
         System.out.println("Input:  "+target);
