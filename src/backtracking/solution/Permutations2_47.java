@@ -11,7 +11,7 @@ import java.util.List;
  * @tag Backtracking
  */
 
-public class Permutations_47 {
+public class Permutations2_47 {
     static class Solution {
         List<List<Integer>> lists;
         boolean[] marked;
