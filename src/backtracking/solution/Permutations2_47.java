@@ -22,6 +22,16 @@ public class Permutations2_47 {
 
             return lists;
         }
+
+        private void search(int[] nums, int idx) {
+            if (idx == nums.length) {
+                //todo 将得到的一组结果添加到最终的列表里
+            }
+
+            for(int num : nums) {
+
+            }
+        }
     }
 
 
