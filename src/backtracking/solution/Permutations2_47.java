@@ -1,5 +1,6 @@
 package backtracking.solution;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,24 +20,35 @@ public class Permutations2_47 {
 
         public List<List<Integer>> permuteUnique(int[] nums) {
             if (nums == null) return new LinkedList<>();
-
+            lists = new LinkedList<>();
+            marked = new boolean[nums.length];
+            tracking = new Integer[nums.length];
+            Arrays.sort(nums);
+            search(nums, 0);
             return lists;
         }
 
         private void search(int[] nums, int idx) {
             if (idx == nums.length) {
-                //todo 将得到的一组结果添加到最终的列表里
+                lists.add(new ArrayList<>(Arrays.asList(tracking)));
+                return;
             }
 
-            for(int num : nums) {
+            for(int i = 0; i < nums.length; i++) {
+                if (marked[i]) continue;
+                if (i > 0 && nums[i] == nums[i-1]) continue;
 
+                marked[i] = true;
+                tracking[idx] = nums[i];
+                search(nums, idx+1);
+                marked[i] = false;
             }
         }
     }
 
 
     public static void main(String[] args) {
-        int[] nums = new int[] { 1,2,3,4 };
+        int[] nums = new int[] { 1,2,1 };
         System.out.println("Input:  "+ Arrays.toString(nums));
 
         long t1 = System.nanoTime();
