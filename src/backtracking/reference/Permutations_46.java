@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 public class Permutations_46 {
-    class Solution {
+    static class Solution {
         public List<List<Integer>> permute(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             helper(0,nums,res);
