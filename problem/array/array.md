@@ -20,15 +20,15 @@
 | 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/SearchInsertPosition_35.java) |
 | 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/CombinationSum_39.java) |
 | 0040 | [Combination Sum II](https://leetcode.com/problems/combination-sum-ii) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/CombinationSum2_39.java) |
-| 0041 |                                                              |            |                                                              |
-| 0042 |                                                              |            |                                                              |
-| 0045 |                                                              |            |                                                              |
-| 0048 |                                                              |            |                                                              |
-| 0053 |                                                              |            |                                                              |
-| 0054 |                                                              |            |                                                              |
-| 0055 |                                                              |            |                                                              |
-| 0056 |                                                              |            |                                                              |
-| 0057 |                                                              |            |                                                              |
+| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive) |    Hard    |                                                              |
+| 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water) |    Hard    |                                                              |
+| 0045 | [Jump Game II](https://leetcode.com/problems/jump-game-ii)   |    Hard    |                                                              |
+| 0048 | [Rotate Image](https://leetcode.com/problems/rotate-image)   |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/RotateImage_48.java) |
+| 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray) |            |                                                              |
+| 0054 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix) |            |                                                              |
+| 0055 | [Jump Game](https://leetcode.com/problems/jump-game)         |            |                                                              |
+| 0056 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) |            |                                                              |
+| 0057 | [Insert Interval](https://leetcode.com/problems/insert-interval) |    Hard    |                                                              |
 | 0059 |                                                              |            |                                                              |
 | 0062 |                                                              |            |                                                              |
 | 0063 |                                                              |            |                                                              |
@@ -41,8 +41,8 @@
 | 0079 |                                                              |            |                                                              |
 | 0080 |                                                              |            |                                                              |
 | 0081 |                                                              |            |                                                              |
-| 0084 |                                                              |            |                                                              |
-| 0085 |                                                              |            |                                                              |
+| 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram) |    Hard    |                                                              |
+| 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle) |    Hard    |                                                              |
 | 0088 |                                                              |            |                                                              |
 | 0090 |                                                              |            |                                                              |
 | 0105 |                                                              |            |                                                              |
@@ -52,12 +52,12 @@
 | 0120 |                                                              |            |                                                              |
 | 0121 |                                                              |            |                                                              |
 | 0122 |                                                              |            |                                                              |
-| 0123 |                                                              |            |                                                              |
-| 0126 |                                                              |            |                                                              |
-| 0128 |                                                              |            |                                                              |
+| 0123 | [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii) |    Hard    |                                                              |
+| 0126 | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii) |    Hard    |                                                              |
+| 0128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence) |    Hard    |                                                              |
 | 0152 |                                                              |            |                                                              |
 | 0153 |                                                              |            |                                                              |
-| 0154 |                                                              |            |                                                              |
+| 0154 | [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii) |    Hard    |                                                              |
 | 0162 |                                                              |            |                                                              |
 | 0163 |                                                              |            |                                                              |
 | 0167 |                                                              |            |                                                              |
@@ -74,96 +74,96 @@
 | 0245 |                                                              |            |                                                              |
 | 0259 |                                                              |            |                                                              |
 | 0268 |                                                              |            |                                                              |
-| 277  |                                                              |            |                                                              |
-| 280  |                                                              |            |                                                              |
-| 283  |                                                              |            |                                                              |
-| 287  |                                                              |            |                                                              |
-| 289  |                                                              |            |                                                              |
-| 370  |                                                              |            |                                                              |
-| 380  |                                                              |            |                                                              |
-| 381  |                                                              |            |                                                              |
-| 414  |                                                              |            |                                                              |
-| 442  |                                                              |            |                                                              |
-| 448  |                                                              |            |                                                              |
-| 457  |                                                              |            |                                                              |
-| 485  |                                                              |            |                                                              |
-| 495  |                                                              |            |                                                              |
-| 509  |                                                              |            |                                                              |
-| 531  |                                                              |            |                                                              |
-| 532  |                                                              |            |                                                              |
-| 533  |                                                              |            |                                                              |
-| 548  |                                                              |            |                                                              |
-| 560  |                                                              |            |                                                              |
-| 562  |                                                              |            |                                                              |
-| 565  |                                                              |            |                                                              |
-| 566  |                                                              |            |                                                              |
-| 581  |                                                              |            |                                                              |
-| 605  |                                                              |            |                                                              |
-| 611  |                                                              |            |                                                              |
-| 621  |                                                              |            |                                                              |
-| 624  |                                                              |            |                                                              |
-| 628  |                                                              |            |                                                              |
-| 643  |                                                              |            |                                                              |
-| 644  |                                                              |            |                                                              |
-| 661  |                                                              |            |                                                              |
-| 665  |                                                              |            |                                                              |
-| 667  |                                                              |            |                                                              |
-| 670  |                                                              |            |                                                              |
-| 674  |                                                              |            |                                                              |
-| 683  |                                                              |            |                                                              |
-| 689  |                                                              |            |                                                              |
-| 695  |                                                              |            |                                                              |
-| 697  |                                                              |            |                                                              |
-| 713  |                                                              |            |                                                              |
-| 714  |                                                              |            |                                                              |
-| 715  |                                                              |            |                                                              |
-| 718  |                                                              |            |                                                              |
-| 719  |                                                              |            |                                                              |
-| 723  |                                                              |            |                                                              |
-| 724  |                                                              |            |                                                              |
-| 729  |                                                              |            |                                                              |
-| 731  |                                                              |            |                                                              |
-| 746  |                                                              |            |                                                              |
-| 747  |                                                              |            |                                                              |
-| 755  |                                                              |            |                                                              |
-| 766  |                                                              |            |                                                              |
-| 768  |                                                              |            |                                                              |
-| 769  |                                                              |            |                                                              |
-| 775  |                                                              |            |                                                              |
-| 782  |                                                              |            |                                                              |
-| 792  |                                                              |            |                                                              |
-| 795  |                                                              |            |                                                              |
-| 825  |                                                              |            |                                                              |
-| 830  |                                                              |            |                                                              |
-| 832  |                                                              |            |                                                              |
-| 835  |                                                              |            |                                                              |
-| 840  |                                                              |            |                                                              |
-| 849  |                                                              |            |                                                              |
-| 867  |                                                              |            |                                                              |
-| 870  |                                                              |            |                                                              |
-| 873  |                                                              |            |                                                              |
-| 888  |                                                              |            |                                                              |
-| 891  |                                                              |            |                                                              |
-| 896  |                                                              |            |                                                              |
-| 900  |                                                              |            |                                                              |
-| 907  |                                                              |            |                                                              |
-| 914  |                                                              |            |                                                              |
-| 915  |                                                              |            |                                                              |
-| 918  |                                                              |            |                                                              |
-| 922  |                                                              |            |                                                              |
-| 926  |                                                              |            |                                                              |
-| 941  |                                                              |            |                                                              |
-| 945  |                                                              |            |                                                              |
-| 950  |                                                              |            |                                                              |
-| 954  |                                                              |            |                                                              |
-| 962  |                                                              |            |                                                              |
-| 969  |                                                              |            |                                                              |
-| 974  |                                                              |            |                                                              |
-| 977  |                                                              |            |                                                              |
-| 978  |                                                              |            |                                                              |
-| 985  |                                                              |            |                                                              |
-| 989  |                                                              |            |                                                              |
-| 999  |                                                              |            |                                                              |
+| 0277 |                                                              |            |                                                              |
+| 0280 |                                                              |            |                                                              |
+| 0283 |                                                              |            |                                                              |
+| 0287 |                                                              |            |                                                              |
+| 0289 |                                                              |            |                                                              |
+| 0370 |                                                              |            |                                                              |
+| 0380 |                                                              |            |                                                              |
+| 0381 | [Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed) |            |                                                              |
+| 0414 |                                                              |            |                                                              |
+| 0442 |                                                              |            |                                                              |
+| 0448 |                                                              |            |                                                              |
+| 0457 |                                                              |            |                                                              |
+| 0485 |                                                              |            |                                                              |
+| 0495 |                                                              |            |                                                              |
+| 0509 |                                                              |            |                                                              |
+| 0531 |                                                              |            |                                                              |
+| 0532 |                                                              |            |                                                              |
+| 0533 |                                                              |            |                                                              |
+| 0548 |                                                              |            |                                                              |
+| 0560 |                                                              |            |                                                              |
+| 0562 |                                                              |            |                                                              |
+| 0565 |                                                              |            |                                                              |
+| 0566 |                                                              |            |                                                              |
+| 0581 |                                                              |            |                                                              |
+| 0605 |                                                              |            |                                                              |
+| 0611 |                                                              |            |                                                              |
+| 0621 |                                                              |            |                                                              |
+| 0624 |                                                              |            |                                                              |
+| 0628 |                                                              |            |                                                              |
+| 0643 |                                                              |            |                                                              |
+| 0644 | [Maximum Average Subarray II](https://leetcode.com/problems/maximum-average-subarray-ii) |            |                                                              |
+| 0661 |                                                              |            |                                                              |
+| 0665 |                                                              |            |                                                              |
+| 0667 |                                                              |            |                                                              |
+| 0670 |                                                              |            |                                                              |
+| 0674 |                                                              |            |                                                              |
+| 0683 |                                                              |            |                                                              |
+| 0689 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays) |            |                                                              |
+| 0695 |                                                              |            |                                                              |
+| 0697 |                                                              |            |                                                              |
+| 0713 |                                                              |            |                                                              |
+| 0714 |                                                              |            |                                                              |
+| 0715 |                                                              |            |                                                              |
+| 0718 |                                                              |            |                                                              |
+| 0719 |                                                              |            |                                                              |
+| 0723 |                                                              |            |                                                              |
+| 0724 |                                                              |            |                                                              |
+| 0729 |                                                              |            |                                                              |
+| 0731 |                                                              |            |                                                              |
+| 0746 |                                                              |            |                                                              |
+| 0747 |                                                              |            |                                                              |
+| 0755 |                                                              |            |                                                              |
+| 0766 |                                                              |            |                                                              |
+| 0768 |                                                              |            |                                                              |
+| 0769 |                                                              |            |                                                              |
+| 0775 |                                                              |            |                                                              |
+| 0782 |                                                              |            |                                                              |
+| 0792 |                                                              |            |                                                              |
+| 0795 |                                                              |            |                                                              |
+| 0825 |                                                              |            |                                                              |
+| 0830 |                                                              |            |                                                              |
+| 0832 |                                                              |            |                                                              |
+| 0835 |                                                              |            |                                                              |
+| 0840 |                                                              |            |                                                              |
+| 0849 |                                                              |            |                                                              |
+| 0867 |                                                              |            |                                                              |
+| 0870 |                                                              |            |                                                              |
+| 0873 |                                                              |            |                                                              |
+| 0888 |                                                              |            |                                                              |
+| 0891 |                                                              |            |                                                              |
+| 0896 |                                                              |            |                                                              |
+| 0900 |                                                              |            |                                                              |
+| 0907 |                                                              |            |                                                              |
+| 0914 |                                                              |            |                                                              |
+| 0915 |                                                              |            |                                                              |
+| 0918 |                                                              |            |                                                              |
+| 0922 |                                                              |            |                                                              |
+| 0926 |                                                              |            |                                                              |
+| 0941 |                                                              |            |                                                              |
+| 0945 |                                                              |            |                                                              |
+| 0950 |                                                              |            |                                                              |
+| 0954 |                                                              |            |                                                              |
+| 0962 |                                                              |            |                                                              |
+| 0969 |                                                              |            |                                                              |
+| 0974 |                                                              |            |                                                              |
+| 0977 |                                                              |            |                                                              |
+| 0978 |                                                              |            |                                                              |
+| 0985 |                                                              |            |                                                              |
+| 0989 |                                                              |            |                                                              |
+| 0999 |                                                              |            |                                                              |
 | 1002 |                                                              |            |                                                              |
 | 1007 |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
