@@ -3,6 +3,10 @@ package array.solution;
 import java.util.Arrays;
 
 /**
+ * 将矩阵顺时针选择90度
+ *
+ * 思路：每次选定4个数进行旋转变换
+ *
  * @author Apollo4634
  * @create 2019/07/28
  * @problem 48
@@ -12,8 +16,11 @@ import java.util.Arrays;
 public class RotateImage_48 {
     static class Solution {
         public void rotate(int[][] matrix) {
-            for (int i = 0; i < matrix.length; i++) {
-                for (int j = 0; j < matrix.length; j++) {
+
+            int layerNum = matrix.length / 2;
+            for (int i = 0; i < layerNum; i++) {
+                int rotateTimes = matrix.length - 2*i - 1;
+                for (int j = 0; j < rotateTimes; j++) {
                     //todo swap
                 }
             }
