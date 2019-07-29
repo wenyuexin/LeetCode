@@ -11,8 +11,8 @@
 | 0018 | [4 Sum](https://github.com/Apollo4634/LeetCode/blob/master/problem/array/0018_4Sum.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/array/solution/FourSum_18.java) |
 | 0030 | [Substring with Concatenation of All Words](https://github.com/Apollo4634/LeetCode/blob/master/problem/hash_table/0030_SubstringWithConcatenationOfAllWords.md) |    Hard    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/SubstringWithConcatenationOfAllWords_30.java) |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku)   |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/ValidSudoku_36.java) |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
+| 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver) |    Hard    |                                                              |
+| 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/GroupAnagrams_49.java) |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |

@@ -22,7 +22,7 @@
 | 0038 | [Count and Say](https://leetcode.com/problems/count-and-say) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/CountAndSay_38.java) |
 | 0043 | [Multiply Strings](https://leetcode.com/problems/multiply-strings) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/MultiplyStrings_43.java) |
 | 0044 |                                                              |            |                                                              |
-| 0049 |                                                              |            |                                                              |
+| 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/GroupAnagrams_49.java) |
 | 0058 |                                                              |            |                                                              |
 | 0065 |                                                              |            |                                                              |
 | 0067 | [Add Binary](https://leetcode.com/problems/add-binary)       |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/AddBinary_67.java) |
