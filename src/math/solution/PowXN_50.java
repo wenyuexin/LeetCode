@@ -60,44 +60,38 @@ public class PowXN_50 {
         public double myPow(double x, int n) {
             if (n == 0) return 1;
             if (n == 1) return x;
-            if (x == 0 && n < 0) return Double.NaN;
-            if (x == 0 && n > 0) return 1.0;
-            return calcPow(x, n);
-        }
+            if (x == 0) return (n < 0)? Double.NaN : 0.0;
 
-        private double calcPow(double x, int n) {
-            boolean nIsPositive = n > 0;
-            boolean nIsMinInteger = (n == Integer.MIN_VALUE);
-            n = nIsMinInteger? Integer.MAX_VALUE : Math.abs(n);
-
-            double[] cache = new double[29]; //2 3 ... 30
-            double ans = x;
-            int m = 1;
-            for (; m < n; m *= 2) {
-                ans *= ans;
-                cache[m] = ans;
+            double ans = 1;
+            if (n == Integer.MIN_VALUE) {
+                ans = x;
+                n += 1;
             }
-            m = n - m/2;
 
-            //计算剩余部分
-            double idx = Math.log(m) / Math.log(2);
-            ans *= cache[(int) idx];
-
-//            while (m > 0) {
-//                double idx = Math.log(m) / Math.log(2);
-//                ans *= cache[(int) idx];
-//
-//            }
-
-            if (nIsMinInteger) ans *= x;
-            if (!nIsPositive) ans = 1/ans;
-            return ans;
+            int nn = Math.abs(n);
+            while (nn > 0) {
+                double tmp = x;
+                int m = 1;
+                while (2*m > 0 && 2*m <= nn) {
+                    m *= 2;
+                    tmp *= tmp;
+                    if (Double.isInfinite(ans)) {
+                        return (n < 0)? 1/ans : ans;
+                    }
+                }
+                ans *= tmp;
+                nn -= m;
+                if (Double.isInfinite(ans)) {
+                    return (n < 0)? 1/ans : ans;
+                }
+            }
+            return (n < 0)? 1/ans : ans;
         }
     }
 
 
     public static void main(String[] args) {
-        double x = 2.; // -100.0 < x < 100.0
+        double x = 0; // -100.0 < x < 100.0
         int n = 10;
         System.out.println("Input:  " + "x = " + x);
         System.out.println("Input:  " + "n = " + n);
