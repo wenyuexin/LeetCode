@@ -15,15 +15,25 @@ public class MaximumSubarray_53 {
     static class Solution {
         public int maxSubArray(int[] nums) {
             if (nums.length == 1) return nums[0];
-            int largestSum = 0;
+            int largestSum = nums[0];
 
+            //int sum = nums[0];
+            //int right = 0;
+            for (int i = 0; i < nums.length; i++) {
+                int sum = nums[i];
+                if (sum > largestSum) largestSum = sum;
+                for (int j = i+1; j < nums.length; j++) {
+                    sum += nums[j];
+                    if (sum > largestSum) largestSum = sum;
+                }
+            }
             return largestSum;
         }
     }
 
 
     public static void main(String[] args) {
-        int[] nums = new int[] { 0,1,2,3 };
+        int[] nums = new int[] { -2,1,-3,4,-1,2,1,-5,4 };
         System.out.println("Input:  "+ Arrays.toString(nums));
 
         long start = System.nanoTime();
