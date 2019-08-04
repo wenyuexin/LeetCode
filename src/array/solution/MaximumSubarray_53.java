@@ -16,9 +16,6 @@ public class MaximumSubarray_53 {
         public int maxSubArray(int[] nums) {
             if (nums.length == 1) return nums[0];
             int largestSum = nums[0];
-
-            //int sum = nums[0];
-            //int right = 0;
             for (int i = 0; i < nums.length; i++) {
                 int sum = nums[i];
                 if (sum > largestSum) largestSum = sum;
@@ -27,6 +24,16 @@ public class MaximumSubarray_53 {
                     if (sum > largestSum) largestSum = sum;
                 }
             }
+            return largestSum;
+        }
+    }
+
+
+    static class Solution2 {
+        public int maxSubArray(int[] nums) {
+            if (nums.length == 1) return nums[0];
+            int largestSum = nums[0];
+
             return largestSum;
         }
     }
