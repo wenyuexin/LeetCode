@@ -18,14 +18,14 @@
 | 0060 |                                                              |            |                                                              |
 | 0065 |                                                              |            |                                                              |
 | 0067 | [Add Binary](https://leetcode.com/problems/add-binary)       |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/AddBinary_67.java) |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
+| 0069 | [Sqrt(x)](https://leetcode.com/problems/sqrtx)               |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/SqrtX_69.java) |
+| 149  |                                                              |            |                                                              |
+| 166  |                                                              |            |                                                              |
+| 168  |                                                              |            |                                                              |
+| 171  |                                                              |            |                                                              |
+| 172  |                                                              |            |                                                              |
+| 202  |                                                              |            |                                                              |
+| 223  |                                                              |            |                                                              |
+| 224  |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 

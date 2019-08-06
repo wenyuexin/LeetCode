@@ -12,15 +12,15 @@
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/FindFirstAndLastPositionOfElementInSortedArray_34.java) |
 | 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/SearchInsertPosition_35.java) |
 | 0050 | [Pow(x, n)](https://leetcode.com/problems/powx-n)            |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/PowXN_50.java) |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
-|      |                                                              |            |                                                              |
+| 0069 | [Sqrt(x)](https://leetcode.com/problems/sqrtx)               |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/SqrtX_69.java) |
+|  74  |                                                              |            |                                                              |
+|  81  |                                                              |            |                                                              |
+| 153  |                                                              |            |                                                              |
+| 154  |                                                              |            |                                                              |
+| 162  |                                                              |            |                                                              |
+| 167  |                                                              |            |                                                              |
+| 174  |                                                              |            |                                                              |
+| 209  |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
