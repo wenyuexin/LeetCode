@@ -3,12 +3,15 @@ package array.solution;
 import java.util.Arrays;
 
 /**
+ * 暂时想不出特别好的方法，可以看参考解法
+ *
  * @author Apollo4634
  * @create 2019/08/02
  * @problem 53
  * @tag Array
  * @tag Divide and Conquer
  * @tag Dynamic Programing
+ * @see array.reference.MaximumSubarray_53
  */
 
 public class MaximumSubarray_53 {
