@@ -25,7 +25,7 @@
 | 0045 | [Jump Game II](https://leetcode.com/problems/jump-game-ii)   |    Hard    |                                                              |
 | 0048 | [Rotate Image](https://leetcode.com/problems/rotate-image)   |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/RotateImage_48.java) |
 | 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/MaximumSubarray_53.java) |
-| 0054 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix) |            |                                                              |
+| 0054 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/SpiralMatrix_54.java) |
 | 0055 | [Jump Game](https://leetcode.com/problems/jump-game)         |            |                                                              |
 | 0056 | [Merge Intervals](https://leetcode.com/problems/merge-intervals) |            |                                                              |
 | 0057 | [Insert Interval](https://leetcode.com/problems/insert-interval) |    Hard    |                                                              |
