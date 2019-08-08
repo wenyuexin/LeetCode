@@ -9,21 +9,26 @@ import java.util.List;
  * @create 2019/08/07
  * @problem 54
  * @tag Array
+ * @see array.reference.SpiralMatrix_54
  */
 
 public class SpiralMatrix_54 {
+
+    //Recommend
     static class Solution {
         public List<Integer> spiralOrder(int[][] matrix) {
             List<Integer> list = new LinkedList<>();
             if (matrix == null || matrix.length == 0)  return list;
             int rows = matrix.length;
             int cols = matrix[0].length;
-            int nLayer = (matrix.length+1) / 2;
+            int nLayer = (Math.min(rows, cols)+1) / 2;
             for (int i = 0; i < nLayer; i++) {
                 addElements(matrix, list, true, i, i, cols-i-1, 1);
                 addElements(matrix, list, false, cols-i-1, i+1, rows-i-1, 1);
-                addElements(matrix, list, true, rows-i-1, cols-i-2, i, -1);
-                addElements(matrix, list, false, i, rows-i-2, i+1, -1);
+                if (rows-i-1 != i)
+                    addElements(matrix, list, true, rows-i-1, cols-i-2, i, -1);
+                if (cols-i-1 != i)
+                    addElements(matrix, list, false, i, rows-i-2, i+1, -1);
             }
             return list;
         }
@@ -32,7 +37,6 @@ public class SpiralMatrix_54 {
             if (step > 0 && from > to) return;
             if (step < 0 && from < to) return;
             to += step;
-            System.out.println(""+inRow+" "+line+" "+from+" "+to+" "+step);
             if (inRow) {
                 for (int i = from; i != to; i += step)
                     list.add(matrix[line][i]);
@@ -55,11 +59,26 @@ public class SpiralMatrix_54 {
 //                { 1 }
 //        };
 
+//        int[][] matrix = new int[][] {
+//                { 1, 2, 3, 4 },
+//                { 5, 6, 7, 8 },
+//                { 9, 10, 11, 12 }
+//        };
+
         int[][] matrix = new int[][] {
-                { 1, 2, 3, 4 },
-                { 5, 6, 7, 8 },
-                { 9, 10, 11, 12 }
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+                { 10, 11, 12 }
         };
+
+//        int[][] matrix = new int[][] {
+//                {1},{2},{3},{4},{5},{6},{7},{8},{9},{10}
+//        };
+
+//        int[][] matrix = new int[][] {
+//                { 1,2,3,4,5,6,7,8,9 }
+//        };
 
         System.out.println("Input:  "+ Arrays.deepToString(matrix));
 
