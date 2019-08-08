@@ -1,7 +1,6 @@
 # LeetCode
 
 * 基于Java的leetcode解题记录
-* **Jdk version:** Jdk 11
 * 争取把所有leetcode的题都解完，部分题可能有多种解法
 
 ## 1. Folder description  
