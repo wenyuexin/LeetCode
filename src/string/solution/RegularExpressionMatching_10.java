@@ -66,7 +66,13 @@ public class RegularExpressionMatching_10 {
 					strIdx += cnt;
 				}
 			}
-			return (strIdx >= chars.length) && (iPartten >= nPattens);
+
+			if (strIdx < chars.length) return false;
+			boolean flag = true;
+			for (int i = iPartten; i < nPattens; i++) {
+				flag &= mode[i];
+			}
+			return flag;
 		}
 	}
 
@@ -75,11 +81,11 @@ public class RegularExpressionMatching_10 {
 		//String s = "asdf wwewrf soop uioh.";
 		//String p = ".*sdf.*.*oop.*";
 
-		String s = "a";
-		String p = "ab*";
+		String s = "abc";
+		String p = "abcd*";
 
 		long t1 = System.nanoTime();
-		boolean flag = new Solution2().isMatch(s,p);
+		boolean flag = new Solution2().isMatch(s, p);
 		long t2 = System.nanoTime();
 		
 		System.out.println("Input:  s -> \""+s+"\"");
