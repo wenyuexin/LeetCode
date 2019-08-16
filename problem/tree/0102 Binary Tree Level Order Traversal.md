@@ -1,4 +1,4 @@
-# 102. Binary Tree Level Order Traversal [[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/tree/solution/BinaryTreeLevelOrderTraversal_102.java)]
+# 102. Binary Tree Level Order Traversal
 
 ```Medium, Tree, Breadth-first Search```
 
