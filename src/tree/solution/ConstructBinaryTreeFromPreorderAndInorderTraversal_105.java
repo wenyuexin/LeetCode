@@ -21,10 +21,10 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal_105 {
             this.inorder = inorder;
             this.preorder = preorder;
             preorderBuildingIndex = 0;
-            return buildWithPreorder(0, preorder.length-1);
+            return build(0, preorder.length-1);
         }
 
-        private TreeNode buildWithPreorder(int from, int to) {
+        private TreeNode build(int from, int to) {
             if (from > to) return null;
             int value = preorder[preorderBuildingIndex++];
             TreeNode root = new TreeNode(value);
@@ -37,8 +37,8 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal_105 {
                 throw new RuntimeException("Invalid inorder or preorder");
             }
 
-            root.left = buildWithPreorder(from, pos-1);
-            root.right = buildWithPreorder(pos+1, to);
+            root.left = build(from, pos-1);
+            root.right = build(pos+1, to);
             return root;
         }
     }
