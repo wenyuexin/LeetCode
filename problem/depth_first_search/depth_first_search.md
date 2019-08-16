@@ -6,8 +6,12 @@
 
 |  #   | Title                                                        | Difficulty |                         My solution                          |
 | :--: | ------------------------------------------------------------ | :--------: | :----------------------------------------------------------: |
-| 0133 | **[Clone Graph](https://github.com/Apollo4634/LeetCode/blob/master/problem/depth_first_Search/0133_CloneGraph.md)** |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search/solution/CloneGraph_133.java) |
-| 0207 | [Course Schedule](https://github.com/Apollo4634/LeetCode/blob/master/problem/topological_sort/0207_CourseSchedule.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort/solution/CourseSchedule_207.java) |
+| 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/tree/solution/ConstructBinaryTreeFromPreorderAndInorderTraversal_105.java) |
+| 0106 |                                                              |            |                                                              |
+| 0133 | [Clone Graph](https://leetcode.com/problems/clone-graph)     |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/depth_first_search/solution/CloneGraph_133.java) |
+| 0199 |                                                              |            |                                                              |
+| 0200 |                                                              |            |                                                              |
+| 0207 | [Course Schedule](https://leetcode.com/problems/course-schedule) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/topological_sort/solution/CourseSchedule_207.java) |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |
 |      |                                                              |            |                                                              |

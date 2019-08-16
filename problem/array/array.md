@@ -45,7 +45,7 @@
 | 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle) |    Hard    |                                                              |
 | 0088 |                                                              |            |                                                              |
 | 0090 |                                                              |            |                                                              |
-| 0105 |                                                              |            |                                                              |
+| 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/tree/solution/ConstructBinaryTreeFromPreorderAndInorderTraversal_105.java) |
 | 0106 |                                                              |            |                                                              |
 | 0118 |                                                              |            |                                                              |
 | 0119 |                                                              |            |                                                              |
