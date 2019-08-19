@@ -78,6 +78,9 @@
 | 34 | [Geometry](https://github.com/Apollo4634/LeetCode/tree/master/problem/geometry/geometry.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/geometry)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/geometry)|
 | 35 | [Random](https://github.com/Apollo4634/LeetCode/tree/master/problem/random/random.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/random)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/random)|
 | 36 | [Rejection Sampling](https://github.com/Apollo4634/LeetCode/tree/master/problem/rejection_sampling/rejection_sampling.md) |[Go](https://github.com/Apollo4634/LeetCode/tree/master/problem/rejection_sampling)|[Go](https://github.com/Apollo4634/LeetCode/tree/master/src/rejection_sampling)|
+| 37 | [Database](https://github.com/Apollo4634/LeetCode/tree/master/problem/database/database.md) |||
+| 38 | [Shell](https://github.com/Apollo4634/LeetCode/tree/master/problem/shell/shell.md) |||
+| 39 | [Concurrency](https://github.com/Apollo4634/LeetCode/tree/master/problem/concurrency/concurrency.md) |||
 
 **Note:**  
 
