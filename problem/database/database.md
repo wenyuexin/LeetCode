@@ -7,7 +7,7 @@
 | 0175 | [Combine Two Tables](https://leetcode.com/problems/combine-two-tables) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/database/solution/CombineTwoTables_175.sql) |
 | 0176 | [Second Highest Salary](https://leetcode.com/problems/second-highest-salary) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/database/solution/SecondHighestSalary_176.sql) |
 | 0177 | [Nth Highest Salary](https://leetcode.com/problems/nth-highest-salary) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/database/solution/NthHighestSalary_177.sql) |
-| 0178 | [Rank Scores](https://leetcode.com/problems/rank-scores)     |            |                                                              |
+| 0178 | [Rank Scores](https://leetcode.com/problems/rank-scores)     |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/database/solution/RankScores_178.sql) |
 | 0180 | [Consecutive Numbers](https://leetcode.com/problems/consecutive-numbers) |            |                                                              |
 | 0181 | [Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers) |            |                                                              |
 | 0182 | [Duplicate Emails](https://leetcode.com/problems/duplicate-emails) |            |                                                              |
