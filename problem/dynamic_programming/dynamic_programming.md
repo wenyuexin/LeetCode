@@ -14,7 +14,7 @@
 |  62  |                                                              |            |                                                              |
 |  63  |                                                              |            |                                                              |
 |  64  |                                                              |            |                                                              |
-|  70  |                                                              |            |                                                              |
+|  70  | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/dynamic_programming/solution/ClimbingStairs_70.java) |
 |  72  |                                                              |            |                                                              |
 |  85  |                                                              |            |                                                              |
 |  87  |                                                              |            |                                                              |
