@@ -29,19 +29,25 @@ public class ClimbingStairs_70 {
     }
 
 
+    //recommended
     static class Solution2 {
-        private int count;
-
         public int climbStairs(int n) {
-            count = 0;
-
+            if (n == 1 || n == 2) return n;
+            int count = 0;
+            int a = 1, b = 2, cnt = 3;
+            while (cnt++ <= n) {
+                count = a + b;
+                a = b;
+                b = count;
+            }
             return count;
         }
     }
 
+
     public static void main(String[] args) {
         long start = System.nanoTime();
-        int methods = new Solution().climbStairs(2);
+        int methods = new Solution2().climbStairs(5);
         long end = System.nanoTime();
 
         System.out.println("Output: "+ methods);
