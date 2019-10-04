@@ -6,11 +6,11 @@
 
 |  #   | Title                                                        | Difficulty |                         My solution                          |
 | :--: | ------------------------------------------------------------ | :--------: | :----------------------------------------------------------: |
-| 0005 | [Longest Palindromic Substring](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0005_LongestPalindromicSubstring.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestPalindromicSubstring.java) |
-| 0010 | [Regular Expression Matching](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0010_RegularExpressionMatching.md) |    Hard    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/RegularExpressionMatching.java) |
-| 0032 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses) |    Hard    |                                                              |
-| 0044 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching) |    Hard    |                                                              |
-| 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/MaximumSubarray_53.java) |
+|  5   | [Longest Palindromic Substring](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0005_LongestPalindromicSubstring.md) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/LongestPalindromicSubstring.java) |
+|  10  | [Regular Expression Matching](https://github.com/Apollo4634/LeetCode/blob/master/problem/string/0010_RegularExpressionMatching.md) |    Hard    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/RegularExpressionMatching.java) |
+|  32  | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses) |    Hard    |                                                              |
+|  44  | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching) |    Hard    |                                                              |
+|  53  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/MaximumSubarray_53.java) |
 |  62  |                                                              |            |                                                              |
 |  63  |                                                              |            |                                                              |
 |  64  |                                                              |            |                                                              |
@@ -18,7 +18,7 @@
 |  72  |                                                              |            |                                                              |
 |  85  |                                                              |            |                                                              |
 |  87  |                                                              |            |                                                              |
-|  91  |                                                              |            |                                                              |
+|  91  | [Decode Ways](https://leetcode.com/problems/decode-ways)     |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/string/solution/DecodeWays_91.java) |
 |  95  |                                                              |            |                                                              |
 |  96  |                                                              |            |                                                              |
 |  97  |                                                              |            |                                                              |
