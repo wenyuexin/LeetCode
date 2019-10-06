@@ -7,6 +7,10 @@ import java.util.List;
 /**
  * @author Apollo4634
  * @create 2019/10/03
+ * @problem 91
+ * @tag String
+ * @tag Dynamic Programming
+ * @see string.reference.DecodeWays_91
  */
 
 public class DecodeWays_91 {
@@ -58,15 +62,13 @@ public class DecodeWays_91 {
             int from = iter.next();
             int totalCount = 1;
             while (iter.hasNext()) {
-                if (chars[from] == '0') {
-                    totalCount = 0; break;
-                }
+                if (chars[from] == '0') return 0;
                 int to = iter.next();
                 if (from+1 == to) continue;
                 count = 0;
                 decode(chars, from, to);
+                if (count == 0) return 0;
                 totalCount *= count;
-                if (totalCount == 0) break;
                 from = to;
             }
             return totalCount;
