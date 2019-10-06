@@ -1,6 +1,11 @@
 package string.reference;
 
 /**
+ * 假设f(n)表示前n位的字符串有f(n)种解码方式，那么
+ * f(n) = flag * [f(n-1) + flag2 * f(n-2)]
+ * 其中，flag表示第n位字符不是'0'，
+ * flag2表示第n-1位和第n位的字符可以被正确解码
+ *
  * @author Apollo4634
  * @create 2019/10/05
  * @problem 91

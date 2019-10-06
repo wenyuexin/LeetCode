@@ -10,7 +10,7 @@ import java.util.List;
  * @problem 91
  * @tag String
  * @tag Dynamic Programming
- * @see string.reference.DecodeWays_91
+ * @see string.reference.DecodeWays_91 - recommended
  */
 
 public class DecodeWays_91 {
