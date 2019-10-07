@@ -32,7 +32,7 @@
 | 152  |                                                              |            |                                                              |
 | 174  |                                                              |            |                                                              |
 | 188  |                                                              |            |                                                              |
-| 198  |                                                              |            |                                                              |
+| 198  | [House Robber](https://leetcode.com/problems/house-robber)   |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/dynamic_programming/solution/HouseRobber_198.java) |
 | 213  |                                                              |            |                                                              |
 | 221  |                                                              |            |                                                              |
 | 256  |                                                              |            |                                                              |
