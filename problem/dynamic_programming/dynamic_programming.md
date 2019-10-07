@@ -24,7 +24,7 @@
 |  97  |                                                              |            |                                                              |
 | 115  |                                                              |            |                                                              |
 | 120  |                                                              |            |                                                              |
-| 121  |                                                              |            |                                                              |
+| 121  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/BestTimeToBuyAndSellStock_121.java) |
 | 123  |                                                              |            |                                                              |
 | 132  |                                                              |            |                                                              |
 | 139  |                                                              |            |                                                              |
