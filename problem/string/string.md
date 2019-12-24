@@ -23,7 +23,7 @@
 |  43  | [Multiply Strings](https://leetcode.com/problems/multiply-strings) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/MultiplyStrings_43.java) |
 |  44  |                                                              |            |                                                              |
 |  49  | [Group Anagrams](https://leetcode.com/problems/group-anagrams) |   Medium   | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/hash_table/solution/GroupAnagrams_49.java) |
-|  58  | [Length of Last Word](https://leetcode.com/problems/length-of-last-word) |    Easy    |                                                              |
+|  58  | [Length of Last Word](https://leetcode.com/problems/length-of-last-word) |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/string/solution/LengthOfLastWord_58.java) |
 |  65  |                                                              |            |                                                              |
 |  67  | [Add Binary](https://leetcode.com/problems/add-binary)       |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/tree/master/src/math/solution/AddBinary_67.java) |
 |  68  |                                                              |            |                                                              |
