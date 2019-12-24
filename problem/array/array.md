@@ -33,7 +33,7 @@
 |  62  |                                                              |            |                                                              |
 |  63  |                                                              |            |                                                              |
 |  64  |                                                              |            |                                                              |
-|  66  |                                                              |            |                                                              |
+|  66  | [Plus One](https://leetcode.com/problems/plus-one)           |    Easy    | [Go](https://github.com/Apollo4634/LeetCode/blob/master/src/array/solution/PlusOne_66.java) |
 |  73  |                                                              |            |                                                              |
 |  74  |                                                              |            |                                                              |
 |  75  |                                                              |            |                                                              |
